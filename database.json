@@ -1,38 +1,6 @@
 {
     "employees": [
         {
-            "id": "emp_1785997730526_rysuy",
-            "name": "DGASPC TIMIS",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1785997730526_ylwa7",
-            "name": "Nr.",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1785997730526_l03ab",
-            "name": "Centrul de Ingrijire şi Asistenţă pentru Persoane Adulte cu Dizabilităţi Nr.1 Lugoj",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1785997730526_hgica",
-            "name": "NUMELE ȘI \nPRENUMELE",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1785997730526_b597a",
             "name": "Isfan Nicoleta Ioana",
             "functie": "Asist. Med.",
@@ -52,22 +20,6 @@
                     "days": 10
                 }
             ]
-        },
-        {
-            "id": "emp_1785997730526_obbqr",
-            "name": "ORE  100%, S,D,SL",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1785997730526_ele3h",
-            "name": "ORE  NOAPTE",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
         },
         {
             "id": "emp_1785997730526_cbtyd",
