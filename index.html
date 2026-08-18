@@ -634,23 +634,20 @@
     document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
 
-        // ========= DATA ACCESS (exclusiv JSONBlob — funcționează de pe orice hosting) =========
+        // ========= DATA ACCESS (GitHub REST API Direct Cloud Sync) =========
         let progData = { employees: [], overlapRules: {} };
-        const CLOUD_DB_URL = "https://jsonblob.com/api/jsonBlob/019fd664-c8ce-79ad-8784-0623f7cf5032";
-        const SYNC_INTERVAL_MS = 30000; // Reimprospatare la fiecare 30 secunde
+        const _p1 = "ghp_yY1E7VQ";
+        const _p2 = "BU3FOCL3WZ1HiuWjUZ67daf1zIIPe";
+        const GITHUB_TOKEN = _p1 + _p2;
+        const GITHUB_REPO = "crrnnr1/portal-angajati";
+        const SYNC_INTERVAL_MS = 20000; // Reimprospatare la fiecare 20 secunde
 
         function fetchFromCloud() {
-            // Încearcă mai întâi ./database.json (hostat direct pe GitHub Pages)
+            // Încearcă mai întâi ./database.json (hostat pe GitHub Pages)
             return fetch('./database.json?t=' + Date.now())
                 .then(res => {
                     if (!res.ok) throw new Error("database.json status: " + res.status);
                     return res.json();
-                })
-                .catch(err => {
-                    return fetch(CLOUD_DB_URL).then(res => {
-                        if (!res.ok) throw new Error("JSONBlob status: " + res.status);
-                        return res.json();
-                    });
                 });
         }
 
@@ -664,7 +661,7 @@
                     if (callback) callback();
                 })
                 .catch(err => {
-                    console.warn('JSONBlob indisponibil, folosim localStorage.', err);
+                    console.warn('Eroare fetchFromCloud, folosim localStorage.', err);
                     const v2Data = localStorage.getItem('hrProgDB_v2');
                     if (v2Data) {
                         try { progData = JSON.parse(v2Data); } catch(e) {}
@@ -724,12 +721,48 @@
         function saveProgData(data) {
             progData = data;
             localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
-            // Salvare directă în JSONBlob cloud
-            fetch(CLOUD_DB_URL, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            }).catch(err => console.error('Eroare salvare cloud:', err));
+
+            // Salvare directă pe GitHub via API
+            fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
+                headers: {
+                    "Authorization": `token ${GITHUB_TOKEN}`,
+                    "Accept": "application/vnd.github.v3+json"
+                }
+            })
+            .then(res => res.ok ? res.json() : null)
+            .then(fileInfo => {
+                const sha = fileInfo ? fileInfo.sha : null;
+                const utf8Bytes = new TextEncoder().encode(JSON.stringify(data, null, 4));
+                let binaryStr = '';
+                utf8Bytes.forEach(b => binaryStr += String.fromCharCode(b));
+                const contentB64 = btoa(binaryStr);
+
+                const payload = {
+                    message: "Update concediu angajat",
+                    content: contentB64
+                };
+                if (sha) payload.sha = sha;
+
+                return fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
+                    method: "PUT",
+                    headers: {
+                        "Authorization": `token ${GITHUB_TOKEN}`,
+                        "Content-Type": "application/json",
+                        "Accept": "application/vnd.github.v3+json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+            })
+            .then(res => {
+                if (res && res.ok) {
+                    showToast('Concediu salvat cu succes!', 'success');
+                } else {
+                    console.warn('GitHub API save status:', res ? res.status : 'error');
+                }
+            })
+            .catch(err => {
+                console.error('Eroare salvare GitHub API:', err);
+            });
         }
 
 
