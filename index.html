@@ -615,6 +615,21 @@
     <!-- Toast -->
     <div id="toast" class="toast"></div>
 
+    <!-- Sync indicator (apare discret cand se reimprospateza datele) -->
+    <div id="sync-indicator" style="
+        position: fixed; bottom: 1rem; right: 1rem;
+        background: rgba(16, 185, 129, 0.9);
+        color: white; padding: 0.4rem 0.8rem;
+        border-radius: 2rem; font-size: 0.75rem;
+        font-weight: 600; z-index: 600;
+        opacity: 0; transition: opacity 0.4s ease;
+        display: flex; align-items: center; gap: 0.4rem;
+        pointer-events: none;
+    ">
+        <span style="width:7px;height:7px;background:#fff;border-radius:50%;display:inline-block;"></span>
+        Date actualizate
+    </div>
+
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
@@ -622,16 +637,22 @@
         // ========= DATA ACCESS (exclusiv JSONBlob — funcționează de pe orice hosting) =========
         let progData = { employees: [], overlapRules: {} };
         const CLOUD_DB_URL = "https://jsonblob.com/api/jsonBlob/019fd664-c8ce-79ad-8784-0623f7cf5032";
+        const SYNC_INTERVAL_MS = 30000; // Reimprospatare la fiecare 30 secunde
 
-        function loadProgDataFromServer(callback) {
-            fetch(CLOUD_DB_URL)
+        function fetchFromCloud() {
+            return fetch(CLOUD_DB_URL)
                 .then(res => {
                     if (!res.ok) throw new Error("JSONBlob status: " + res.status);
                     return res.json();
-                })
+                });
+        }
+
+        function loadProgDataFromServer(callback) {
+            fetchFromCloud()
                 .then(data => {
                     if (data && (data.employees || data.overlapRules)) {
                         progData = data;
+                        localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
                     }
                     if (callback) callback();
                 })
@@ -643,6 +664,54 @@
                     }
                     if (callback) callback();
                 });
+        }
+
+        // Sincronizare automata in fundal — actualizeaza calendarul angajatilor logati
+        function startAutoSync() {
+            setInterval(() => {
+                if (!currentEmp) return; // nu sincroniza daca nu e nimeni logat
+                fetchFromCloud()
+                    .then(data => {
+                        if (!data || !data.employees) return;
+                        const oldJson = JSON.stringify(progData);
+                        const newJson = JSON.stringify(data);
+                        if (oldJson === newJson) return; // nimic nou
+                        progData = data;
+                        localStorage.setItem('hrProgDB_v2', newJson);
+                        // Actualizeaza referinta angajat logat
+                        const freshEmp = progData.employees.find(e => e.id === currentEmp.id);
+                        if (freshEmp) currentEmp = freshEmp;
+                        renderApp();
+                        showSyncIndicator();
+                    })
+                    .catch(() => {}); // erorile de retea se ignora silentios
+            }, SYNC_INTERVAL_MS);
+
+            // Refresh si cand utilizatorul revine pe tab (ex: iese din WhatsApp si deschide browserul)
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible' && currentEmp) {
+                    fetchFromCloud()
+                        .then(data => {
+                            if (!data || !data.employees) return;
+                            const oldJson = JSON.stringify(progData);
+                            if (JSON.stringify(data) === oldJson) return;
+                            progData = data;
+                            localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
+                            const freshEmp = progData.employees.find(e => e.id === currentEmp.id);
+                            if (freshEmp) currentEmp = freshEmp;
+                            renderApp();
+                            showSyncIndicator();
+                        })
+                        .catch(() => {});
+                }
+            });
+        }
+
+        function showSyncIndicator() {
+            const ind = document.getElementById('sync-indicator');
+            if (!ind) return;
+            ind.style.opacity = '1';
+            setTimeout(() => { ind.style.opacity = '0'; }, 2000);
         }
 
         function saveProgData(data) {
@@ -862,6 +931,9 @@
             selBar.classList.remove('visible');
             document.body.classList.remove('has-selection');
         });
+
+        // Porneste sincronizarea automata
+        startAutoSync();
 
         // ========= RENDER APP =========
         function renderApp() {
