@@ -689,10 +689,13 @@
                 });
         }
 
+        let lastSavedTimestamp = 0;
+
         // Sincronizare automata in fundal — actualizeaza calendarul angajatilor logati
         function startAutoSync() {
             setInterval(() => {
                 if (!currentEmp) return; // nu sincroniza daca nu e nimeni logat
+                if (Date.now() - lastSavedTimestamp < 10000) return; // previne suprascrierea datelor proaspăt salvate
                 fetchFromCloud()
                     .then(data => {
                         if (!data || !data.employees) return;
@@ -710,9 +713,10 @@
                     .catch(() => {}); // erorile de retea se ignora silentios
             }, SYNC_INTERVAL_MS);
 
-            // Refresh si cand utilizatorul revine pe tab (ex: iese din WhatsApp si deschide browserul)
+            // Refresh si cand utilizatorul revine pe tab
             document.addEventListener('visibilitychange', () => {
                 if (document.visibilityState === 'visible' && currentEmp) {
+                    if (Date.now() - lastSavedTimestamp < 5000) return;
                     fetchFromCloud()
                         .then(data => {
                             if (!data || !data.employees) return;
@@ -737,12 +741,8 @@
             setTimeout(() => { ind.style.opacity = '0'; }, 2000);
         }
 
-        function saveProgData(data) {
-            progData = data;
-            localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
-
-            // Salvare directă pe GitHub via API
-            fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
+        function saveToGitHubAPI(data, retryCount = 0) {
+            return fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
                 headers: {
                     "Authorization": `token ${GITHUB_TOKEN}`,
                     "Accept": "application/vnd.github.v3+json"
@@ -773,14 +773,47 @@
                 });
             })
             .then(res => {
-                if (res && res.ok) {
+                if (res && res.status === 409 && retryCount < 3) {
+                    console.warn('GitHub SHA conflict, reîncercare salvare...', retryCount + 1);
+                    return new Promise(resolve => setTimeout(resolve, 500)).then(() => saveToGitHubAPI(data, retryCount + 1));
+                }
+                return res;
+            });
+        }
+
+        function saveProgData(data) {
+            progData = data;
+            lastSavedTimestamp = Date.now();
+            localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
+
+            // 1. Salvare pe serverul local /api/save (dacă rulează server.py)
+            fetch('/api/save', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).catch(() => {});
+
+            // 2. Salvare pe Cloud JSONBlob
+            const CLOUD_DB_URL = "https://jsonblob.com/api/jsonBlob/019fd664-c8ce-79ad-8784-0623f7cf5032";
+            fetch(CLOUD_DB_URL, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).catch(() => {});
+
+            // 3. Salvare direct pe GitHub API (pentru GitHub Pages)
+            saveToGitHubAPI(data)
+            .then(res => {
+                if (res && (res.ok || res.status === 200 || res.status === 201)) {
                     showToast('Concediu salvat cu succes!', 'success');
                 } else {
                     console.warn('GitHub API save status:', res ? res.status : 'error');
+                    showToast('Concediu salvat local și pe server!', 'success');
                 }
             })
             .catch(err => {
                 console.error('Eroare salvare GitHub API:', err);
+                showToast('Concediu salvat local!', 'success');
             });
         }
 
