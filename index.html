@@ -640,10 +640,17 @@
         const SYNC_INTERVAL_MS = 30000; // Reimprospatare la fiecare 30 secunde
 
         function fetchFromCloud() {
-            return fetch(CLOUD_DB_URL)
+            // Încearcă mai întâi ./database.json (hostat direct pe GitHub Pages)
+            return fetch('./database.json?t=' + Date.now())
                 .then(res => {
-                    if (!res.ok) throw new Error("JSONBlob status: " + res.status);
+                    if (!res.ok) throw new Error("database.json status: " + res.status);
                     return res.json();
+                })
+                .catch(err => {
+                    return fetch(CLOUD_DB_URL).then(res => {
+                        if (!res.ok) throw new Error("JSONBlob status: " + res.status);
+                        return res.json();
+                    });
                 });
         }
 
