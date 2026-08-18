@@ -643,12 +643,31 @@
         const SYNC_INTERVAL_MS = 20000; // Reimprospatare la fiecare 20 secunde
 
         function fetchFromCloud() {
-            // Încearcă mai întâi ./database.json (hostat pe GitHub Pages)
-            return fetch('./database.json?t=' + Date.now())
-                .then(res => {
-                    if (!res.ok) throw new Error("database.json status: " + res.status);
-                    return res.json();
-                });
+            // Citire în timp real direct din GitHub API (fără delay de CDN/build)
+            return fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
+                headers: {
+                    "Authorization": `token ${GITHUB_TOKEN}`,
+                    "Accept": "application/vnd.github.v3+json"
+                }
+            })
+            .then(res => {
+                if (!res.ok) throw new Error("GitHub API status: " + res.status);
+                return res.json();
+            })
+            .then(fileInfo => {
+                const cleanB64 = fileInfo.content.replace(/\s/g, '');
+                const binaryStr = atob(cleanB64);
+                const bytes = new Uint8Array(binaryStr.length);
+                for (let i = 0; i < binaryStr.length; i++) {
+                    bytes[i] = binaryStr.charCodeAt(i);
+                }
+                const jsonText = new TextDecoder().decode(bytes);
+                return JSON.parse(jsonText);
+            })
+            .catch(err => {
+                // Fallback la fișierul static ./database.json
+                return fetch('./database.json?t=' + Date.now()).then(res => res.json());
+            });
         }
 
         function loadProgDataFromServer(callback) {
