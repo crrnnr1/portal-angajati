@@ -142,14 +142,7 @@
             "functie": "Teh as. soc",
             "cnp": "1841028351589",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1787299137323_jcrt",
-                    "start": "2027-01-04",
-                    "end": "2027-01-29",
-                    "days": 20
-                }
-            ]
+            "intervals": []
         },
         {
             "id": "emp_1786613879264_fvzux",
