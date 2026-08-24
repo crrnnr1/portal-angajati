@@ -5,7 +5,7 @@
             "name": "Bălănescu Mihaela",
             "functie": "Asist. Med.",
             "cnp": "2730410351064",
-            "cuvenit": 35,
+            "cuvenit": 21,
             "intervals": [],
             "leaves": [
                 {
@@ -99,7 +99,7 @@
             "name": "Leucuș Daniela",
             "functie": "Asist. Med.",
             "cnp": "2730825352625",
-            "cuvenit": 35,
+            "cuvenit": 21,
             "intervals": []
         },
         {
@@ -196,7 +196,7 @@
             "name": "Boanca Cristiana",
             "functie": "Infirmieră",
             "cnp": "2731010352628",
-            "cuvenit": 35,
+            "cuvenit": 21,
             "intervals": []
         },
         {
@@ -228,7 +228,7 @@
             "name": "Maran Maria Mirabela",
             "functie": "Infirmieră",
             "cnp": "2870907352294",
-            "cuvenit": 31,
+            "cuvenit": 21,
             "intervals": []
         },
         {
@@ -404,6 +404,206 @@
             "name": "Strehan Alexandru",
             "functie": "Munc. Fochist",
             "cnp": "1660309352623",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_ymhdw",
+            "name": "DGASPC TIMIS",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_ueclp",
+            "name": "2T/3T - spor de tură",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_9gbs0",
+            "name": "CO - concediu de odihnă",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_n1cxf",
+            "name": "CM - concediu medical",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_4amvi",
+            "name": "NUMELE ȘI \nPRENUMELE",
+            "functie": "FUNCŢIA",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_9doim",
+            "name": "ORE SĂRBĂTOARE",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_le5fz",
+            "name": "Micula Adriana Elena",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_3opj6",
+            "name": "Gross Elena",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_a7zhl",
+            "name": "ORE  NOAPTE",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_ik32b",
+            "name": "Petrescu Cristian Ioan",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570021_ob1q3",
+            "name": "Crîsciu Florin Samson",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_0qztq",
+            "name": "Șef centru",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_88b7i",
+            "name": "HUȘANU Luminița Leocadia",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_sfkxp",
+            "name": "NUMELE SI \r\nPRENUMELE",
+            "functie": "Functia",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_gs5un",
+            "name": "Dobozi Simona Monica",
+            "functie": "As. Med. Pr.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_0xjme",
+            "name": "Măran Florina Violeta",
+            "functie": "Instr ergoterapie",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_qs2qy",
+            "name": "Ocnariu Mariana",
+            "functie": "Instr ergoterapie",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_r5ygc",
+            "name": "Pop Coman Daniel",
+            "functie": "Instr ergoterapie",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_rey65",
+            "name": "Tatar Daniel Vasile",
+            "functie": "Instr ergoterapie",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_w9abd",
+            "name": "Vierescu Cristian",
+            "functie": "Instr ergoterapie",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_lyj9b",
+            "name": "Balintescu Valentin Constantin",
+            "functie": "Infirmiera",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_7ym1d",
+            "name": "Grecu Aurelia",
+            "functie": "Infirmiera",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_7dhxp",
+            "name": "Suici Alin Daniel",
+            "functie": "Infirmiera",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_150sx",
+            "name": "Munteanu Mihaela",
+            "functie": "Ingrijitor curatenie",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787571570022_sezmz",
+            "name": "Ciurescu Voichița",
+            "functie": "Spalatorasa",
+            "cnp": "",
             "cuvenit": 21,
             "intervals": []
         }
