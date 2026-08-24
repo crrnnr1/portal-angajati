@@ -606,6 +606,38 @@
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
+        },
+        {
+            "id": "emp_1787572548754_5eh15",
+            "name": "Nr. 66107/04.05.2026",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787572548754_jfiqr",
+            "name": "Luna aprilie 2026: 20 zile lucrătoare x 8h/zi = 160 ore/lună",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787572548754_ud1r7",
+            "name": "TLS - total ore lucrate inclusiv ore suplimentare",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787572548754_ybuuz",
+            "name": "TNL - total ore plătite în timpul normal de lucru",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
         }
     ],
     "overlapRules": {}
