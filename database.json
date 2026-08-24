@@ -6,7 +6,14 @@
             "functie": "Asist. Med.",
             "cnp": "1730414352620",
             "cuvenit": 35,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_balanescu_1",
+                    "start": "2027-01-11",
+                    "end": "2027-01-22",
+                    "days": 10
+                }
+            ],
             "leaves": [
                 {
                     "start": "2027-01-11",
@@ -20,7 +27,8 @@
             "functie": "Infirmieră",
             "cnp": "1880213350085",
             "cuvenit": 34,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_wj39g",
@@ -28,7 +36,8 @@
             "functie": "Infirmieră",
             "cnp": "1881215351614",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_cvm2m",
@@ -36,7 +45,8 @@
             "functie": "Infirmieră",
             "cnp": "2650226352634",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_ox5ot",
@@ -44,7 +54,8 @@
             "functie": "Infirmieră",
             "cnp": "1730205330796",
             "cuvenit": 21,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_0vfxd",
@@ -52,7 +63,15 @@
             "functie": "Infirmieră",
             "cnp": "1680904352628",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [
+                {
+                    "id": "int_1787556809977_65ye",
+                    "start": "2027-01-04",
+                    "end": "2027-01-13",
+                    "days": 6
+                }
+            ],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_eyfef",
@@ -60,7 +79,8 @@
             "functie": "Infirmieră",
             "cnp": "2680204352659",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_fev10",
@@ -68,7 +88,8 @@
             "functie": "Infirmieră",
             "cnp": "2761002352622",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_xwtp6",
@@ -76,7 +97,8 @@
             "functie": "Infirmieră",
             "cnp": "2690624352636",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_9pt50",
@@ -84,7 +106,8 @@
             "functie": "Infirmieră",
             "cnp": "1720302352636",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_qdih6",
@@ -92,7 +115,8 @@
             "functie": "Asist. Med.",
             "cnp": "2790708352628",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_dssqi",
@@ -100,7 +124,8 @@
             "functie": "Asist. Med.",
             "cnp": "2730825352625",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_q6yjs",
@@ -108,7 +133,8 @@
             "functie": "Asist. Med.",
             "cnp": "2790115352623",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_60u1s",
@@ -116,7 +142,8 @@
             "functie": "Instr. Ergo.",
             "cnp": "1750724352623",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_oklgs",
@@ -124,7 +151,8 @@
             "functie": "Instr. Ergo.",
             "cnp": "2610319352646",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_dszm3",
@@ -132,7 +160,8 @@
             "functie": "Instr. Ergo.",
             "cnp": "2770609352647",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_ys1u0",
@@ -140,7 +169,8 @@
             "functie": "Instr. Ergo.",
             "cnp": "2691231200029",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_9n9df",
@@ -157,7 +187,8 @@
             "functie": "Lucr. Soc",
             "cnp": "2720112352628",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_2fpug",
@@ -165,7 +196,8 @@
             "functie": "Lucr. Soc",
             "cnp": "2830915351572",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_t3dul",
@@ -173,7 +205,8 @@
             "functie": "Infirmieră",
             "cnp": "2930903226706",
             "cuvenit": 31,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_gjlyr",
@@ -181,7 +214,8 @@
             "functie": "Infirmieră",
             "cnp": "1730414352620",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_m568n",
@@ -189,7 +223,8 @@
             "functie": "Infirmieră",
             "cnp": "2700926352627",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_7p3nb",
@@ -197,7 +232,8 @@
             "functie": "Infirmieră",
             "cnp": "2731010352628",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_oycpr",
@@ -205,7 +241,8 @@
             "functie": "Infirmieră",
             "cnp": "1780326352645",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_s5f3k",
@@ -213,7 +250,8 @@
             "functie": "Infirmieră",
             "cnp": "1720319352622",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_ycljm",
@@ -221,7 +259,8 @@
             "functie": "Infirmieră",
             "cnp": "2720208352649",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_a1hps",
@@ -229,7 +268,8 @@
             "functie": "Infirmieră",
             "cnp": "2870907352294",
             "cuvenit": 31,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_mqojt",
@@ -237,7 +277,8 @@
             "functie": "Infirmieră",
             "cnp": "2761214352620",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_av7wj",
@@ -245,7 +286,8 @@
             "functie": "Infirmieră",
             "cnp": "1760626352623",
             "cuvenit": 36,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_jjn5v",
@@ -253,7 +295,8 @@
             "functie": "Infirmieră",
             "cnp": "2820913351579",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_sgj5f",
@@ -261,7 +304,8 @@
             "functie": "Infirmieră",
             "cnp": "2860512351582",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_n4vr1",
@@ -269,7 +313,8 @@
             "functie": "Infirmieră",
             "cnp": "2781027352623",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_x3lrh",
@@ -277,7 +322,8 @@
             "functie": "Infirmieră",
             "cnp": "2691129352632",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_b0wwf",
@@ -285,7 +331,8 @@
             "functie": "Infirmieră",
             "cnp": "2730212352621",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_r2d07",
@@ -293,7 +340,8 @@
             "functie": "Infirmieră",
             "cnp": "1740119352621",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_ncdw0",
@@ -301,7 +349,8 @@
             "functie": "Ingrijitoare",
             "cnp": "1880201350033",
             "cuvenit": 33,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_lo32p",
@@ -309,7 +358,8 @@
             "functie": "Ingrijitoare",
             "cnp": "2710812352625",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_xu1lg",
@@ -317,7 +367,8 @@
             "functie": "Spalatoreasa",
             "cnp": "2810717351582",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_1q52v",
@@ -325,7 +376,8 @@
             "functie": "Munc. Intret",
             "cnp": "1821208351570",
             "cuvenit": 32,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_4eq0l",
@@ -333,7 +385,8 @@
             "functie": "Munc. Fochist",
             "cnp": "1650801352621",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_q0uas",
@@ -341,7 +394,8 @@
             "functie": "Şofer",
             "cnp": "1720728352621",
             "cuvenit": 32,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_mt6w9",
@@ -349,7 +403,8 @@
             "functie": "Sef centru",
             "cnp": "2670426352638",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_z1gcp",
@@ -357,7 +412,8 @@
             "functie": "Asist. social",
             "cnp": "2821106354165",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_s92j5",
@@ -365,7 +421,8 @@
             "functie": "Psiho log",
             "cnp": "2760223352681",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_mldhr",
@@ -373,7 +430,8 @@
             "functie": "Insp. Spec. finan. Cont.",
             "cnp": "2710203352647",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_9lrws",
@@ -381,7 +439,8 @@
             "functie": "Kinetoterapeut",
             "cnp": "1820406351598",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_hhvba",
@@ -389,7 +448,8 @@
             "functie": "Insp. Spec. Res. Umane",
             "cnp": "1690122352622",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_m5ah8",
@@ -397,7 +457,8 @@
             "functie": "Asist. Med.",
             "cnp": "***",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1787552800408_0auqw",
@@ -405,7 +466,8 @@
             "functie": "Munc. Fochist",
             "cnp": "1660309352623",
             "cuvenit": 21,
-            "intervals": []
+            "intervals": [],
+            "leaves": []
         }
     ],
     "overlapRules": {}
