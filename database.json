@@ -1,38 +1,6 @@
 {
     "employees": [
         {
-            "id": "emp_1786613879264_60u1s",
-            "name": "Bogdan Claudiu Adrian",
-            "functie": "Instr. Ergo.",
-            "cnp": "1750724352623",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_oklgs",
-            "name": "Indricau Rodica",
-            "functie": "Instr. Ergo.",
-            "cnp": "2610319352646",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_dszm3",
-            "name": "Popet Leodana Nadia",
-            "functie": "Instr. Ergo.",
-            "cnp": "2770609352647",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_ys1u0",
-            "name": "Şandru Lăcrămioara",
-            "functie": "Instr. Ergo.",
-            "cnp": "2691231200029",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_9n9df",
             "name": "Schiopu Daian Caius",
             "functie": "Teh as. soc",
@@ -118,14 +86,6 @@
             "name": "Strehan Alexandru",
             "functie": "Munc. Fochist",
             "cnp": "1660309352623",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570021_3opj6",
-            "name": "Gross Elena",
-            "functie": "Instr. Ergo.",
-            "cnp": "",
             "cuvenit": 21,
             "intervals": []
         },
