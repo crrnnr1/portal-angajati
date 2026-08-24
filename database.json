@@ -10,22 +10,6 @@
             "leaves": []
         },
         {
-            "id": "emp_1786613879264_fvzux",
-            "name": "Drăgoi Claudia Veronica",
-            "functie": "Lucr. Soc",
-            "cnp": "2720112352628",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_2fpug",
-            "name": "Petrovici Crina Maria",
-            "functie": "Lucr. Soc",
-            "cnp": "2830915351572",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_xu1lg",
             "name": "Ciurescu Voichita Dorina",
             "functie": "Spalatoreasa",
@@ -39,14 +23,6 @@
             "functie": "Munc. Intret",
             "cnp": "1821208351570",
             "cuvenit": 32,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_4eq0l",
-            "name": "Benea Cristian",
-            "functie": "Munc. Fochist",
-            "cnp": "1650801352621",
-            "cuvenit": 35,
             "intervals": []
         },
         {
@@ -71,30 +47,6 @@
             "functie": "Psiho log",
             "cnp": "2760223352681",
             "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_9lrws",
-            "name": "Sajti Janos",
-            "functie": "Kinetoterapeut",
-            "cnp": "1820406351598",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787552800408_0auqw",
-            "name": "Strehan Alexandru",
-            "functie": "Munc. Fochist",
-            "cnp": "1660309352623",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570021_ob1q3",
-            "name": "Crîsciu Florin Samson",
-            "functie": "Munc. Fochist",
-            "cnp": "",
-            "cuvenit": 21,
             "intervals": []
         },
         {
