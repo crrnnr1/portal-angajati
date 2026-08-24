@@ -175,20 +175,8 @@
             "functie": "Teh as. soc",
             "cnp": "1841028351589",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1787552323517_804e",
-                    "start": "2027-01-04",
-                    "end": "2027-01-21",
-                    "days": 14
-                }
-            ],
-            "leaves": [
-                {
-                    "start": "2027-01-04",
-                    "end": "2027-01-21"
-                }
-            ]
+            "intervals": [],
+            "leaves": []
         },
         {
             "id": "emp_1786613879264_fvzux",
@@ -442,7 +430,7 @@
             "id": "emp_1787552800408_0auqw",
             "name": "Strehan Alexandru",
             "functie": "Munc. Fochist",
-            "cnp": "",
+            "cnp": "***",
             "cuvenit": 21,
             "intervals": []
         }
