@@ -57,14 +57,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1786613879264_xwtp6",
-            "name": "Balomiri Daniela",
-            "functie": "Infirmieră",
-            "cnp": "2690624352636",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_9pt50",
             "name": "Șoman Florin",
             "functie": "Infirmieră",
@@ -126,22 +118,6 @@
             "name": "Petrovici Crina Maria",
             "functie": "Lucr. Soc",
             "cnp": "2830915351572",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_t3dul",
-            "name": "Balint Alexandra",
-            "functie": "Infirmieră",
-            "cnp": "2930903226706",
-            "cuvenit": 31,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_gjlyr",
-            "name": "Balintescu Valentin C-tin",
-            "functie": "Infirmieră",
-            "cnp": "1730414352620",
             "cuvenit": 35,
             "intervals": []
         },
@@ -413,14 +389,6 @@
             "id": "emp_1787571570022_w9abd",
             "name": "Vierescu Cristian",
             "functie": "Instr ergoterapie",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_7dhxp",
-            "name": "Suici Alin Daniel",
-            "functie": "Infirmiera",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
