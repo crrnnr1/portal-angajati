@@ -40,7 +40,14 @@
             "functie": "Infirmieră",
             "cnp": "***",
             "cuvenit": 34,
-            "intervals": []
+            "intervals": [
+                {
+                    "id": "int_1787552801771_zzl2",
+                    "start": "2027-01-04",
+                    "end": "2027-01-07",
+                    "days": 2
+                }
+            ]
         },
         {
             "id": "emp_1786613879264_wj39g",
@@ -429,6 +436,14 @@
             "functie": "Asist. Med.",
             "cnp": "***",
             "cuvenit": 35,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787552800408_0auqw",
+            "name": "Strehan Alexandru",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
             "intervals": []
         }
     ],
