@@ -1,20 +1,6 @@
 {
     "employees": [
         {
-            "id": "emp_1786613879264_t3ycw",
-            "name": "Bălănescu Mihaela",
-            "functie": "Asist. Med.",
-            "cnp": "2730410351064",
-            "cuvenit": 21,
-            "intervals": [],
-            "leaves": [
-                {
-                    "start": "2027-01-11",
-                    "end": "2027-01-22"
-                }
-            ]
-        },
-        {
             "id": "emp_1786613879264_3wo0p",
             "name": "Ciucă Călin",
             "functie": "Infirmieră",
@@ -443,14 +429,6 @@
             "id": "emp_1787571570021_ob1q3",
             "name": "Crîsciu Florin Samson",
             "functie": "Munc. Fochist",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_0qztq",
-            "name": "Șef centru",
-            "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
