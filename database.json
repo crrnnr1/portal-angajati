@@ -81,14 +81,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1786613879264_dssqi",
-            "name": "Leucuș Daniela",
-            "functie": "Asist. Med.",
-            "cnp": "2730825352625",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_q6yjs",
             "name": "Mercea Loredana Viorica",
             "functie": "Asist. Med.",
@@ -442,14 +434,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787571570022_gs5un",
-            "name": "Dobozi Simona Monica",
-            "functie": "As. Med. Pr.",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787571570022_0xjme",
             "name": "Măran Florina Violeta",
             "functie": "Instr ergoterapie",
@@ -525,6 +509,14 @@
             "id": "emp_1787571570022_sezmz",
             "name": "Ciurescu Voichița",
             "functie": "Spalatorasa",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787572775224_rg9ye",
+            "name": "Bălănescu Mihaela",
+            "functie": "Asist. Med.",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
