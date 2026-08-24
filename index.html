@@ -639,9 +639,6 @@
         // Daca rulam pe localhost -> folosim URL relative
         // Daca rulam pe GitHub Pages / alta origine externa -> determinam URL-ul serverului Python din localStorage sau il cerem utilizatorului
         let SERVER_BASE = '';
-        const FIXED_TUNNEL_URLS = [
-            'https://portal-angajati-dgasp.serveo.net'
-        ];
 
         async function detectServerBase() {
             const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
@@ -650,100 +647,64 @@
                 return;
             }
 
-            // Incercam mai intai URL-ul salvat in localStorage
+            // 1. Incercam URL-ul salvat recent in localStorage (cel mai rapid)
             const saved = localStorage.getItem('angajat_server_base');
             if (saved) {
                 try {
-                    const testResp = await fetch(saved + '/api/info', { signal: AbortSignal.timeout(4000) });
+                    const testResp = await fetch(saved + '/api/info', { signal: AbortSignal.timeout(3000) });
                     if (testResp.ok) { SERVER_BASE = saved; return; }
                 } catch(e) {}
             }
 
-            // Incercam URL-urile fixe cunoscute (Serveo etc.)
-            for (const url of FIXED_TUNNEL_URLS) {
-                try {
-                    const testResp = await fetch(url + '/api/info', { signal: AbortSignal.timeout(5000) });
-                    if (testResp.ok) {
-                        SERVER_BASE = url;
-                        localStorage.setItem('angajat_server_base', SERVER_BASE);
-                        return;
+            // 2. Citim server_config.json publicat automat de serverul Python pe GitHub Pages
+            try {
+                const origin = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
+                const configResp = await fetch(origin + '/server_config.json?t=' + Date.now(), { signal: AbortSignal.timeout(5000) });
+                if (configResp.ok) {
+                    const config = await configResp.json();
+                    const configUrl = (config.server_url || '').replace(/\/$/, '');
+                    if (configUrl) {
+                        try {
+                            const testResp = await fetch(configUrl + '/api/info', { signal: AbortSignal.timeout(5000) });
+                            if (testResp.ok) {
+                                SERVER_BASE = configUrl;
+                                localStorage.setItem('angajat_server_base', configUrl);
+                                return;
+                            }
+                        } catch(e) {}
                     }
-                } catch(e) {}
-            }
+                }
+            } catch(e) {}
 
-            // Afisam modal de configurare
-            await askUserForServerBase();
-        }
+            // 3. Incercam URL-ul fix Serveo
+            try {
+                const serveoBase = 'https://portal-angajati-dgasp.serveo.net';
+                const testResp = await fetch(serveoBase + '/api/info', { signal: AbortSignal.timeout(5000) });
+                if (testResp.ok) {
+                    SERVER_BASE = serveoBase;
+                    localStorage.setItem('angajat_server_base', serveoBase);
+                    return;
+                }
+            } catch(e) {}
 
-        function askUserForServerBase() {
-            return new Promise((resolve) => {
-                const existing = document.getElementById('server-config-modal');
-                if (existing) existing.remove();
-
-                const modal = document.createElement('div');
-                modal.id = 'server-config-modal';
-                modal.style.cssText = `
-                    position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;
-                    display:flex;align-items:center;justify-content:center;padding:1.5rem;
-                `;
-                modal.innerHTML = `
-                    <div style="background:#1e1e2e;border:1px solid rgba(139,92,246,0.4);border-radius:1rem;
-                         padding:2rem;max-width:480px;width:100%;color:#e2e8f0;font-family:Inter,sans-serif;">
-                        <div style="font-size:1.5rem;margin-bottom:0.5rem;">⚙️ Configurare server</div>
-                        <p style="color:#94a3b8;font-size:0.9rem;margin:0 0 1.2rem;">
-                            Aplicația rulează în afara rețelei locale.<br>
-                            Introduceți link-ul serverului primit de la HR<br>
-                            <span style="color:#a78bfa;">(exemplu: https://xxxxx.trycloudflare.com)</span>
-                        </p>
-                        <input id="server-url-input" type="url" placeholder="https://xxxxx.trycloudflare.com"
-                            style="width:100%;box-sizing:border-box;padding:0.75rem 1rem;border-radius:0.5rem;
-                            border:1px solid rgba(139,92,246,0.4);background:#0f0f1a;color:#e2e8f0;
-                            font-size:0.95rem;margin-bottom:1rem;outline:none;" />
-                        <div id="server-url-error" style="color:#f87171;font-size:0.8rem;margin-bottom:0.5rem;display:none;">
-                            Link invalid sau serverul nu răspunde. Verificați și reîncercați.
-                        </div>
-                        <button id="server-url-save" style="width:100%;padding:0.75rem;border-radius:0.5rem;
-                            border:none;background:linear-gradient(135deg,#7c3aed,#5b21b6);
-                            color:white;font-weight:700;font-size:1rem;cursor:pointer;">
-                            Conectare
-                        </button>
-                    </div>
-                `;
-                document.body.appendChild(modal);
-
-                const input = document.getElementById('server-url-input');
-                const errEl = document.getElementById('server-url-error');
-                const saveBtn = document.getElementById('server-url-save');
-
-                const saved = localStorage.getItem('angajat_server_base');
-                if (saved) input.value = saved;
-                input.focus();
-
-                saveBtn.addEventListener('click', async () => {
-                    let url = input.value.trim().replace(/\/$/, '');
-                    if (!url) return;
-                    saveBtn.disabled = true;
-                    saveBtn.textContent = 'Se verifică...';
-                    errEl.style.display = 'none';
-                    try {
-                        const resp = await fetch(url + '/api/info', { signal: AbortSignal.timeout(5000) });
-                        if (resp.ok) {
-                            SERVER_BASE = url;
-                            localStorage.setItem('angajat_server_base', url);
-                            modal.remove();
-                            resolve();
-                        } else {
-                            throw new Error('not ok');
-                        }
-                    } catch(e) {
-                        errEl.style.display = 'block';
-                        saveBtn.disabled = false;
-                        saveBtn.textContent = 'Conectare';
-                    }
-                });
-
-                input.addEventListener('keydown', (ev) => { if (ev.key === 'Enter') saveBtn.click(); });
-            });
+            // 4. Afisam un mesaj de eroare simplu in loc de modal cu campuri
+            const errDiv = document.createElement('div');
+            errDiv.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;padding:1.5rem;';
+            errDiv.innerHTML = `
+                <div style="background:#1e1e2e;border:1px solid rgba(239,68,68,0.5);border-radius:1rem;padding:2rem;max-width:400px;width:100%;color:#e2e8f0;font-family:Inter,sans-serif;text-align:center;">
+                    <div style="font-size:2.5rem;margin-bottom:1rem;">⚠️</div>
+                    <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;">Serverul nu este pornit</div>
+                    <p style="color:#94a3b8;font-size:0.9rem;margin:0 0 1.5rem;">
+                        Rugați HR-ul să pornească serverul de pe calculator.<br>
+                        Apoi reîncărcați această pagină.
+                    </p>
+                    <button onclick="location.reload()" style="padding:0.75rem 2rem;border-radius:0.5rem;border:none;background:linear-gradient(135deg,#7c3aed,#5b21b6);color:white;font-weight:700;cursor:pointer;font-size:1rem;">
+                        🔄 Reîncearcă
+                    </button>
+                </div>`;
+            document.body.appendChild(errDiv);
+            // Asteaptam indefinit — utilizatorul da click pe Reincearca
+            await new Promise(() => {});
         }
 
         function apiUrl(path) {
