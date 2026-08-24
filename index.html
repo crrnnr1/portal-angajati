@@ -318,7 +318,14 @@
             position: relative;
         }
         .m-cal-cell.wknd { background: rgba(255, 255, 255, 0.015); }
-        .m-cal-cell.holiday { background: rgba(239, 68, 68, 0.06); border-color: rgba(239, 68, 68, 0.12); }
+        .m-cal-cell.holiday {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.18), rgba(185, 28, 28, 0.08)) !important;
+            border-color: rgba(239, 68, 68, 0.35) !important;
+        }
+        .m-cal-cell.holiday .m-day-num {
+            color: #f87171 !important;
+            font-weight: 700;
+        }
         .m-cal-cell.other { opacity: 0.2; background: transparent; }
         .m-cal-cell.today { border: 1.5px solid var(--primary-color); box-shadow: 0 0 8px rgba(59, 130, 246, 0.2); }
 
@@ -348,10 +355,14 @@
         .m-cal-cell.today .m-day-num { color: var(--primary-color); }
 
         .m-holiday-tag {
-            font-size: 0.5rem;
-            color: #f87171;
-            line-height: 1;
-            padding: 0 0.15rem;
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: #fca5a5;
+            background: rgba(239, 68, 68, 0.25);
+            border-radius: 3px;
+            line-height: 1.1;
+            padding: 1px 3px;
+            margin: 1px 0;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -856,19 +867,21 @@
             const holidays = [];
             holidays.push({ date: `${year}-01-01`, name: 'Anul Nou' });
             holidays.push({ date: `${year}-01-02`, name: 'Anul Nou (Ziua 2)' });
-            holidays.push({ date: `${year}-01-24`, name: 'Ziua Unirii' });
+            holidays.push({ date: `${year}-01-06`, name: 'Boboteaza' });
+            holidays.push({ date: `${year}-01-07`, name: 'Sf. Ioan Botezătorul' });
+            holidays.push({ date: `${year}-01-24`, name: 'Ziua Unirii Principatelor' });
             holidays.push({ date: `${year}-05-01`, name: 'Ziua Muncii' });
             holidays.push({ date: `${year}-06-01`, name: 'Ziua Copilului' });
             holidays.push({ date: `${year}-08-15`, name: 'Adormirea Maicii Domnului' });
             holidays.push({ date: `${year}-11-30`, name: 'Sf. Andrei' });
             holidays.push({ date: `${year}-12-01`, name: 'Ziua Națională' });
-            holidays.push({ date: `${year}-12-25`, name: 'Crăciun' });
+            holidays.push({ date: `${year}-12-25`, name: 'Crăciun (Ziua 1)' });
             holidays.push({ date: `${year}-12-26`, name: 'Crăciun (Ziua 2)' });
 
             const easter = getEasterOrthodox(year);
             const goodFriday = new Date(easter); goodFriday.setDate(goodFriday.getDate() - 2);
             holidays.push({ date: dateToIso(goodFriday), name: 'Vinerea Mare' });
-            holidays.push({ date: dateToIso(easter), name: 'Paștele' });
+            holidays.push({ date: dateToIso(easter), name: 'Paștele Ortodox' });
             const easterMon = new Date(easter); easterMon.setDate(easterMon.getDate() + 1);
             holidays.push({ date: dateToIso(easterMon), name: 'A 2-a zi Paște' });
             const pentecost = new Date(easter); pentecost.setDate(pentecost.getDate() + 49);
@@ -1164,7 +1177,7 @@
                 cell.dataset.date = iso;
 
                 let html = `<div class="m-day-num">${day}</div>`;
-                if (holiday) html += `<div class="m-holiday-tag">${holiday.name}</div>`;
+                if (holiday) html += `<div class="m-holiday-tag" title="${holiday.name}">🏛️ ${holiday.name}</div>`;
 
                 html += '<div class="m-badges">';
                 let badgeCount = 0;
