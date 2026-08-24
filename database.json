@@ -6,8 +6,20 @@
             "functie": "Asist. Med.",
             "cnp": "1730414352620",
             "cuvenit": 35,
-            "intervals": [],
-            "leaves": []
+            "intervals": [
+                {
+                    "id": "int_1787556052259_rv6y",
+                    "start": "2027-01-11",
+                    "end": "2027-01-22",
+                    "days": 10
+                }
+            ],
+            "leaves": [
+                {
+                    "start": "2027-01-11",
+                    "end": "2027-01-22"
+                }
+            ]
         },
         {
             "id": "emp_1786613879264_3wo0p",
