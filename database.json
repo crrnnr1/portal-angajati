@@ -416,14 +416,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787571570021_9doim",
-            "name": "ORE SĂRBĂTOARE",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787571570021_le5fz",
             "name": "Micula Adriana Elena",
             "functie": "Asist. Med.",
@@ -435,14 +427,6 @@
             "id": "emp_1787571570021_3opj6",
             "name": "Gross Elena",
             "functie": "Instr. Ergo.",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570021_a7zhl",
-            "name": "ORE  NOAPTE",
-            "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
@@ -563,22 +547,6 @@
             "id": "emp_1787571570022_sezmz",
             "name": "Ciurescu Voichița",
             "functie": "Spalatorasa",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787572548754_ud1r7",
-            "name": "TLS - total ore lucrate inclusiv ore suplimentare",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787572548754_ybuuz",
-            "name": "TNL - total ore plătite în timpul normal de lucru",
-            "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
