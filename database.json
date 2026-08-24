@@ -73,14 +73,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1786613879264_q6yjs",
-            "name": "Mercea Loredana Viorica",
-            "functie": "Asist. Med.",
-            "cnp": "2790115352623",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_60u1s",
             "name": "Bogdan Claudiu Adrian",
             "functie": "Instr. Ergo.",
@@ -322,14 +314,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1786613879264_z1gcp",
-            "name": "Bustescu Radu Emanuela Paula",
-            "functie": "Asist. social",
-            "cnp": "2821106354165",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_s92j5",
             "name": "Daminescu Madalina Elena",
             "functie": "Psiho log",
@@ -370,22 +354,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787571570021_4amvi",
-            "name": "NUMELE ȘI \nPRENUMELE",
-            "functie": "FUNCŢIA",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570021_le5fz",
-            "name": "Micula Adriana Elena",
-            "functie": "Asist. Med.",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787571570021_3opj6",
             "name": "Gross Elena",
             "functie": "Instr. Ergo.",
@@ -405,14 +373,6 @@
             "id": "emp_1787571570021_ob1q3",
             "name": "Crîsciu Florin Samson",
             "functie": "Munc. Fochist",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_sfkxp",
-            "name": "NUMELE SI \r\nPRENUMELE",
-            "functie": "Functia",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
@@ -453,22 +413,6 @@
             "id": "emp_1787571570022_w9abd",
             "name": "Vierescu Cristian",
             "functie": "Instr ergoterapie",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_lyj9b",
-            "name": "Balintescu Valentin Constantin",
-            "functie": "Infirmiera",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_7ym1d",
-            "name": "Grecu Aurelia",
-            "functie": "Infirmiera",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
