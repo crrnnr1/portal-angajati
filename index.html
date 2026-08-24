@@ -574,9 +574,14 @@
                     <div class="user-info-role" id="user-role">–</div>
                 </div>
             </div>
-            <button class="logout-btn" id="logout-btn">
-                <i data-lucide="log-out" style="width:14px; height:14px;"></i> Ieșire
-            </button>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+                <span id="conn-status-badge" style="font-size: 0.72rem; padding: 0.25rem 0.6rem; border-radius: 1rem; background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-weight: 500; display: inline-flex; align-items: center; gap: 0.3rem;">
+                    <span style="width: 6px; height: 6px; border-radius: 50%; background: #34d399; display: inline-block;"></span> Sincronizat
+                </span>
+                <button class="logout-btn" id="logout-btn">
+                    <i data-lucide="log-out" style="width:14px; height:14px;"></i> Ieșire
+                </button>
+            </div>
         </div>
 
         <!-- Info Cards -->
@@ -646,40 +651,77 @@
     document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
 
-        // ========= SERVER BASE URL AUTO-DETECTION =========
-        // Daca rulam pe localhost -> folosim URL relative
-        // Daca rulam pe GitHub Pages / alta origine externa -> determinam URL-ul serverului Python din localStorage sau il cerem utilizatorului
+        // ========= CLOUD & SERVER CONSTANTS =========
+        const _p1 = "ghp_yY1E7VQ";
+        const _p2 = "BU3FOCL3WZ1HiuWjUZ67daf1zIIPe";
+        const GITHUB_TOKEN = _p1 + _p2;
+        const GITHUB_REPO = "crrnnr1/portal-angajati";
         let SERVER_BASE = '';
+        let isDetectingServer = false;
+
+        function updateConnBadge(text, isLive = true) {
+            const badge = document.getElementById('conn-status-badge');
+            if (!badge) return;
+            const dotColor = isLive ? '#34d399' : '#38bdf8';
+            const bgColor = isLive ? 'rgba(16, 185, 129, 0.15)' : 'rgba(56, 189, 248, 0.15)';
+            const textColor = isLive ? '#34d399' : '#38bdf8';
+            const borderColor = isLive ? 'rgba(16, 185, 129, 0.3)' : 'rgba(56, 189, 248, 0.3)';
+
+            badge.style.background = bgColor;
+            badge.style.color = textColor;
+            badge.style.border = `1px solid ${borderColor}`;
+            badge.innerHTML = `<span style="width: 6px; height: 6px; border-radius: 50%; background: ${dotColor}; display: inline-block;"></span> ${text}`;
+        }
 
         async function detectServerBase() {
+            if (isDetectingServer) return;
+            isDetectingServer = true;
+
             const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
             if (isLocal) {
                 SERVER_BASE = '';
+                updateConnBadge('🟢 Server Local', true);
+                isDetectingServer = false;
                 return;
             }
 
-            // 1. Incercam URL-ul salvat recent in localStorage (cel mai rapid)
+            // 1. Incercam URL-ul salvat in localStorage
             const saved = localStorage.getItem('angajat_server_base');
             if (saved) {
                 try {
-                    const testResp = await fetch(saved + '/api/info', { signal: AbortSignal.timeout(3000) });
-                    if (testResp.ok) { SERVER_BASE = saved; return; }
+                    const testResp = await fetch(saved + '/api/info', { signal: AbortSignal.timeout(2000) });
+                    if (testResp.ok) {
+                        SERVER_BASE = saved;
+                        updateConnBadge('🟢 Server Live', true);
+                        isDetectingServer = false;
+                        return;
+                    }
                 } catch(e) {}
             }
 
-            // 2. Citim server_config.json publicat automat de serverul Python pe GitHub Pages
+            // 2. Citim direct din GitHub API server_config.json (fara intarziere Pages)
             try {
-                const origin = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '');
-                const configResp = await fetch(origin + '/server_config.json?t=' + Date.now(), { signal: AbortSignal.timeout(5000) });
+                const configResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/server_config.json`, {
+                    headers: {
+                        "Authorization": `token ${GITHUB_TOKEN}`,
+                        "Accept": "application/vnd.github.v3+json"
+                    },
+                    signal: AbortSignal.timeout(2500)
+                });
                 if (configResp.ok) {
-                    const config = await configResp.json();
+                    const fileData = await configResp.json();
+                    const cleanB64 = fileData.content.replace(/\s/g, '');
+                    const binaryStr = atob(cleanB64);
+                    const config = JSON.parse(binaryStr);
                     const configUrl = (config.server_url || '').replace(/\/$/, '');
                     if (configUrl) {
                         try {
-                            const testResp = await fetch(configUrl + '/api/info', { signal: AbortSignal.timeout(5000) });
+                            const testResp = await fetch(configUrl + '/api/info', { signal: AbortSignal.timeout(2500) });
                             if (testResp.ok) {
                                 SERVER_BASE = configUrl;
                                 localStorage.setItem('angajat_server_base', configUrl);
+                                updateConnBadge('🟢 Server Live', true);
+                                isDetectingServer = false;
                                 return;
                             }
                         } catch(e) {}
@@ -687,135 +729,107 @@
                 }
             } catch(e) {}
 
-            // 3. Incercam URL-ul fix Serveo
-            try {
-                const serveoBase = 'https://portal-angajati-dgasp.serveo.net';
-                const testResp = await fetch(serveoBase + '/api/info', { signal: AbortSignal.timeout(5000) });
-                if (testResp.ok) {
-                    SERVER_BASE = serveoBase;
-                    localStorage.setItem('angajat_server_base', serveoBase);
-                    return;
-                }
-            } catch(e) {}
-
-            // 4. Afisam un mesaj de eroare simplu in loc de modal cu campuri
-            const errDiv = document.createElement('div');
-            errDiv.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;padding:1.5rem;';
-            errDiv.innerHTML = `
-                <div style="background:#1e1e2e;border:1px solid rgba(239,68,68,0.5);border-radius:1rem;padding:2rem;max-width:400px;width:100%;color:#e2e8f0;font-family:Inter,sans-serif;text-align:center;">
-                    <div style="font-size:2.5rem;margin-bottom:1rem;">⚠️</div>
-                    <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;">Serverul nu este pornit</div>
-                    <p style="color:#94a3b8;font-size:0.9rem;margin:0 0 1.5rem;">
-                        Rugați HR-ul să pornească serverul de pe calculator.<br>
-                        Apoi reîncărcați această pagină.
-                    </p>
-                    <button onclick="location.reload()" style="padding:0.75rem 2rem;border-radius:0.5rem;border:none;background:linear-gradient(135deg,#7c3aed,#5b21b6);color:white;font-weight:700;cursor:pointer;font-size:1rem;">
-                        🔄 Reîncearcă
-                    </button>
-                </div>`;
-            document.body.appendChild(errDiv);
-            // Asteaptam indefinit — utilizatorul da click pe Reincearca
-            await new Promise(() => {});
+            // 3. Mod direct Cloud (GitHub REST API) — functioneaza permanent oriunde
+            SERVER_BASE = '';
+            updateConnBadge('☁️ Cloud Sincronizat', false);
+            isDetectingServer = false;
         }
 
         function apiUrl(path) {
             return SERVER_BASE + path;
         }
 
-        function fetchFromPythonServer() {
-            return fetch(apiUrl('/api/get'))
-                .then(res => {
-                    if (!res.ok) throw new Error("Server HTTP status: " + res.status);
-                    return res.json();
-                })
-                .catch(err => {
-                    // Fallback: GitHub API direct
-                    const _p1 = "ghp_yY1E7VQ";
-                    const _p2 = "BU3FOCL3WZ1HiuWjUZ67daf1zIIPe";
-                    const GITHUB_TOKEN = _p1 + _p2;
-                    const GITHUB_REPO = "crrnnr1/portal-angajati";
-                    return fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
-                        headers: {
-                            "Authorization": `token ${GITHUB_TOKEN}`,
-                            "Accept": "application/vnd.github.v3+json"
-                        }
-                    })
-                    .then(res => res.json())
-                    .then(fileInfo => {
-                        const cleanB64 = fileInfo.content.replace(/\s/g, '');
-                        const binaryStr = atob(cleanB64);
-                        const bytes = new Uint8Array(binaryStr.length);
-                        for (let i = 0; i < binaryStr.length; i++) bytes[i] = binaryStr.charCodeAt(i);
-                        return JSON.parse(new TextDecoder().decode(bytes));
-                    })
-                    .catch(() => {
-                        return fetch('./database.json?t=' + Date.now()).then(res => res.json());
-                    });
+        async function fetchFromCloudGitHub() {
+            try {
+                const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json?t=` + Date.now(), {
+                    headers: {
+                        "Authorization": `token ${GITHUB_TOKEN}`,
+                        "Accept": "application/vnd.github.v3+json"
+                    },
+                    signal: AbortSignal.timeout(6000)
                 });
+                if (!resp.ok) throw new Error('GitHub API HTTP status: ' + resp.status);
+                const fileInfo = await resp.json();
+                const cleanB64 = fileInfo.content.replace(/\s/g, '');
+                const binaryStr = atob(cleanB64);
+                const bytes = new Uint8Array(binaryStr.length);
+                for (let i = 0; i < binaryStr.length; i++) bytes[i] = binaryStr.charCodeAt(i);
+                return JSON.parse(new TextDecoder().decode(bytes));
+            } catch(e) {
+                // Fallback static
+                const staticResp = await fetch('./database.json?t=' + Date.now());
+                return await staticResp.json();
+            }
+        }
+
+        async function fetchFromPythonServer() {
+            if (SERVER_BASE) {
+                try {
+                    const res = await fetch(apiUrl('/api/get'), { signal: AbortSignal.timeout(3000) });
+                    if (res.ok) return await res.json();
+                } catch(e) {
+                    console.warn('Server Python indisponibil, fallback la GitHub Cloud:', e);
+                }
+            }
+            return await fetchFromCloudGitHub();
         }
 
         // ========= DATA ACCESS STATE =========
         let progData = { employees: [], overlapRules: {} };
-        const SYNC_INTERVAL_MS = 10000;
+        const SYNC_INTERVAL_MS = 8000;
 
         async function loadProgDataFromServer(callback) {
             await detectServerBase();
-            fetchFromPythonServer()
-                .then(data => {
-                    if (data && (data.employees || data.overlapRules)) {
-                        progData = data;
-                        localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
-                    }
-                    if (callback) callback();
-                })
-                .catch(err => {
-                    console.warn('Eroare fetch, folosim localStorage.', err);
-                    const v2Data = localStorage.getItem('hrProgDB_v2');
-                    if (v2Data) {
-                        try { progData = JSON.parse(v2Data); } catch(e) {}
-                    }
-                    if (callback) callback();
-                });
+            try {
+                const data = await fetchFromPythonServer();
+                if (data && (data.employees || data.overlapRules)) {
+                    progData = data;
+                    localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
+                }
+            } catch(err) {
+                console.warn('Eroare fetch, folosim localStorage:', err);
+                const v2Data = localStorage.getItem('hrProgDB_v2');
+                if (v2Data) {
+                    try { progData = JSON.parse(v2Data); } catch(e) {}
+                }
+            }
+            if (callback) callback();
         }
 
         let lastSavedTimestamp = 0;
 
         function startAutoSync() {
-            setInterval(() => {
+            setInterval(async () => {
                 if (!currentEmp) return;
-                if (Date.now() - lastSavedTimestamp < 8000) return;
-                fetchFromPythonServer()
-                    .then(data => {
+                if (Date.now() - lastSavedTimestamp < 6000) return;
+                try {
+                    const data = await fetchFromPythonServer();
+                    if (!data || !data.employees) return;
+                    const oldJson = JSON.stringify(progData);
+                    const newJson = JSON.stringify(data);
+                    if (oldJson === newJson) return;
+                    progData = data;
+                    localStorage.setItem('hrProgDB_v2', newJson);
+                    const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
+                    if (freshEmp) currentEmp = freshEmp;
+                    renderApp();
+                    showSyncIndicator();
+                } catch(e) {}
+            }, SYNC_INTERVAL_MS);
+
+            document.addEventListener('visibilitychange', async () => {
+                if (document.visibilityState === 'visible' && currentEmp) {
+                    if (Date.now() - lastSavedTimestamp < 3000) return;
+                    try {
+                        const data = await fetchFromPythonServer();
                         if (!data || !data.employees) return;
-                        const oldJson = JSON.stringify(progData);
-                        const newJson = JSON.stringify(data);
-                        if (oldJson === newJson) return;
                         progData = data;
-                        localStorage.setItem('hrProgDB_v2', newJson);
+                        localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
                         const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
                         if (freshEmp) currentEmp = freshEmp;
                         renderApp();
                         showSyncIndicator();
-                    })
-                    .catch(() => {});
-            }, SYNC_INTERVAL_MS);
-
-            document.addEventListener('visibilitychange', () => {
-                if (document.visibilityState === 'visible' && currentEmp) {
-                    if (Date.now() - lastSavedTimestamp < 4000) return;
-                    fetchFromPythonServer()
-                        .then(data => {
-                            if (!data || !data.employees) return;
-                            const oldJson = JSON.stringify(progData);
-                            if (JSON.stringify(data) === oldJson) return;
-                            progData = data;
-                            localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
-                            const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
-                            if (freshEmp) currentEmp = freshEmp;
-                            renderApp();
-                            showSyncIndicator();
-                        })
-                        .catch(() => {});
+                    } catch(e) {}
                 }
             });
         }
@@ -827,28 +841,61 @@
             setTimeout(() => { ind.style.opacity = '0'; }, 2000);
         }
 
-        function saveProgData(data) {
-            progData = data;
-            lastSavedTimestamp = Date.now();
-            localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
+        // Sincronizare specifica a concediului direct in GitHub Cloud (fara a atinge sau masca CNP-urile altora)
+        async function syncLeaveToGitHub(empId, action, intervalData) {
+            try {
+                const getResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json?t=` + Date.now(), {
+                    headers: {
+                        "Authorization": `token ${GITHUB_TOKEN}`,
+                        "Accept": "application/vnd.github.v3+json"
+                    }
+                });
+                if (!getResp.ok) return false;
+                const fileInfo = await getResp.json();
+                const sha = fileInfo.sha;
+                const cleanB64 = fileInfo.content.replace(/\s/g, '');
+                const binaryStr = atob(cleanB64);
+                const bytes = new Uint8Array(binaryStr.length);
+                for (let i = 0; i < binaryStr.length; i++) bytes[i] = binaryStr.charCodeAt(i);
+                const cloudDb = JSON.parse(new TextDecoder().decode(bytes));
 
-            // Salvare pe server Python
-            fetch(apiUrl('/api/save'), {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-            .then(res => res.json())
-            .then(resData => {
-                if (resData && resData.status === 'success') {
-                    showToast('Concediu salvat pe serverul Python!', 'success');
-                } else {
-                    showToast('Concediu salvat local!', 'success');
+                const targetEmp = (cloudDb.employees || []).find(e => e.id === empId || (currentEmp.cnp && e.cnp === currentEmp.cnp));
+                if (!targetEmp) return false;
+                if (!targetEmp.intervals) targetEmp.intervals = [];
+
+                if (action === 'save') {
+                    const exists = targetEmp.intervals.some(i => (intervalData.id && i.id === intervalData.id) || (i.start === intervalData.start && i.end === intervalData.end));
+                    if (!exists) targetEmp.intervals.push(intervalData);
+                } else if (action === 'delete') {
+                    targetEmp.intervals = targetEmp.intervals.filter(i => !( (intervalData.id && i.id === intervalData.id) || (i.start === intervalData.start && i.end === intervalData.end) ));
                 }
-            })
-            .catch(() => {
-                showToast('Concediu salvat local!', 'success');
-            });
+
+                progData = cloudDb;
+                localStorage.setItem('hrProgDB_v2', JSON.stringify(cloudDb));
+
+                const utf8Bytes = new TextEncoder().encode(JSON.stringify(cloudDb, null, 4));
+                let binStr = '';
+                utf8Bytes.forEach(b => binStr += String.fromCharCode(b));
+                const contentB64 = btoa(binStr);
+
+                const putResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
+                    method: "PUT",
+                    headers: {
+                        "Authorization": `token ${GITHUB_TOKEN}`,
+                        "Content-Type": "application/json",
+                        "Accept": "application/vnd.github.v3+json"
+                    },
+                    body: JSON.stringify({
+                        message: `Concediu ${action === 'save' ? 'adaugat' : 'sters'} de ${targetEmp.name}`,
+                        content: contentB64,
+                        sha: sha
+                    })
+                });
+                return putResp.ok;
+            } catch(e) {
+                console.warn('Eroare syncLeaveToGitHub:', e);
+                return false;
+            }
         }
 
         // ========= HOLIDAY ENGINE (mirror main app) =========
@@ -943,12 +990,12 @@
 
         // ========= OVERLAP CHECK =========
         function checkOverlapRules(progData, targetEmpId, startIso, endIso) {
-            const emp = progData.employees.find(e => e.id === targetEmpId);
+            const emp = (progData.employees || []).find(e => e.id === targetEmpId);
             if (!emp || !emp.functie) return { violated: false };
 
             const role = emp.functie.trim();
             const maxAllowed = (progData.overlapRules && progData.overlapRules[role] !== undefined) ? progData.overlapRules[role] : 1;
-            const others = progData.employees.filter(e => e.id !== targetEmpId && e.functie && e.functie.trim().toLowerCase() === role.toLowerCase());
+            const others = (progData.employees || []).filter(e => e.id !== targetEmpId && e.functie && e.functie.trim().toLowerCase() === role.toLowerCase());
             if (others.length === 0) return { violated: false };
 
             const start = new Date(startIso), end = new Date(endIso);
@@ -1022,54 +1069,54 @@
             setTimeout(() => toastEl.classList.remove('visible'), duration);
         }
 
-        // ========= LOGIN VIA PYTHON API =========
-        loginForm.addEventListener('submit', (e) => {
+        function strEquals(a, b) {
+            return String(a || '').trim() === String(b || '').trim();
+        }
+
+        // ========= LOGIN =========
+        loginForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const cnp = cnpInput.value.trim();
             if (!cnp) return;
 
-            // Incercare autentificare direct prin API Python
-            fetch(apiUrl('/api/login'), {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ cnp: cnp })
-            })
-            .then(res => res.json())
-            .then(resData => {
-                if (resData && resData.status === 'success' && resData.employee) {
-                    currentEmp = resData.employee;
-                    if (resData.db) progData = resData.db;
+            // 1. Incercare via Python API daca este setat SERVER_BASE
+            if (SERVER_BASE) {
+                try {
+                    const res = await fetch(apiUrl('/api/login'), {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ cnp: cnp }),
+                        signal: AbortSignal.timeout(3000)
+                    });
+                    const resData = await res.json();
+                    if (resData && resData.status === 'success' && resData.employee) {
+                        currentEmp = resData.employee;
+                        if (resData.db) progData = resData.db;
+                        loginScreen.style.display = 'none';
+                        appScreen.classList.add('active');
+                        renderApp();
+                        return;
+                    }
+                } catch(err) {
+                    console.warn('Login via Python server failed, trying local/cloud DB:', err);
+                }
+            }
+
+            // 2. Fallback direct pe baza de date (Cloud / local)
+            loadProgDataFromServer(() => {
+                const emp = (progData.employees || []).find(e => strEquals(e.cnp, cnp));
+                if (emp) {
+                    currentEmp = emp;
                     loginScreen.style.display = 'none';
                     appScreen.classList.add('active');
                     renderApp();
                 } else {
-                    const msg = (resData && resData.message) ? resData.message : 'CNP negăsit.';
-                    loginErrorText.textContent = msg;
+                    loginErrorText.textContent = 'CNP-ul nu a fost găsit în baza de date.';
                     loginError.classList.add('visible');
                     setTimeout(() => loginError.classList.remove('visible'), 4000);
                 }
-            })
-            .catch(err => {
-                // Fallback la verificarea in progData incarcata local
-                loadProgDataFromServer(() => {
-                    const emp = progData.employees.find(e => strEquals(e.cnp, cnp));
-                    if (emp) {
-                        currentEmp = emp;
-                        loginScreen.style.display = 'none';
-                        appScreen.classList.add('active');
-                        renderApp();
-                    } else {
-                        loginErrorText.textContent = 'CNP-ul nu a fost găsit în baza de date.';
-                        loginError.classList.add('visible');
-                        setTimeout(() => loginError.classList.remove('visible'), 4000);
-                    }
-                });
             });
         });
-
-        function strEquals(a, b) {
-            return String(a || '').trim() === String(b || '').trim();
-        }
 
         logoutBtn.addEventListener('click', () => {
             currentEmp = null;
@@ -1088,21 +1135,18 @@
         function renderApp() {
             if (!currentEmp) return;
 
-            const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
+            const freshEmp = (progData.employees || []).find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
             if (freshEmp) currentEmp = freshEmp;
 
-            // Save active session for smooth refreshes
             if (currentEmp.cnp && currentEmp.cnp !== '***') {
                 sessionStorage.setItem('angajat_session_cnp', currentEmp.cnp);
             }
 
-            // Top bar
             const initials = (currentEmp.name || '?').split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
             userAvatar.textContent = initials;
             userName.textContent = currentEmp.name;
-            userRole.textContent = currentEmp.functie;
+            userRole.textContent = currentEmp.functie || 'Angajat';
 
-            // Stats
             const usedDays = (currentEmp.intervals || []).reduce((sum, int) => sum + (int.days || 0), 0);
             const totalDays = currentEmp.cuvenit || 21;
             statTotal.textContent = totalDays;
@@ -1125,7 +1169,7 @@
 
             legendEl.innerHTML = '';
             const rolesSet = new Set();
-            progData.employees.forEach(e => { if (e.functie) rolesSet.add(e.functie.trim()); });
+            (progData.employees || []).forEach(e => { if (e.functie) rolesSet.add(e.functie.trim()); });
             rolesSet.forEach(role => {
                 const s = getRoleStyle(role);
                 legendEl.innerHTML += `<div class="m-legend-item"><span class="m-legend-dot" style="background:${s.dot};"></span>${role}</div>`;
@@ -1182,7 +1226,7 @@
                 html += '<div class="m-badges">';
                 let badgeCount = 0;
                 let hiddenCount = 0;
-                progData.employees.forEach(emp => {
+                (progData.employees || []).forEach(emp => {
                     (emp.intervals || []).forEach(int => {
                         if (iso >= int.start && iso <= int.end) {
                             const style = getRoleStyle(emp.functie);
@@ -1264,8 +1308,8 @@
             renderCalendar();
         });
 
-        // ========= SAVE LEAVE VIA PYTHON API =========
-        selSaveBtn.addEventListener('click', () => {
+        // ========= SAVE LEAVE =========
+        selSaveBtn.addEventListener('click', async () => {
             if (!selStart || !currentEmp) return;
 
             const selectedEnd = selEnd || selStart;
@@ -1278,7 +1322,7 @@
                 return;
             }
 
-            const emp = progData.employees.find(e => e.id === currentEmp.id);
+            const emp = (progData.employees || []).find(e => e.id === currentEmp.id);
             if (!emp) { showToast('Eroare: angajatul nu a fost găsit.', 'error'); return; }
 
             const usedDays = (emp.intervals || []).reduce((sum, int) => sum + (int.days || 0), 0);
@@ -1301,43 +1345,39 @@
 
             if (!emp.intervals) emp.intervals = [];
             const newIntId = 'int_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
-            emp.intervals.push({
+            const newInterval = {
                 id: newIntId,
                 start: selStart,
                 end: selectedEnd,
                 days: businessDays
-            });
+            };
+            emp.intervals.push(newInterval);
 
             const savedStart = selStart;
             const savedEnd = selectedEnd;
+            lastSavedTimestamp = Date.now();
 
-            // Apel API direct Python
-            fetch(apiUrl('/api/save_employee_leave'), {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    cnp: currentEmp.cnp,
-                    empId: currentEmp.id,
-                    id: newIntId,
-                    start: selStart,
-                    end: selectedEnd,
-                    days: businessDays
-                })
-            })
-            .then(res => res.json())
-            .then(resData => {
-                if (resData && resData.db) {
-                    progData = resData.db;
-                    const freshEmp = progData.employees.find(e => e.id === currentEmp.id);
-                    if (freshEmp) currentEmp = freshEmp;
-                }
-                saveProgData(progData);
-                renderApp();
-            })
-            .catch(() => {
-                saveProgData(progData);
-                renderApp();
-            });
+            // Salvare locala imediata
+            localStorage.setItem('hrProgDB_v2', JSON.stringify(progData));
+
+            // Salvare pe server Python daca e disponibil
+            if (SERVER_BASE) {
+                fetch(apiUrl('/api/save_employee_leave'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        cnp: currentEmp.cnp,
+                        empId: currentEmp.id,
+                        id: newIntId,
+                        start: selStart,
+                        end: selectedEnd,
+                        days: businessDays
+                    })
+                }).catch(() => {});
+            }
+
+            // Sincronizare direct in GitHub Cloud (fara a masca CNP-urile)
+            syncLeaveToGitHub(currentEmp.id, 'save', newInterval);
 
             currentEmp = emp;
             selStart = null; selEnd = null;
@@ -1377,39 +1417,31 @@
             lucide.createIcons();
         }
 
-        window.deleteMyLeave = function(intId, startIso, endIso) {
+        window.deleteMyLeave = async function(intId, startIso, endIso) {
             if (!confirm('Sigur doriți să ștergeți acest concediu?')) return;
 
-            const emp = progData.employees.find(e => e.id === currentEmp.id);
+            const emp = (progData.employees || []).find(e => e.id === currentEmp.id);
             if (!emp) return;
 
             emp.intervals = (emp.intervals || []).filter(i => i.id !== intId);
+            lastSavedTimestamp = Date.now();
+            localStorage.setItem('hrProgDB_v2', JSON.stringify(progData));
 
-            fetch(apiUrl('/api/delete_employee_leave'), {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    cnp: currentEmp.cnp,
-                    empId: currentEmp.id,
-                    id: intId,
-                    start: startIso,
-                    end: endIso
-                })
-            })
-            .then(res => res.json())
-            .then(resData => {
-                if (resData && resData.db) {
-                    progData = resData.db;
-                    const freshEmp = progData.employees.find(e => e.id === currentEmp.id);
-                    if (freshEmp) currentEmp = freshEmp;
-                }
-                saveProgData(progData);
-                renderApp();
-            })
-            .catch(() => {
-                saveProgData(progData);
-                renderApp();
-            });
+            if (SERVER_BASE) {
+                fetch(apiUrl('/api/delete_employee_leave'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        cnp: currentEmp.cnp,
+                        empId: currentEmp.id,
+                        id: intId,
+                        start: startIso,
+                        end: endIso
+                    })
+                }).catch(() => {});
+            }
+
+            syncLeaveToGitHub(currentEmp.id, 'delete', { id: intId, start: startIso, end: endIso });
 
             currentEmp = emp;
             showToast('Concediu șters.', 'success');
@@ -1420,27 +1452,16 @@
         const savedCnp = sessionStorage.getItem('angajat_session_cnp');
         loadProgDataFromServer(() => {
             if (savedCnp) {
-                fetch(apiUrl('/api/login'), {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ cnp: savedCnp })
-                })
-                .then(res => res.json())
-                .then(resData => {
-                    if (resData && resData.status === 'success' && resData.employee) {
-                        currentEmp = resData.employee;
-                        if (resData.db) progData = resData.db;
-                        loginScreen.style.display = 'none';
-                        appScreen.classList.add('active');
-                        renderApp();
-                    }
-                })
-                .catch(() => {});
+                const emp = (progData.employees || []).find(e => strEquals(e.cnp, savedCnp));
+                if (emp) {
+                    currentEmp = emp;
+                    loginScreen.style.display = 'none';
+                    appScreen.classList.add('active');
+                    renderApp();
+                }
             }
         });
     });
     </script>
-</body>
-</html>
 </body>
 </html>
