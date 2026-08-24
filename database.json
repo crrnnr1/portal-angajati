@@ -433,6 +433,14 @@
             "cnp": "***",
             "cuvenit": 21,
             "intervals": []
+        },
+        {
+            "id": "emp_1787555324435_7ybek",
+            "name": "ORE SĂRBĂTOARE",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
         }
     ],
     "overlapRules": {}
