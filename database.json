@@ -1,30 +1,6 @@
 {
     "employees": [
         {
-            "id": "emp_1786613879264_wj39g",
-            "name": "Otescu Alin Nicolae",
-            "functie": "Infirmieră",
-            "cnp": "1881215351614",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_0vfxd",
-            "name": "Văcariu Ioan",
-            "functie": "Infirmieră",
-            "cnp": "1680904352628",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_9pt50",
-            "name": "Șoman Florin",
-            "functie": "Infirmieră",
-            "cnp": "1720302352636",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_60u1s",
             "name": "Bogdan Claudiu Adrian",
             "functie": "Instr. Ergo.",
@@ -82,78 +58,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1786613879264_av7wj",
-            "name": "Moisoni Marius Petru",
-            "functie": "Infirmieră",
-            "cnp": "1760626352623",
-            "cuvenit": 36,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_jjn5v",
-            "name": "Mudaci Ana",
-            "functie": "Infirmieră",
-            "cnp": "2820913351579",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_sgj5f",
-            "name": "Olariu Oana Ancuta",
-            "functie": "Infirmieră",
-            "cnp": "2860512351582",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_n4vr1",
-            "name": "Paralescu Rodica",
-            "functie": "Infirmieră",
-            "cnp": "2781027352623",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_x3lrh",
-            "name": "Petrescu Liliana",
-            "functie": "Infirmieră",
-            "cnp": "2691129352632",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_b0wwf",
-            "name": "Stoicănescu Sorina",
-            "functie": "Infirmieră",
-            "cnp": "2730212352621",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_r2d07",
-            "name": "Tătar Daniel",
-            "functie": "Infirmieră",
-            "cnp": "1740119352621",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_ncdw0",
-            "name": "Andrei Sergiu",
-            "functie": "Ingrijitoare",
-            "cnp": "1880201350033",
-            "cuvenit": 33,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_lo32p",
-            "name": "Munteanu Mihaela Miorita",
-            "functie": "Ingrijitoare",
-            "cnp": "2710812352625",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_xu1lg",
             "name": "Ciurescu Voichita Dorina",
             "functie": "Spalatoreasa",
@@ -202,26 +106,10 @@
             "intervals": []
         },
         {
-            "id": "emp_1786613879264_mldhr",
-            "name": "Muscai Frăguța",
-            "functie": "Insp. Spec. finan. Cont.",
-            "cnp": "2710203352647",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_9lrws",
             "name": "Sajti Janos",
             "functie": "Kinetoterapeut",
             "cnp": "1820406351598",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_hhvba",
-            "name": "Crîștiu Dan",
-            "functie": "Insp. Spec. Res. Umane",
-            "cnp": "1690122352622",
             "cuvenit": 35,
             "intervals": []
         },
@@ -242,65 +130,9 @@
             "intervals": []
         },
         {
-            "id": "emp_1787571570021_ik32b",
-            "name": "Petrescu Cristian Ioan",
-            "functie": "Infirmieră",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787571570021_ob1q3",
             "name": "Crîsciu Florin Samson",
             "functie": "Munc. Fochist",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_0xjme",
-            "name": "Măran Florina Violeta",
-            "functie": "Instr ergoterapie",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_qs2qy",
-            "name": "Ocnariu Mariana",
-            "functie": "Instr ergoterapie",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_r5ygc",
-            "name": "Pop Coman Daniel",
-            "functie": "Instr ergoterapie",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_rey65",
-            "name": "Tatar Daniel Vasile",
-            "functie": "Instr ergoterapie",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_w9abd",
-            "name": "Vierescu Cristian",
-            "functie": "Instr ergoterapie",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787571570022_150sx",
-            "name": "Munteanu Mihaela",
-            "functie": "Ingrijitor curatenie",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
