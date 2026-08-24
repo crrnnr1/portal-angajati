@@ -1,14 +1,6 @@
 {
     "employees": [
         {
-            "id": "emp_1786613879264_3wo0p",
-            "name": "Ciucă Călin",
-            "functie": "Infirmieră",
-            "cnp": "1880213350085",
-            "cuvenit": 34,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_wj39g",
             "name": "Otescu Alin Nicolae",
             "functie": "Infirmieră",
@@ -17,42 +9,10 @@
             "intervals": []
         },
         {
-            "id": "emp_1786613879264_cvm2m",
-            "name": "Gavrilescu Elvira",
-            "functie": "Infirmieră",
-            "cnp": "2650226352634",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_ox5ot",
-            "name": "Lupu Săndel",
-            "functie": "Infirmieră",
-            "cnp": "1730205330796",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_0vfxd",
             "name": "Văcariu Ioan",
             "functie": "Infirmieră",
             "cnp": "1680904352628",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_eyfef",
-            "name": "Dragu Fira",
-            "functie": "Infirmieră",
-            "cnp": "2680204352659",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_fev10",
-            "name": "Hota Valentina",
-            "functie": "Infirmieră",
-            "cnp": "2761002352622",
             "cuvenit": 35,
             "intervals": []
         },
@@ -118,62 +78,6 @@
             "name": "Petrovici Crina Maria",
             "functie": "Lucr. Soc",
             "cnp": "2830915351572",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_m568n",
-            "name": "Berke Mirela Lia",
-            "functie": "Infirmieră",
-            "cnp": "2700926352627",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_7p3nb",
-            "name": "Boanca Cristiana",
-            "functie": "Infirmieră",
-            "cnp": "2731010352628",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_oycpr",
-            "name": "Catrinoiu Laurentiu Ioan",
-            "functie": "Infirmieră",
-            "cnp": "1780326352645",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_s5f3k",
-            "name": "Jiva Gabriel",
-            "functie": "Infirmieră",
-            "cnp": "1720319352622",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_ycljm",
-            "name": "Kiss Irina",
-            "functie": "Infirmieră",
-            "cnp": "2720208352649",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_a1hps",
-            "name": "Maran Maria Mirabela",
-            "functie": "Infirmieră",
-            "cnp": "2870907352294",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1786613879264_mqojt",
-            "name": "Moisoni Maria Liliana",
-            "functie": "Infirmieră",
-            "cnp": "2761214352620",
             "cuvenit": 35,
             "intervals": []
         },
