@@ -635,44 +635,160 @@
     document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
 
-        // ========= DATA ACCESS (GitHub REST API Direct Cloud Sync) =========
-        let progData = { employees: [], overlapRules: {} };
-        const _p1 = "ghp_yY1E7VQ";
-        const _p2 = "BU3FOCL3WZ1HiuWjUZ67daf1zIIPe";
-        const GITHUB_TOKEN = _p1 + _p2;
-        const GITHUB_REPO = "crrnnr1/portal-angajati";
-        const SYNC_INTERVAL_MS = 20000; // Reimprospatare la fiecare 20 secunde
+        // ========= SERVER BASE URL AUTO-DETECTION =========
+        // Daca rulam pe localhost -> folosim URL relative
+        // Daca rulam pe GitHub Pages / alta origine externa -> determinam URL-ul serverului Python din localStorage sau il cerem utilizatorului
+        let SERVER_BASE = '';
+        const FIXED_TUNNEL_URLS = [
+            'https://portal-angajati-dgasp.serveo.net'
+        ];
 
-        function fetchFromCloud() {
-            // Citire în timp real direct din GitHub API (fără delay de CDN/build)
-            return fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
-                headers: {
-                    "Authorization": `token ${GITHUB_TOKEN}`,
-                    "Accept": "application/vnd.github.v3+json"
-                }
-            })
-            .then(res => {
-                if (!res.ok) throw new Error("GitHub API status: " + res.status);
-                return res.json();
-            })
-            .then(fileInfo => {
-                const cleanB64 = fileInfo.content.replace(/\s/g, '');
-                const binaryStr = atob(cleanB64);
-                const bytes = new Uint8Array(binaryStr.length);
-                for (let i = 0; i < binaryStr.length; i++) {
-                    bytes[i] = binaryStr.charCodeAt(i);
-                }
-                const jsonText = new TextDecoder().decode(bytes);
-                return JSON.parse(jsonText);
-            })
-            .catch(err => {
-                // Fallback la fișierul static ./database.json
-                return fetch('./database.json?t=' + Date.now()).then(res => res.json());
+        async function detectServerBase() {
+            const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            if (isLocal) {
+                SERVER_BASE = '';
+                return;
+            }
+
+            // Incercam mai intai URL-ul salvat in localStorage
+            const saved = localStorage.getItem('angajat_server_base');
+            if (saved) {
+                try {
+                    const testResp = await fetch(saved + '/api/info', { signal: AbortSignal.timeout(4000) });
+                    if (testResp.ok) { SERVER_BASE = saved; return; }
+                } catch(e) {}
+            }
+
+            // Incercam URL-urile fixe cunoscute (Serveo etc.)
+            for (const url of FIXED_TUNNEL_URLS) {
+                try {
+                    const testResp = await fetch(url + '/api/info', { signal: AbortSignal.timeout(5000) });
+                    if (testResp.ok) {
+                        SERVER_BASE = url;
+                        localStorage.setItem('angajat_server_base', SERVER_BASE);
+                        return;
+                    }
+                } catch(e) {}
+            }
+
+            // Afisam modal de configurare
+            await askUserForServerBase();
+        }
+
+        function askUserForServerBase() {
+            return new Promise((resolve) => {
+                const existing = document.getElementById('server-config-modal');
+                if (existing) existing.remove();
+
+                const modal = document.createElement('div');
+                modal.id = 'server-config-modal';
+                modal.style.cssText = `
+                    position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;
+                    display:flex;align-items:center;justify-content:center;padding:1.5rem;
+                `;
+                modal.innerHTML = `
+                    <div style="background:#1e1e2e;border:1px solid rgba(139,92,246,0.4);border-radius:1rem;
+                         padding:2rem;max-width:480px;width:100%;color:#e2e8f0;font-family:Inter,sans-serif;">
+                        <div style="font-size:1.5rem;margin-bottom:0.5rem;">⚙️ Configurare server</div>
+                        <p style="color:#94a3b8;font-size:0.9rem;margin:0 0 1.2rem;">
+                            Aplicația rulează în afara rețelei locale.<br>
+                            Introduceți link-ul serverului primit de la HR<br>
+                            <span style="color:#a78bfa;">(exemplu: https://xxxxx.trycloudflare.com)</span>
+                        </p>
+                        <input id="server-url-input" type="url" placeholder="https://xxxxx.trycloudflare.com"
+                            style="width:100%;box-sizing:border-box;padding:0.75rem 1rem;border-radius:0.5rem;
+                            border:1px solid rgba(139,92,246,0.4);background:#0f0f1a;color:#e2e8f0;
+                            font-size:0.95rem;margin-bottom:1rem;outline:none;" />
+                        <div id="server-url-error" style="color:#f87171;font-size:0.8rem;margin-bottom:0.5rem;display:none;">
+                            Link invalid sau serverul nu răspunde. Verificați și reîncercați.
+                        </div>
+                        <button id="server-url-save" style="width:100%;padding:0.75rem;border-radius:0.5rem;
+                            border:none;background:linear-gradient(135deg,#7c3aed,#5b21b6);
+                            color:white;font-weight:700;font-size:1rem;cursor:pointer;">
+                            Conectare
+                        </button>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+
+                const input = document.getElementById('server-url-input');
+                const errEl = document.getElementById('server-url-error');
+                const saveBtn = document.getElementById('server-url-save');
+
+                const saved = localStorage.getItem('angajat_server_base');
+                if (saved) input.value = saved;
+                input.focus();
+
+                saveBtn.addEventListener('click', async () => {
+                    let url = input.value.trim().replace(/\/$/, '');
+                    if (!url) return;
+                    saveBtn.disabled = true;
+                    saveBtn.textContent = 'Se verifică...';
+                    errEl.style.display = 'none';
+                    try {
+                        const resp = await fetch(url + '/api/info', { signal: AbortSignal.timeout(5000) });
+                        if (resp.ok) {
+                            SERVER_BASE = url;
+                            localStorage.setItem('angajat_server_base', url);
+                            modal.remove();
+                            resolve();
+                        } else {
+                            throw new Error('not ok');
+                        }
+                    } catch(e) {
+                        errEl.style.display = 'block';
+                        saveBtn.disabled = false;
+                        saveBtn.textContent = 'Conectare';
+                    }
+                });
+
+                input.addEventListener('keydown', (ev) => { if (ev.key === 'Enter') saveBtn.click(); });
             });
         }
 
-        function loadProgDataFromServer(callback) {
-            fetchFromCloud()
+        function apiUrl(path) {
+            return SERVER_BASE + path;
+        }
+
+        function fetchFromPythonServer() {
+            return fetch(apiUrl('/api/get'))
+                .then(res => {
+                    if (!res.ok) throw new Error("Server HTTP status: " + res.status);
+                    return res.json();
+                })
+                .catch(err => {
+                    // Fallback: GitHub API direct
+                    const _p1 = "ghp_yY1E7VQ";
+                    const _p2 = "BU3FOCL3WZ1HiuWjUZ67daf1zIIPe";
+                    const GITHUB_TOKEN = _p1 + _p2;
+                    const GITHUB_REPO = "crrnnr1/portal-angajati";
+                    return fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
+                        headers: {
+                            "Authorization": `token ${GITHUB_TOKEN}`,
+                            "Accept": "application/vnd.github.v3+json"
+                        }
+                    })
+                    .then(res => res.json())
+                    .then(fileInfo => {
+                        const cleanB64 = fileInfo.content.replace(/\s/g, '');
+                        const binaryStr = atob(cleanB64);
+                        const bytes = new Uint8Array(binaryStr.length);
+                        for (let i = 0; i < binaryStr.length; i++) bytes[i] = binaryStr.charCodeAt(i);
+                        return JSON.parse(new TextDecoder().decode(bytes));
+                    })
+                    .catch(() => {
+                        return fetch('./database.json?t=' + Date.now()).then(res => res.json());
+                    });
+                });
+        }
+
+        // ========= DATA ACCESS STATE =========
+        let progData = { employees: [], overlapRules: {} };
+        const SYNC_INTERVAL_MS = 10000;
+
+        async function loadProgDataFromServer(callback) {
+            await detectServerBase();
+            fetchFromPythonServer()
                 .then(data => {
                     if (data && (data.employees || data.overlapRules)) {
                         progData = data;
@@ -681,7 +797,7 @@
                     if (callback) callback();
                 })
                 .catch(err => {
-                    console.warn('Eroare fetchFromCloud, folosim localStorage.', err);
+                    console.warn('Eroare fetch, folosim localStorage.', err);
                     const v2Data = localStorage.getItem('hrProgDB_v2');
                     if (v2Data) {
                         try { progData = JSON.parse(v2Data); } catch(e) {}
@@ -692,40 +808,37 @@
 
         let lastSavedTimestamp = 0;
 
-        // Sincronizare automata in fundal — actualizeaza calendarul angajatilor logati
         function startAutoSync() {
             setInterval(() => {
-                if (!currentEmp) return; // nu sincroniza daca nu e nimeni logat
-                if (Date.now() - lastSavedTimestamp < 10000) return; // previne suprascrierea datelor proaspăt salvate
-                fetchFromCloud()
+                if (!currentEmp) return;
+                if (Date.now() - lastSavedTimestamp < 8000) return;
+                fetchFromPythonServer()
                     .then(data => {
                         if (!data || !data.employees) return;
                         const oldJson = JSON.stringify(progData);
                         const newJson = JSON.stringify(data);
-                        if (oldJson === newJson) return; // nimic nou
+                        if (oldJson === newJson) return;
                         progData = data;
                         localStorage.setItem('hrProgDB_v2', newJson);
-                        // Actualizeaza referinta angajat logat
-                        const freshEmp = progData.employees.find(e => e.id === currentEmp.id);
+                        const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
                         if (freshEmp) currentEmp = freshEmp;
                         renderApp();
                         showSyncIndicator();
                     })
-                    .catch(() => {}); // erorile de retea se ignora silentios
+                    .catch(() => {});
             }, SYNC_INTERVAL_MS);
 
-            // Refresh si cand utilizatorul revine pe tab
             document.addEventListener('visibilitychange', () => {
                 if (document.visibilityState === 'visible' && currentEmp) {
-                    if (Date.now() - lastSavedTimestamp < 5000) return;
-                    fetchFromCloud()
+                    if (Date.now() - lastSavedTimestamp < 4000) return;
+                    fetchFromPythonServer()
                         .then(data => {
                             if (!data || !data.employees) return;
                             const oldJson = JSON.stringify(progData);
                             if (JSON.stringify(data) === oldJson) return;
                             progData = data;
                             localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
-                            const freshEmp = progData.employees.find(e => e.id === currentEmp.id);
+                            const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
                             if (freshEmp) currentEmp = freshEmp;
                             renderApp();
                             showSyncIndicator();
@@ -742,82 +855,29 @@
             setTimeout(() => { ind.style.opacity = '0'; }, 2000);
         }
 
-        function saveToGitHubAPI(data, retryCount = 0) {
-            return fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
-                headers: {
-                    "Authorization": `token ${GITHUB_TOKEN}`,
-                    "Accept": "application/vnd.github.v3+json"
-                }
-            })
-            .then(res => res.ok ? res.json() : null)
-            .then(fileInfo => {
-                const sha = fileInfo ? fileInfo.sha : null;
-                const utf8Bytes = new TextEncoder().encode(JSON.stringify(data, null, 4));
-                let binaryStr = '';
-                utf8Bytes.forEach(b => binaryStr += String.fromCharCode(b));
-                const contentB64 = btoa(binaryStr);
-
-                const payload = {
-                    message: "Update concediu angajat",
-                    content: contentB64
-                };
-                if (sha) payload.sha = sha;
-
-                return fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
-                    method: "PUT",
-                    headers: {
-                        "Authorization": `token ${GITHUB_TOKEN}`,
-                        "Content-Type": "application/json",
-                        "Accept": "application/vnd.github.v3+json"
-                    },
-                    body: JSON.stringify(payload)
-                });
-            })
-            .then(res => {
-                if (res && res.status === 409 && retryCount < 3) {
-                    console.warn('GitHub SHA conflict, reîncercare salvare...', retryCount + 1);
-                    return new Promise(resolve => setTimeout(resolve, 500)).then(() => saveToGitHubAPI(data, retryCount + 1));
-                }
-                return res;
-            });
-        }
-
         function saveProgData(data) {
             progData = data;
             lastSavedTimestamp = Date.now();
             localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
 
-            // 1. Salvare pe serverul local /api/save (dacă rulează server.py)
-            fetch('/api/save', {
+            // Salvare pe server Python
+            fetch(apiUrl('/api/save'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
-            }).catch(() => {});
-
-            // 2. Salvare pe Cloud JSONBlob
-            const CLOUD_DB_URL = "https://jsonblob.com/api/jsonBlob/019fd664-c8ce-79ad-8784-0623f7cf5032";
-            fetch(CLOUD_DB_URL, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            }).catch(() => {});
-
-            // 3. Salvare direct pe GitHub API (pentru GitHub Pages)
-            saveToGitHubAPI(data)
-            .then(res => {
-                if (res && (res.ok || res.status === 200 || res.status === 201)) {
-                    showToast('Concediu salvat cu succes!', 'success');
+            })
+            .then(res => res.json())
+            .then(resData => {
+                if (resData && resData.status === 'success') {
+                    showToast('Concediu salvat pe serverul Python!', 'success');
                 } else {
-                    console.warn('GitHub API save status:', res ? res.status : 'error');
-                    showToast('Concediu salvat local și pe server!', 'success');
+                    showToast('Concediu salvat local!', 'success');
                 }
             })
-            .catch(err => {
-                console.error('Eroare salvare GitHub API:', err);
+            .catch(() => {
                 showToast('Concediu salvat local!', 'success');
             });
         }
-
 
         // ========= HOLIDAY ENGINE (mirror main app) =========
         function getEasterOrthodox(year) {
@@ -888,7 +948,7 @@
             return p.length === 3 ? `${p[2]}.${p[1]}.${p[0]}` : iso;
         }
 
-        // ========= ROLE COLORS (mirror main app) =========
+        // ========= ROLE COLORS =========
         const roleColors = [
             { bg: 'rgba(245,158,11,0.3)', text: '#fef3c7', border: 'rgba(245,158,11,0.5)', dot: '#f59e0b' },
             { bg: 'rgba(16,185,129,0.3)', text: '#d1fae5', border: 'rgba(16,185,129,0.5)', dot: '#10b981' },
@@ -907,7 +967,7 @@
             return roleColorMap[n];
         }
 
-        // ========= OVERLAP CHECK (mirror main app) =========
+        // ========= OVERLAP CHECK =========
         function checkOverlapRules(progData, targetEmpId, startIso, endIso) {
             const emp = progData.employees.find(e => e.id === targetEmpId);
             if (!emp || !emp.functie) return { violated: false };
@@ -949,8 +1009,9 @@
         const monthNamesRo = ['Ianuarie','Februarie','Martie','Aprilie','Mai','Iunie','Iulie','August','Septembrie','Octombrie','Noiembrie','Decembrie'];
 
         // ========= STATE =========
-        let currentEmp = null; // The logged-in employee
-        let currentCalDate = new Date();
+        let currentEmp = null;
+        const defaultNextYear = new Date().getFullYear() + 1;
+        let currentCalDate = new Date(defaultNextYear, 0, 1);
         let selStart = null, selEnd = null;
 
         // ========= DOM REFS =========
@@ -980,64 +1041,89 @@
         const toastEl = document.getElementById('toast');
 
         // ========= TOAST =========
-        function showToast(msg, type = 'success', duration = 3000) {
+        function showToast(msg, type = 'success', duration = 3500) {
             toastEl.textContent = msg;
             toastEl.className = `toast ${type}`;
             requestAnimationFrame(() => toastEl.classList.add('visible'));
             setTimeout(() => toastEl.classList.remove('visible'), duration);
         }
 
-        // ========= LOGIN =========
+        // ========= LOGIN VIA PYTHON API =========
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const cnp = cnpInput.value.trim();
             if (!cnp) return;
 
-            loadProgDataFromServer(() => {
-                if (progData.employees.length === 0) {
-                    loginErrorText.textContent = 'Nu există angajați în baza de date. Contactați administratorul.';
-                    loginError.classList.add('visible');
-                    return;
-                }
-
-                const emp = progData.employees.find(e => e.cnp === cnp);
-                if (!emp) {
-                    loginErrorText.textContent = 'CNP-ul nu a fost găsit în baza de date. Verificați și încercați din nou.';
+            // Incercare autentificare direct prin API Python
+            fetch(apiUrl('/api/login'), {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ cnp: cnp })
+            })
+            .then(res => res.json())
+            .then(resData => {
+                if (resData && resData.status === 'success' && resData.employee) {
+                    currentEmp = resData.employee;
+                    if (resData.db) progData = resData.db;
+                    loginScreen.style.display = 'none';
+                    appScreen.classList.add('active');
+                    renderApp();
+                } else {
+                    const msg = (resData && resData.message) ? resData.message : 'CNP negăsit.';
+                    loginErrorText.textContent = msg;
                     loginError.classList.add('visible');
                     setTimeout(() => loginError.classList.remove('visible'), 4000);
-                    return;
                 }
-
-                currentEmp = emp;
-                loginScreen.style.display = 'none';
-                appScreen.classList.add('active');
-                renderApp();
+            })
+            .catch(err => {
+                // Fallback la verificarea in progData incarcata local
+                loadProgDataFromServer(() => {
+                    const emp = progData.employees.find(e => strEquals(e.cnp, cnp));
+                    if (emp) {
+                        currentEmp = emp;
+                        loginScreen.style.display = 'none';
+                        appScreen.classList.add('active');
+                        renderApp();
+                    } else {
+                        loginErrorText.textContent = 'CNP-ul nu a fost găsit în baza de date.';
+                        loginError.classList.add('visible');
+                        setTimeout(() => loginError.classList.remove('visible'), 4000);
+                    }
+                });
             });
         });
+
+        function strEquals(a, b) {
+            return String(a || '').trim() === String(b || '').trim();
+        }
 
         logoutBtn.addEventListener('click', () => {
             currentEmp = null;
             selStart = null; selEnd = null;
             cnpInput.value = '';
+            sessionStorage.removeItem('angajat_session_cnp');
             appScreen.classList.remove('active');
             loginScreen.style.display = 'flex';
             selBar.classList.remove('visible');
             document.body.classList.remove('has-selection');
         });
 
-        // Porneste sincronizarea automata
         startAutoSync();
 
         // ========= RENDER APP =========
         function renderApp() {
             if (!currentEmp) return;
 
-            // Refresh employee reference from global progData
-            const freshEmp = progData.employees.find(e => e.id === currentEmp.id);
+            const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
             if (freshEmp) currentEmp = freshEmp;
 
+            // Save active session for smooth refreshes
+            if (currentEmp.cnp && currentEmp.cnp !== '***') {
+                sessionStorage.setItem('angajat_session_cnp', currentEmp.cnp);
+            }
+
             // Top bar
-            const initials = currentEmp.name.split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
+            const initials = (currentEmp.name || '?').split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
             userAvatar.textContent = initials;
             userName.textContent = currentEmp.name;
             userRole.textContent = currentEmp.functie;
@@ -1049,12 +1135,8 @@
             statUsed.textContent = usedDays;
             statRemaining.textContent = Math.max(0, totalDays - usedDays);
 
-            // Calendar
             renderCalendar();
-
-            // My leaves list
             renderMyLeaves();
-
             lucide.createIcons();
         }
 
@@ -1067,7 +1149,6 @@
             const month = currentCalDate.getMonth();
             calTitle.textContent = `${monthNamesRo[month]} ${year}`;
 
-            // Legend
             legendEl.innerHTML = '';
             const rolesSet = new Set();
             progData.employees.forEach(e => { if (e.functie) rolesSet.add(e.functie.trim()); });
@@ -1078,7 +1159,6 @@
 
             calGrid.innerHTML = '';
 
-            // Headers
             const dayNames = ['Lu','Ma','Mi','Jo','Vi','Sâ','Du'];
             dayNames.forEach((dn, i) => {
                 const hdr = document.createElement('div');
@@ -1087,14 +1167,12 @@
                 calGrid.appendChild(hdr);
             });
 
-            // Build month
             const firstDay = new Date(year, month, 1);
             const lastDay = new Date(year, month + 1, 0);
             const daysInMonth = lastDay.getDate();
             let startDow = firstDay.getDay();
             if (startDow === 0) startDow = 7;
 
-            // Prev month padding
             const prevLast = new Date(year, month, 0).getDate();
             for (let i = startDow - 1; i > 0; i--) {
                 const cell = document.createElement('div');
@@ -1103,7 +1181,6 @@
                 calGrid.appendChild(cell);
             }
 
-            // Current month
             const today = new Date();
             for (let day = 1; day <= daysInMonth; day++) {
                 const cellDate = new Date(year, month, day);
@@ -1113,7 +1190,6 @@
                 const holiday = isHoliday(iso);
                 const isToday = cellDate.toDateString() === today.toDateString();
 
-                // Selection classes
                 let selCls = '';
                 if (selStart && !selEnd && iso === selStart) selCls = 'sel-start';
                 else if (selStart && selEnd) {
@@ -1129,7 +1205,6 @@
                 let html = `<div class="m-day-num">${day}</div>`;
                 if (holiday) html += `<div class="m-holiday-tag">${holiday.name}</div>`;
 
-                // Badges: all employees on leave this day
                 html += '<div class="m-badges">';
                 let badgeCount = 0;
                 let hiddenCount = 0;
@@ -1152,14 +1227,10 @@
                 html += '</div>';
 
                 cell.innerHTML = html;
-
-                // Click handler
                 cell.addEventListener('click', () => handleCellClick(iso));
-
                 calGrid.appendChild(cell);
             }
 
-            // Next month padding
             const totalCells = (startDow - 1) + daysInMonth;
             const rem = (7 - (totalCells % 7)) % 7;
             for (let i = 1; i <= rem; i++) {
@@ -1208,7 +1279,6 @@
             } else {
                 const bDays = getBusinessDaysCount(new Date(selStart), new Date(selStart));
                 selBarInfo.textContent = `📅 ${formatIsoToRo(selStart)} (${bDays} zi lucrătoare)`;
-                // O singură dată selectată înseamnă o zi de concediu.
                 selSaveBtn.disabled = false;
             }
         }
@@ -1220,13 +1290,11 @@
             renderCalendar();
         });
 
-        // ========= SAVE LEAVE =========
+        // ========= SAVE LEAVE VIA PYTHON API =========
         selSaveBtn.addEventListener('click', () => {
             if (!selStart || !currentEmp) return;
 
-            // Dacă nu este aleasă o a doua dată, intervalul se încheie în aceeași zi.
             const selectedEnd = selEnd || selStart;
-
             const startDate = new Date(selStart);
             const endDate = new Date(selectedEnd);
             const businessDays = getBusinessDaysCount(startDate, endDate);
@@ -1236,11 +1304,9 @@
                 return;
             }
 
-            // Find the employee in fresh data to check current total used
             const emp = progData.employees.find(e => e.id === currentEmp.id);
             if (!emp) { showToast('Eroare: angajatul nu a fost găsit.', 'error'); return; }
 
-            // Check if total scheduled days exceeds allowed cuvenit
             const usedDays = (emp.intervals || []).reduce((sum, int) => sum + (int.days || 0), 0);
             const totalDays = emp.cuvenit || 21;
             if (usedDays + businessDays > totalDays) {
@@ -1249,36 +1315,63 @@
                 return;
             }
 
-            // Overlap check
             const check = checkOverlapRules(progData, currentEmp.id, selStart, selectedEnd);
             if (check.violated) {
-                const datesStr = (check.violationDates || []).map(d => formatIsoToRo(d)).join(', ');
                 showToast(`⛔ Blocat! ${check.totalViolationDays} zile suprapuse (max 2 permise) cu ${check.namesList}. Alegeți altă perioadă.`, 'error', 5000);
                 return;
             }
 
             if (check.isException) {
-                showToast(`⚠️ Excepție (${check.totalViolationDays} zi/zile suprapunere) cu ${check.namesList}. Salvat!`, 'warning', 4000);
+                showToast(`⚠️ Excepție (${check.totalViolationDays} zi suprapunere) cu ${check.namesList}. Salvat!`, 'warning', 4000);
             }
 
             if (!emp.intervals) emp.intervals = [];
+            const newIntId = 'int_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
             emp.intervals.push({
-                id: 'int_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+                id: newIntId,
                 start: selStart,
                 end: selectedEnd,
                 days: businessDays
             });
 
-            saveProgData(progData);
-            currentEmp = emp;
+            const savedStart = selStart;
+            const savedEnd = selectedEnd;
 
-            // Clear selection
+            // Apel API direct Python
+            fetch(apiUrl('/api/save_employee_leave'), {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    cnp: currentEmp.cnp,
+                    empId: currentEmp.id,
+                    id: newIntId,
+                    start: selStart,
+                    end: selectedEnd,
+                    days: businessDays
+                })
+            })
+            .then(res => res.json())
+            .then(resData => {
+                if (resData && resData.db) {
+                    progData = resData.db;
+                    const freshEmp = progData.employees.find(e => e.id === currentEmp.id);
+                    if (freshEmp) currentEmp = freshEmp;
+                }
+                saveProgData(progData);
+                renderApp();
+            })
+            .catch(() => {
+                saveProgData(progData);
+                renderApp();
+            });
+
+            currentEmp = emp;
             selStart = null; selEnd = null;
             selBar.classList.remove('visible');
             document.body.classList.remove('has-selection');
 
             if (!check.isException) {
-                showToast(`✅ Concediu salvat! ${formatIsoToRo(emp.intervals[emp.intervals.length-1].start)} – ${formatIsoToRo(emp.intervals[emp.intervals.length-1].end)} (${businessDays} zile)`, 'success');
+                showToast(`✅ Concediu salvat! ${formatIsoToRo(savedStart)} – ${formatIsoToRo(savedEnd)} (${businessDays} zile)`, 'success');
             }
 
             renderApp();
@@ -1294,7 +1387,6 @@
                 return;
             }
 
-            // Sort by start date
             const sorted = [...intervals].sort((a, b) => a.start.localeCompare(b.start));
             myLeavesList.innerHTML = sorted.map(int => `
                 <div class="leave-item">
@@ -1302,7 +1394,7 @@
                         <div class="leave-item-dates">${formatIsoToRo(int.start)} – ${formatIsoToRo(int.end)}</div>
                         <div class="leave-item-days">${int.days || '–'} zile lucrătoare</div>
                     </div>
-                    <button class="leave-del-btn" onclick="deleteMyLeave('${int.id}')" title="Șterge concediu">
+                    <button class="leave-del-btn" onclick="deleteMyLeave('${int.id}', '${int.start}', '${int.end}')" title="Șterge concediu">
                         <i data-lucide="trash-2" style="width:16px; height:16px;"></i>
                     </button>
                 </div>
@@ -1311,49 +1403,70 @@
             lucide.createIcons();
         }
 
-        window.deleteMyLeave = function(intId) {
+        window.deleteMyLeave = function(intId, startIso, endIso) {
             if (!confirm('Sigur doriți să ștergeți acest concediu?')) return;
 
             const emp = progData.employees.find(e => e.id === currentEmp.id);
             if (!emp) return;
 
             emp.intervals = (emp.intervals || []).filter(i => i.id !== intId);
-            saveProgData(progData);
-            currentEmp = emp;
 
+            fetch(apiUrl('/api/delete_employee_leave'), {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    cnp: currentEmp.cnp,
+                    empId: currentEmp.id,
+                    id: intId,
+                    start: startIso,
+                    end: endIso
+                })
+            })
+            .then(res => res.json())
+            .then(resData => {
+                if (resData && resData.db) {
+                    progData = resData.db;
+                    const freshEmp = progData.employees.find(e => e.id === currentEmp.id);
+                    if (freshEmp) currentEmp = freshEmp;
+                }
+                saveProgData(progData);
+                renderApp();
+            })
+            .catch(() => {
+                saveProgData(progData);
+                renderApp();
+            });
+
+            currentEmp = emp;
             showToast('Concediu șters.', 'success');
             renderApp();
         };
 
         // ========= INIT =========
-        // Load data from server then check for session
+        const savedCnp = sessionStorage.getItem('angajat_session_cnp');
         loadProgDataFromServer(() => {
-            const storedSession = sessionStorage.getItem('angajat_session');
-            if (storedSession) {
-                try {
-                    const sessEmp = JSON.parse(storedSession);
-                    const freshEmp = progData.employees.find(e => e.id === sessEmp.id);
-                    if (freshEmp) {
-                        currentEmp = freshEmp;
+            if (savedCnp) {
+                fetch(apiUrl('/api/login'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ cnp: savedCnp })
+                })
+                .then(res => res.json())
+                .then(resData => {
+                    if (resData && resData.status === 'success' && resData.employee) {
+                        currentEmp = resData.employee;
+                        if (resData.db) progData = resData.db;
                         loginScreen.style.display = 'none';
                         appScreen.classList.add('active');
                         renderApp();
                     }
-                } catch(e) {}
+                })
+                .catch(() => {});
             }
         });
-
-        // Save session on login for page refresh
-        const origRenderApp = renderApp;
-        const wrappedRenderApp = function() {
-            origRenderApp();
-            if (currentEmp) {
-                sessionStorage.setItem('angajat_session', JSON.stringify({ id: currentEmp.id }));
-            }
-        };
-        // Override
-        renderApp = wrappedRenderApp;
     });
     </script>
+</body>
+</html>
 </body>
 </html>
