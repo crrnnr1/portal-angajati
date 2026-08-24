@@ -18,18 +18,6 @@
                     "start": "2026-11-02",
                     "end": "2026-11-11",
                     "days": 8
-                },
-                {
-                    "id": "int_1786690696082_tur3",
-                    "start": "2027-03-02",
-                    "end": "2027-03-19",
-                    "days": 14
-                },
-                {
-                    "id": "int_1786690720266_6b1b",
-                    "start": "2027-06-08",
-                    "end": "2027-06-11",
-                    "days": 4
                 }
             ],
             "leaves": []
@@ -40,14 +28,7 @@
             "functie": "Infirmieră",
             "cnp": "***",
             "cuvenit": 34,
-            "intervals": [
-                {
-                    "id": "int_1787552801771_zzl2",
-                    "start": "2027-01-04",
-                    "end": "2027-01-07",
-                    "days": 2
-                }
-            ]
+            "intervals": []
         },
         {
             "id": "emp_1786613879264_wj39g",
@@ -70,7 +51,7 @@
             "name": "Lupu Săndel",
             "functie": "Infirmieră",
             "cnp": "***",
-            "cuvenit": 35,
+            "cuvenit": 21,
             "intervals": []
         },
         {
@@ -431,6 +412,14 @@
             "name": "Strehan Alexandru",
             "functie": "Munc. Fochist",
             "cnp": "***",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787555602205_duc52",
+            "name": "NUMELE ȘI \nPRENUMELE",
+            "functie": "FUNCŢIA",
+            "cnp": "",
             "cuvenit": 21,
             "intervals": []
         }
