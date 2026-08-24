@@ -73,14 +73,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1786613879264_qdih6",
-            "name": "Isfan Nicoleta Ioana",
-            "functie": "Asist. Med.",
-            "cnp": "2790708352628",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
             "id": "emp_1786613879264_q6yjs",
             "name": "Mercea Loredana Viorica",
             "functie": "Asist. Med.",
@@ -370,14 +362,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1786613879264_m5ah8",
-            "name": "Gonciar Voichița",
-            "functie": "Asist. Med.",
-            "cnp": "12324",
-            "cuvenit": 35,
-            "intervals": []
-        },
-        {
             "id": "emp_1787552800408_0auqw",
             "name": "Strehan Alexandru",
             "functie": "Munc. Fochist",
@@ -509,14 +493,6 @@
             "id": "emp_1787571570022_sezmz",
             "name": "Ciurescu Voichița",
             "functie": "Spalatorasa",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787572775224_rg9ye",
-            "name": "Bălănescu Mihaela",
-            "functie": "Asist. Med.",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
