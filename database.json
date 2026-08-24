@@ -406,14 +406,6 @@
             "cnp": "***",
             "cuvenit": 21,
             "intervals": []
-        },
-        {
-            "id": "emp_1787555602205_duc52",
-            "name": "NUMELE ȘI \nPRENUMELE",
-            "functie": "FUNCŢIA",
-            "cnp": "***",
-            "cuvenit": 21,
-            "intervals": []
         }
     ],
     "overlapRules": {}
