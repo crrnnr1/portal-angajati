@@ -305,14 +305,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643300159_wpyay",
-            "name": "Luna ianuarie 2026: 18 zile lucrătoare x 8h/zi = 144 ore/lună",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643300159_oaaw1",
             "name": "Balint Alexandra",
             "functie": "Infirmieră",
@@ -473,14 +465,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643300663_cfp42",
-            "name": "Luna martie 2026: 22 zile lucrătoare x 8h/zi = 176 ore/lună",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643300885_qpig0",
             "name": "Nr. 66107/04.05.2026",
             "functie": "Asistent medical",
@@ -497,14 +481,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643301159_pyv1u",
-            "name": "Luna mai 2026: 20 zile lucrătoare x 8h/zi = 160 ore/lună",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643301400_blbee",
             "name": "Nr. 100217/01.07.2026",
             "functie": "Asistent medical",
@@ -513,24 +489,8 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643301400_9dun2",
-            "name": "Luna iunie 2026: 21 zile lucrătoare x 8h/zi = 168 ore/lună",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643301681_nhi4g",
             "name": "Nr. 116952/03.08.2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643301681_izte8",
-            "name": "Luna iulie 2026: 23 zile lucrătoare x 8h/zi = 184 ore/lună",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
