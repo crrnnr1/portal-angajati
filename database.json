@@ -145,14 +145,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787642314254_pxsmt",
-            "name": "Berke Mirela Lia",
-            "functie": "Infirmiera",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787642314254_fg6lo",
             "name": "Catrinoiu Laurentiu Ioan",
             "functie": "Infirmiera",
@@ -419,78 +411,6 @@
         {
             "id": "emp_1787643300159_lhqgs",
             "name": "Șef centru",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300198_obrk0",
-            "name": "Nr.",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300448_7bu1j",
-            "name": "Nr. 32752/02.03.2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300449_x4o4l",
-            "name": "TLS - total ore lucrate inclusiv ore suplimentare",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300449_j7vpl",
-            "name": "TNL - total ore plătite în timpul normal de lucru",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300663_e7pz4",
-            "name": "Nr. 52366/01.04.2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300885_qpig0",
-            "name": "Nr. 66107/04.05.2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643301159_o8i37",
-            "name": "Nr. 82065/03.06.2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643301400_blbee",
-            "name": "Nr. 100217/01.07.2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643301681_nhi4g",
-            "name": "Nr. 116952/03.08.2026",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
