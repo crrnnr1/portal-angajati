@@ -481,25 +481,9 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643300200_rmkcf",
-            "name": "Asistenti Medicali",
-            "functie": "4",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643300200_gsjyh",
             "name": "Instructori + Lucratori sociali + Teh as soc",
             "functie": "8",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300200_nw9tc",
-            "name": "Infirmieri",
-            "functie": "17",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
