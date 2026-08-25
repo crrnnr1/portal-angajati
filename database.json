@@ -415,14 +415,6 @@
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
-        },
-        {
-            "id": "emp_1787645752985_plie6",
-            "name": "Petrescu Cristian Ioan",
-            "functie": "Infirmieră",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
         }
     ],
     "overlapRules": {}
