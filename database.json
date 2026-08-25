@@ -527,14 +527,6 @@
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
-        },
-        {
-            "id": "emp_1787645073917_udaye",
-            "name": "HUȘANU Luminița Leocadia",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
         }
     ],
     "overlapRules": {}
