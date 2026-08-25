@@ -441,14 +441,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643300200_1cx56",
-            "name": "CENTRALIZATOR PONTAJ LUNA ianuarie 2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643300200_qkcqf",
             "name": "GRUPE DE PERSONAL",
             "functie": "Asistent medical",
@@ -505,14 +497,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643300490_sz9z5",
-            "name": "CENTRALIZATOR PONTAJ LUNA februarie 2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643300663_e7pz4",
             "name": "Nr. 52366/01.04.2026",
             "functie": "Asistent medical",
@@ -547,14 +531,6 @@
         {
             "id": "emp_1787643300885_hutz6",
             "name": "Luna aprilie 2026: 20 zile lucrătoare x 8h/zi = 160 ore/lună",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300939_3ghpr",
-            "name": "CENTRALIZATOR PONTAJ LUNA aprilie 2026",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
@@ -660,14 +636,6 @@
             "id": "emp_1787643301940_f84zg",
             "name": "Gonciar Voichița",
             "functie": "Asist. Med.",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643302002_h2ee6",
-            "name": "CENTRALIZATOR PONTAJ LUNA august 2026",
-            "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
