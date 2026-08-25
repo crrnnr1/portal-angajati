@@ -59,7 +59,7 @@
         {
             "id": "emp_1787645670166_9r7oq",
             "name": "Schiopu Daian Caius",
-            "functie": "Teh asist socială",
+            "functie": "Teh as. soc",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
@@ -67,7 +67,7 @@
         {
             "id": "emp_1787645670166_k3ck7",
             "name": "Drăgoi Claudia Veronica",
-            "functie": "Lucr. social",
+            "functie": "Lucr. Soc",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
@@ -75,7 +75,7 @@
         {
             "id": "emp_1787645670166_me91d",
             "name": "Petrovici Crina Maria",
-            "functie": "Lucr. social",
+            "functie": "Lucr. Soc",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
@@ -428,6 +428,30 @@
             "id": "emp_1787645689617_wesa5",
             "name": "HUȘANU Luminița Leocadia",
             "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645752985_8qd0m",
+            "name": "Micula Adriana Elena",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645752985_fxoh4",
+            "name": "Gross Elena",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645752985_plie6",
+            "name": "Petrescu Cristian Ioan",
+            "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
