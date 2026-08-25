@@ -655,6 +655,118 @@
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
+        },
+        {
+            "id": "emp_1787643301159_o8i37",
+            "name": "Nr. 82065/03.06.2026",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301159_pyv1u",
+            "name": "Luna mai 2026: 20 zile lucrătoare x 8h/zi = 160 ore/lună",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301208_9j0b0",
+            "name": "CENTRALIZATOR PONTAJ LUNA mai 2026",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301400_blbee",
+            "name": "Nr. 100217/01.07.2026",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301400_9dun2",
+            "name": "Luna iunie 2026: 21 zile lucrătoare x 8h/zi = 168 ore/lună",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301451_yvs1z",
+            "name": "CENTRALIZATOR PONTAJ LUNA iunie 2026",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301681_nhi4g",
+            "name": "Nr. 116952/03.08.2026",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301681_izte8",
+            "name": "Luna iulie 2026: 23 zile lucrătoare x 8h/zi = 184 ore/lună",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301681_5llj1",
+            "name": "Benea Cristian",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301681_3nyu9",
+            "name": "Strehan Alexandru",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301743_uoonb",
+            "name": "CENTRALIZATOR PONTAJ LUNA iulie 2026",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301940_mhxps",
+            "name": "Luna august 2026: 21 zile lucrătoare x 8h/zi = 168 ore/lună",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643301940_f84zg",
+            "name": "Gonciar Voichița",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643302002_h2ee6",
+            "name": "CENTRALIZATOR PONTAJ LUNA august 2026",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
         }
     ],
     "overlapRules": {}
