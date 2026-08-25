@@ -799,6 +799,46 @@
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
+        },
+        {
+            "id": "emp_1787643982773_ux3vy",
+            "name": "Văcariu Ioan",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643982773_vrh2i",
+            "name": "Dragu Fira",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643982773_in6fy",
+            "name": "Hota Valentina",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643982773_eb5iy",
+            "name": "Balomiri Daniela",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643982773_qmiju",
+            "name": "Șoman Florin",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
         }
     ],
     "overlapRules": {}
