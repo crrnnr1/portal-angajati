@@ -457,30 +457,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643300160_ptnxf",
-            "name": "HUȘANU Luminița Leocadia",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300179_10yt8",
-            "name": "ianuarie",
-            "functie": "1/1/23",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300179_wzzat",
-            "name": "februarie",
-            "functie": "1/2/23",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643300198_obrk0",
             "name": "Nr.",
             "functie": "Asistent medical",
@@ -763,14 +739,6 @@
         {
             "id": "emp_1787643302002_h2ee6",
             "name": "CENTRALIZATOR PONTAJ LUNA august 2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643872745_ksvdh",
-            "name": "O R E Z I L N I C",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
