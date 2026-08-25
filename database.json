@@ -1,4 +1,413 @@
 {
-    "employees": [],
+    "employees": [
+        {
+            "id": "emp_1787645335291_9ifpa",
+            "name": "Isfan Nicoleta Ioana",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_g1mem",
+            "name": "Leucuș Daniela",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_lqo8i",
+            "name": "Mercea Loredana Viorica",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_i3iqs",
+            "name": "Bogdan Claudiu Adrian",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_lmy8w",
+            "name": "Indricau Rodica",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_d81gc",
+            "name": "Popet Leodana Nadia",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_33kcx",
+            "name": "Şandru Lăcrămioara",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_7x0yw",
+            "name": "Schiopu Daian Caius",
+            "functie": "Teh asist socială",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_cu1cy",
+            "name": "Drăgoi Claudia Veronica",
+            "functie": "Lucr. social",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_e4cdl",
+            "name": "Petrovici Crina Maria",
+            "functie": "Lucr. social",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_y0uea",
+            "name": "Balint Alexandra",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_aklo8",
+            "name": "Balintescu Valentin C-tin",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_tph9y",
+            "name": "Berke Mirela Lia",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_47zln",
+            "name": "Boanca Cristiana",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_i0w2f",
+            "name": "Catrinoiu Laurentiu Ioan",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_zfv2z",
+            "name": "Jiva Gabriel",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_v3wi1",
+            "name": "Kiss Irina",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_s1nyv",
+            "name": "Maran Maria Mirabela",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_oyns3",
+            "name": "Moisoni Maria Liliana",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_q786j",
+            "name": "Moisoni Marius Petru",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_iq7sa",
+            "name": "Mudaci Ana",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_vsgxr",
+            "name": "Olariu Oana Ancuta",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_27bz2",
+            "name": "Paralescu Rodica",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_xtfex",
+            "name": "Petrescu Liliana",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_eqmmi",
+            "name": "Stoicănescu Sorina",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_rq03p",
+            "name": "Tătar Daniel",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_hzopz",
+            "name": "Andrei Sergiu",
+            "functie": "Ingrijitoare",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_999hd",
+            "name": "Munteanu Mihaela Miorita",
+            "functie": "Ingrijitoare",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_ztz72",
+            "name": "Ciurescu Voichita Dorina",
+            "functie": "Spalatoreasa",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_misjg",
+            "name": "Craciun Ciprian Dorel",
+            "functie": "Munc. Intret",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_08x2k",
+            "name": "Crîsciu Florin Samson",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_v8ivd",
+            "name": "Popeţ Nicolae Florin",
+            "functie": "Şofer",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_mmx93",
+            "name": "Husanu Luminita",
+            "functie": "Sef centru",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_xqdoh",
+            "name": "Bustescu Radu Emanuela Paula",
+            "functie": "Asist. social",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_pdrmc",
+            "name": "Daminescu Madalina Elena",
+            "functie": "Psiho log",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_rd7fk",
+            "name": "Muscai Frăguța",
+            "functie": "Insp. Spec. finan. Cont.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_x2exg",
+            "name": "Sajti Janos",
+            "functie": "Kinetoterapeut",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_poov7",
+            "name": "Crîștiu Dan",
+            "functie": "Insp. Spec. Res. Umane",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_pqasf",
+            "name": "Balanescu Mihaela",
+            "functie": "As. Med. Pr.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_q28an",
+            "name": "Otescu Alin Nicolae",
+            "functie": "Instr ergoterapie",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_x1nfw",
+            "name": "Ciucă Călin",
+            "functie": "Ingrijitor curatenie",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_cocbc",
+            "name": "Benea Cristian",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_5no0h",
+            "name": "Strehan Alexandru",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335291_eqb2p",
+            "name": "Gonciar Voichița",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335292_d2zkv",
+            "name": "Gavrilescu Elvira",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335292_nn1f5",
+            "name": "Lupu Sandel",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335292_f217b",
+            "name": "Văcariu Ioan",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335292_3o179",
+            "name": "Dragu Fira",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335292_ar3eh",
+            "name": "Hota Valentina",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335292_qi8j4",
+            "name": "Balomiri Daniela",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787645335292_onzb5",
+            "name": "Șoman Florin",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        }
+    ],
     "overlapRules": {}
 }
