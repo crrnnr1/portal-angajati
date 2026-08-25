@@ -513,14 +513,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643300709_t6p8q",
-            "name": "CENTRALIZATOR PONTAJ LUNA martie 2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643300885_qpig0",
             "name": "Nr. 66107/04.05.2026",
             "functie": "Asistent medical",
@@ -553,14 +545,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643301208_9j0b0",
-            "name": "CENTRALIZATOR PONTAJ LUNA mai 2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643301400_blbee",
             "name": "Nr. 100217/01.07.2026",
             "functie": "Asistent medical",
@@ -571,14 +555,6 @@
         {
             "id": "emp_1787643301400_9dun2",
             "name": "Luna iunie 2026: 21 zile lucrătoare x 8h/zi = 168 ore/lună",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643301451_yvs1z",
-            "name": "CENTRALIZATOR PONTAJ LUNA iunie 2026",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
@@ -612,14 +588,6 @@
             "id": "emp_1787643301681_3nyu9",
             "name": "Strehan Alexandru",
             "functie": "Munc. Fochist",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643301743_uoonb",
-            "name": "CENTRALIZATOR PONTAJ LUNA iulie 2026",
-            "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
