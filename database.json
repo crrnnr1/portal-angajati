@@ -767,6 +767,38 @@
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
+        },
+        {
+            "id": "emp_1787643872745_ksvdh",
+            "name": "O R E Z I L N I C",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643872745_0n2o4",
+            "name": "Gavrilescu Elvira",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643872745_80y3w",
+            "name": "Lupu Sandel",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1787643872745_8hqhy",
+            "name": "Coordonat personal de specialitate",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
         }
     ],
     "overlapRules": {}
