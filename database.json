@@ -441,24 +441,8 @@
             "intervals": []
         },
         {
-            "id": "emp_1787643300200_qkcqf",
-            "name": "GRUPE DE PERSONAL",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1787643300448_7bu1j",
             "name": "Nr. 32752/02.03.2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300449_98bcs",
-            "name": "Luna februarie 2026: 20 zile lucrătoare x 8h/zi = 160 ore/lună",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
@@ -475,22 +459,6 @@
         {
             "id": "emp_1787643300449_j7vpl",
             "name": "TNL - total ore plătite în timpul normal de lucru",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300449_jnsb2",
-            "name": "CO - concediu de odihnă",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300449_woktc",
-            "name": "CM - concediu medical",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
@@ -515,14 +483,6 @@
         {
             "id": "emp_1787643300885_qpig0",
             "name": "Nr. 66107/04.05.2026",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643300885_hutz6",
-            "name": "Luna aprilie 2026: 20 zile lucrătoare x 8h/zi = 160 ore/lună",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
@@ -588,14 +548,6 @@
             "id": "emp_1787643301681_3nyu9",
             "name": "Strehan Alexandru",
             "functie": "Munc. Fochist",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
-            "id": "emp_1787643301940_mhxps",
-            "name": "Luna august 2026: 21 zile lucrătoare x 8h/zi = 168 ore/lună",
-            "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
