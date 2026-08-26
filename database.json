@@ -302,14 +302,7 @@
             "functie": "Asist. Med.",
             "cnp": "123456",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1787725196386_030o",
-                    "start": "2027-01-25",
-                    "end": "2027-01-28",
-                    "days": 4
-                }
-            ]
+            "intervals": []
         },
         {
             "id": "emp_1787645670167_qvmba",
