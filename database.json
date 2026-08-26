@@ -6,14 +6,7 @@
             "functie": "Asist. Med.",
             "cnp": "3",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1787722441181_vy1m",
-                    "start": "2027-01-25",
-                    "end": "2027-01-26",
-                    "days": 2
-                }
-            ]
+            "intervals": []
         },
         {
             "id": "emp_1787645670166_pg2ei",
@@ -29,14 +22,7 @@
             "functie": "Asist. Med.",
             "cnp": "1212",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1787722418309_p1v0",
-                    "start": "2027-01-11",
-                    "end": "2027-01-14",
-                    "days": 4
-                }
-            ]
+            "intervals": []
         },
         {
             "id": "emp_1787645670166_5hzzx",
@@ -314,16 +300,9 @@
             "id": "emp_1787645670167_2mfbr",
             "name": "Balanescu Mihaela",
             "functie": "Asist. Med.",
-            "cnp": "1",
+            "cnp": "55",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1787722431134_tvvz",
-                    "start": "2027-01-18",
-                    "end": "2027-01-21",
-                    "days": 4
-                }
-            ]
+            "intervals": []
         },
         {
             "id": "emp_1787645670167_qvmba",
