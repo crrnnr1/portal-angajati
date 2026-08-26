@@ -62,20 +62,7 @@
             "functie": "Teh as. soc",
             "cnp": "1841028351589",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1787722127608_zt00",
-                    "start": "2027-01-11",
-                    "end": "2027-01-15",
-                    "days": 5
-                },
-                {
-                    "id": "int_1787722268336_f94l",
-                    "start": "2027-01-18",
-                    "end": "2027-01-26",
-                    "days": 7
-                }
-            ]
+            "intervals": []
         },
         {
             "id": "emp_1787645670166_k3ck7",
@@ -313,7 +300,7 @@
             "id": "emp_1787645670167_2mfbr",
             "name": "Balanescu Mihaela",
             "functie": "Asist. Med.",
-            "cnp": "",
+            "cnp": "1",
             "cuvenit": 35,
             "intervals": []
         },
