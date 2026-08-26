@@ -20,7 +20,7 @@
             "id": "emp_1787645670166_ewcik",
             "name": "Mercea Loredana Viorica",
             "functie": "Asist. Med.",
-            "cnp": "5",
+            "cnp": "1212",
             "cuvenit": 35,
             "intervals": []
         },
@@ -302,14 +302,7 @@
             "functie": "Asist. Med.",
             "cnp": "1",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1787722336590_b4xa",
-                    "start": "2027-01-11",
-                    "end": "2027-01-21",
-                    "days": 9
-                }
-            ]
+            "intervals": []
         },
         {
             "id": "emp_1787645670167_qvmba",
@@ -341,14 +334,7 @@
             "functie": "Asist. Med.",
             "cnp": "2",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1787722371252_qujj",
-                    "start": "2027-01-25",
-                    "end": "2027-01-27",
-                    "days": 3
-                }
-            ]
+            "intervals": []
         },
         {
             "id": "emp_1787645670167_9w4yx",
