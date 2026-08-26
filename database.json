@@ -301,7 +301,14 @@
             "functie": "Insp. Spec. Res. Umane",
             "cnp": "",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [
+                {
+                    "id": "int_1787732921989_sv0q",
+                    "start": "2027-01-11",
+                    "end": "2027-01-15",
+                    "days": 5
+                }
+            ]
         },
         {
             "id": "emp_1787645670167_2mfbr",
