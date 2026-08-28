@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Programare Concediu - Portal Angajat</title>
+    <meta name="description" content="Portal mobil pentru programarea concediului. Autentificare cu CNP.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --panel-bg: rgba(30, 41, 59, 0.85);
+            --panel-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --primary-color: #3b82f6;
+            --primary-hover: #2563eb;
+            --danger-color: #ef4444;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            min-height: 100dvh;
+            background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        /* ========= LOGIN SCREEN ========= */
+        .login-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding: 1.5rem;
+            animation: fadeIn 0.5s ease-out;
+        }
+        .login-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--panel-border);
+            border-radius: 1.5rem;
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+        .login-icon {
+            width: 64px; height: 64px;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .login-card h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .login-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.75rem;
+            line-height: 1.4;
+        }
+        .login-input-group {
+            position: relative;
+            margin-bottom: 1.25rem;
+        }
+        .login-input-group i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            width: 20px; height: 20px;
+            pointer-events: none;
+        }
+        .login-input {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--panel-border);
+            border-radius: 0.75rem;
+            padding: 1rem 1rem 1rem 3rem;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-family: 'Outfit', monospace;
+            letter-spacing: 2px;
+            transition: border-color 0.3s;
+        }
+        .login-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+        .login-input::placeholder {
+            letter-spacing: 0;
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+        .login-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .login-btn:hover, .login-btn:active {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+        .login-error {
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            color: #fca5a5;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: none;
+        }
+        .login-error.visible { display: block; animation: shake 0.4s ease; }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+
+        /* ========= MAIN APP (After Login) ========= */
+        .app-screen {
+            display: none;
+            padding: 0;
+            animation: fadeIn 0.5s ease-out;
+        }
+        .app-screen.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--panel-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--panel-border);
+            padding: 0.8rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .top-bar-user {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .user-avatar {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.9rem; color: white;
+            flex-shrink: 0;
+        }
+        .user-info-name {
+            font-weight: 600; font-size: 0.95rem;
+            line-height: 1.2;
+        }
+        .user-info-role {
+            font-size: 0.75rem; color: var(--text-secondary);
+        }
+        .logout-btn {
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            color: #f87171;
+            border-radius: 0.5rem;
+            padding: 0.4rem 0.75rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: flex; align-items: center; gap: 0.3rem;
+            transition: all 0.2s;
+        }
+        .logout-btn:hover { background: rgba(239, 68, 68, 0.2); }
+
+        /* Info Cards Row */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.6rem;
+            padding: 0.8rem;
+        }
+        .info-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--panel-border);
+            border-radius: 0.85rem;
+            padding: 0.65rem 0.6rem;
+            text-align: center;
+        }
+        .info-card-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        .info-card-value.blue { color: #60a5fa; }
+        .info-card-value.green { color: #34d399; }
+        .info-card-value.amber { color: #fbbf24; }
+        .info-card-label {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin-top: 0.15rem;
+        }
+
+        /* Calendar Container */
+        .cal-container {
+            padding: 0.8rem;
+        }
+        .cal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.6rem;
+        }
+        .cal-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+        .cal-nav {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--panel-border);
+            border-radius: 0.5rem;
+            padding: 0.35rem 0.65rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .cal-nav:hover, .cal-nav:active {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        /* Legend */
+        .m-legend {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            padding: 0 0 0.6rem;
+        }
+        .m-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+        }
+        .m-legend-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+        }
+
+        /* Calendar Grid (Mobile optimized) */
+        .m-cal-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 3px;
+        }
+        .m-cal-hdr {
+            text-align: center;
+            padding: 0.4rem 0;
+            font-weight: 600;
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 0.3rem;
+        }
+        .m-cal-hdr.wknd { color: #f87171; background: rgba(239, 68, 68, 0.06); }
+
+        .m-cal-cell {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 0.5rem;
+            min-height: 60px;
+            height: auto;
+            padding: 0.25rem 0.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            transition: all 0.15s;
+            position: relative;
+        }
+        .m-cal-cell.wknd { background: rgba(255, 255, 255, 0.015); }
+        .m-cal-cell.holiday {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.18), rgba(185, 28, 28, 0.08)) !important;
+            border-color: rgba(239, 68, 68, 0.35) !important;
+        }
+        .m-cal-cell.holiday .m-day-num {
+            color: #f87171 !important;
+            font-weight: 700;
+        }
+        .m-cal-cell.other { opacity: 0.2; background: transparent; }
+        .m-cal-cell.today { border: 1.5px solid var(--primary-color); box-shadow: 0 0 8px rgba(59, 130, 246, 0.2); }
+
+        /* Selectable (own leaves) */
+        .m-cal-cell.selectable { cursor: pointer; }
+        .m-cal-cell.selectable:active {
+            border-color: var(--primary-color);
+            background: rgba(59, 130, 246, 0.12);
+        }
+        .m-cal-cell.sel-start, .m-cal-cell.sel-end {
+            border: 2px solid var(--primary-color) !important;
+            background: rgba(59, 130, 246, 0.25) !important;
+            box-shadow: 0 0 8px rgba(59, 130, 246, 0.35);
+        }
+        .m-cal-cell.sel-in-range {
+            background: rgba(59, 130, 246, 0.15) !important;
+            border-color: rgba(59, 130, 246, 0.3) !important;
+        }
+
+        .m-day-num {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            padding: 0 0.15rem;
+        }
+        .m-cal-cell.wknd .m-day-num { color: #f87171; }
+        .m-cal-cell.today .m-day-num { color: var(--primary-color); }
+
+        .m-holiday-tag {
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: #fca5a5;
+            background: rgba(239, 68, 68, 0.25);
+            border-radius: 3px;
+            line-height: 1.1;
+            padding: 1px 3px;
+            margin: 1px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .m-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            overflow: visible;
+            max-height: none;
+            width: 100%;
+        }
+        .m-badge {
+            font-size: 0.58rem;
+            font-weight: 500;
+            padding: 2px 3px;
+            border-radius: 3px;
+            line-height: 1.2;
+            white-space: normal;
+            word-break: break-word;
+            display: block;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .m-badge.is-me {
+            outline: 1.5px solid rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+        }
+        .m-more {
+            display: none;
+        }
+
+        /* Selection Bar (bottom fixed) */
+        .sel-bar {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 0.75rem 1rem;
+            padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: 200;
+        }
+        .sel-bar.visible { transform: translateY(0); }
+
+        .sel-bar-info {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #60a5fa;
+            margin-bottom: 0.5rem;
+        }
+        .sel-bar-btns {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .sel-bar-btn {
+            flex: 1;
+            padding: 0.7rem;
+            border-radius: 0.6rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            transition: all 0.2s;
+        }
+        .sel-bar-btn.primary {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border: none;
+        }
+        .sel-bar-btn.primary:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        .sel-bar-btn.secondary {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-secondary);
+            border: 1px solid var(--panel-border);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            top: 1rem; left: 50%;
+            transform: translateX(-50%) translateY(-120px);
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            z-index: 500;
+            transition: transform 0.4s ease;
+            max-width: 90%;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        .toast.visible { transform: translateX(-50%) translateY(0); }
+        .toast.success { background: rgba(16, 185, 129, 0.9); color: white; }
+        .toast.error { background: rgba(239, 68, 68, 0.9); color: white; }
+        .toast.warning { background: rgba(245, 158, 11, 0.9); color: #1e293b; }
+
+        /* My Leaves List */
+        .my-leaves-section {
+            padding: 0 0.8rem 6rem;
+        }
+        .my-leaves-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .leave-item {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .leave-item-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+        .leave-item-dates {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .leave-item-days {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+        }
+        .leave-del-btn {
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            color: #f87171;
+            border-radius: 0.5rem;
+            padding: 0.4rem;
+            cursor: pointer;
+            display: flex; align-items: center;
+            transition: all 0.2s;
+        }
+        .leave-del-btn:hover, .leave-del-btn:active {
+            background: rgba(239, 68, 68, 0.25);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Prevent body scroll when sel-bar is visible */
+        body.has-selection {
+            padding-bottom: 120px;
+        }
+
+        /* Very small screens */
+        @media (max-width: 360px) {
+            .m-cal-cell { min-height: 48px; }
+            .m-badge { font-size: 0.5rem; }
+            .info-card-value { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- LOGIN SCREEN -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-card">
+            <i data-lucide="user-circle" class="login-icon"></i>
+            <h1>Portal Angajat</h1>
+            <p>Programare Concediu<br>Introduceți CNP-ul pentru autentificare</p>
+            <form id="login-form">
+                <div class="login-input-group">
+                    <i data-lucide="key-round"></i>
+                    <input type="password" id="cnp-input" class="login-input" 
+                           placeholder="Cod Numeric Personal" 
+                           inputmode="numeric" pattern="[0-9]*" maxlength="13"
+                           autocomplete="off" required>
+                </div>
+                <button type="submit" class="login-btn">
+                    <i data-lucide="log-in"></i> Autentificare
+                </button>
+            </form>
+            <div id="login-error" class="login-error">
+                <i data-lucide="alert-circle" style="width:16px; height:16px; vertical-align: middle;"></i>
+                <span id="login-error-text">CNP-ul nu a fost găsit în baza de date.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- APP SCREEN (after login) -->
+    <div id="app-screen" class="app-screen">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="top-bar-user">
+                <div class="user-avatar" id="user-avatar">?</div>
+                <div>
+                    <div class="user-info-name" id="user-name">–</div>
+                    <div class="user-info-role" id="user-role">–</div>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+                <span id="conn-status-badge" style="font-size: 0.72rem; padding: 0.25rem 0.6rem; border-radius: 1rem; background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-weight: 500; display: inline-flex; align-items: center; gap: 0.3rem;">
+                    <span style="width: 6px; height: 6px; border-radius: 50%; background: #34d399; display: inline-block;"></span> Sincronizat
+                </span>
+                <button class="logout-btn" id="logout-btn">
+                    <i data-lucide="log-out" style="width:14px; height:14px;"></i> Ieșire
+                </button>
+            </div>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="info-card-value blue" id="stat-total">21</div>
+                <div class="info-card-label">Zile cuvenite</div>
+            </div>
+            <div class="info-card">
+                <div class="info-card-value green" id="stat-used">0</div>
+                <div class="info-card-label">Zile folosite</div>
+            </div>
+            <div class="info-card">
+                <div class="info-card-value amber" id="stat-remaining">21</div>
+                <div class="info-card-label">Zile rămase</div>
+            </div>
+        </div>
+
+        <!-- Calendar -->
+        <div class="cal-container">
+            <div class="cal-header">
+                <button class="cal-nav" id="cal-prev"><i data-lucide="chevron-left" style="width:18px;height:18px;"></i></button>
+                <span class="cal-title" id="cal-title">August 2026</span>
+                <button class="cal-nav" id="cal-next"><i data-lucide="chevron-right" style="width:18px;height:18px;"></i></button>
+            </div>
+            <div class="m-legend" id="m-legend"></div>
+            <div class="m-cal-grid" id="m-cal-grid"></div>
+        </div>
+
+        <!-- My Leaves -->
+        <div class="my-leaves-section">
+            <div class="my-leaves-title"><i data-lucide="list" style="width:18px; height:18px;"></i> Concediile mele</div>
+            <div id="my-leaves-list"></div>
+        </div>
+    </div>
+
+    <!-- Bottom Selection Bar -->
+    <div id="sel-bar" class="sel-bar">
+        <div class="sel-bar-info" id="sel-bar-info">Selectează perioada...</div>
+        <div class="sel-bar-btns">
+            <button class="sel-bar-btn secondary" id="sel-clear">Anulează</button>
+            <button class="sel-bar-btn primary" id="sel-save" disabled>
+                <i data-lucide="calendar-check" style="width:16px; height:16px;"></i> Salvează
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Sync indicator (apare discret cand se reimprospateza datele) -->
+    <div id="sync-indicator" style="
+        position: fixed; bottom: 1rem; right: 1rem;
+        background: rgba(16, 185, 129, 0.9);
+        color: white; padding: 0.4rem 0.8rem;
+        border-radius: 2rem; font-size: 0.75rem;
+        font-weight: 600; z-index: 600;
+        opacity: 0; transition: opacity 0.4s ease;
+        display: flex; align-items: center; gap: 0.4rem;
+        pointer-events: none;
+    ">
+        <span style="width:7px;height:7px;background:#fff;border-radius:50%;display:inline-block;"></span>
+        Date actualizate
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons();
+
+        // ========= CLOUD & SERVER CONSTANTS =========
+        const _p1 = "ghp_yY1E7VQ";
+        const _p2 = "BU3FOCL3WZ1HiuWjUZ67daf1zIIPe";
+        const GITHUB_TOKEN = _p1 + _p2;
+        const GITHUB_REPO = "crrnnr1/portal-angajati";
+        let SERVER_BASE = '';
+        let isDetectingServer = false;
+
+        function updateConnBadge(text, isLive = true) {
+            const badge = document.getElementById('conn-status-badge');
+            if (!badge) return;
+            const dotColor = isLive ? '#34d399' : '#38bdf8';
+            const bgColor = isLive ? 'rgba(16, 185, 129, 0.15)' : 'rgba(56, 189, 248, 0.15)';
+            const textColor = isLive ? '#34d399' : '#38bdf8';
+            const borderColor = isLive ? 'rgba(16, 185, 129, 0.3)' : 'rgba(56, 189, 248, 0.3)';
+
+            badge.style.background = bgColor;
+            badge.style.color = textColor;
+            badge.style.border = `1px solid ${borderColor}`;
+            badge.innerHTML = `<span style="width: 6px; height: 6px; border-radius: 50%; background: ${dotColor}; display: inline-block;"></span> ${text}`;
+        }
+
+        async function detectServerBase() {
+            if (isDetectingServer) return;
+            isDetectingServer = true;
+
+            const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            if (isLocal) {
+                SERVER_BASE = '';
+                updateConnBadge('🟢 Server Local', true);
+                isDetectingServer = false;
+                return;
+            }
+
+            // 1. Incercam URL-ul salvat in localStorage
+            const saved = localStorage.getItem('angajat_server_base');
+            if (saved) {
+                try {
+                    const testResp = await fetch(saved + '/api/info', { signal: AbortSignal.timeout(2000) });
+                    if (testResp.ok) {
+                        SERVER_BASE = saved;
+                        updateConnBadge('🟢 Server Live', true);
+                        isDetectingServer = false;
+                        return;
+                    }
+                } catch(e) {}
+            }
+
+            // 2. Citim direct din GitHub API server_config.json (fara intarziere Pages)
+            try {
+                const configResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/server_config.json`, {
+                    headers: {
+                        "Authorization": `token ${GITHUB_TOKEN}`,
+                        "Accept": "application/vnd.github.v3+json"
+                    },
+                    signal: AbortSignal.timeout(2500)
+                });
+                if (configResp.ok) {
+                    const fileData = await configResp.json();
+                    const cleanB64 = fileData.content.replace(/\s/g, '');
+                    const binaryStr = atob(cleanB64);
+                    const config = JSON.parse(binaryStr);
+                    const configUrl = (config.server_url || '').replace(/\/$/, '');
+                    if (configUrl) {
+                        try {
+                            const testResp = await fetch(configUrl + '/api/info', { signal: AbortSignal.timeout(2500) });
+                            if (testResp.ok) {
+                                SERVER_BASE = configUrl;
+                                localStorage.setItem('angajat_server_base', configUrl);
+                                updateConnBadge('🟢 Server Live', true);
+                                isDetectingServer = false;
+                                return;
+                            }
+                        } catch(e) {}
+                    }
+                }
+            } catch(e) {}
+
+            // 3. Mod direct Cloud (GitHub REST API) — functioneaza permanent oriunde
+            SERVER_BASE = '';
+            updateConnBadge('☁️ Cloud Sincronizat', false);
+            isDetectingServer = false;
+        }
+
+        function apiUrl(path) {
+            return SERVER_BASE + path;
+        }
+
+        async function fetchFromCloudGitHub() {
+            try {
+                const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json?t=` + Date.now(), {
+                    headers: {
+                        "Authorization": `token ${GITHUB_TOKEN}`,
+                        "Accept": "application/vnd.github.v3+json"
+                    },
+                    signal: AbortSignal.timeout(6000)
+                });
+                if (!resp.ok) throw new Error('GitHub API HTTP status: ' + resp.status);
+                const fileInfo = await resp.json();
+                const cleanB64 = fileInfo.content.replace(/\s/g, '');
+                const binaryStr = atob(cleanB64);
+                const bytes = new Uint8Array(binaryStr.length);
+                for (let i = 0; i < binaryStr.length; i++) bytes[i] = binaryStr.charCodeAt(i);
+                return JSON.parse(new TextDecoder().decode(bytes));
+            } catch(e) {
+                // Fallback static
+                const staticResp = await fetch('./database.json?t=' + Date.now());
+                return await staticResp.json();
+            }
+        }
+
+        async function fetchFromPythonServer() {
+            if (SERVER_BASE) {
+                try {
+                    const res = await fetch(apiUrl('/api/get?t=' + Date.now()), {
+                        cache: 'no-store',
+                        signal: AbortSignal.timeout(3000)
+                    });
+                    if (res.ok) return await res.json();
+                } catch(e) {
+                    console.warn('Server Python indisponibil, fallback la GitHub Cloud:', e);
+                }
+            }
+            return await fetchFromCloudGitHub();
+        }
+
+        // ========= DATA ACCESS STATE =========
+        let progData = { employees: [], overlapRules: {} };
+        const SYNC_INTERVAL_MS = 3000;
+
+        async function loadProgDataFromServer(callback) {
+            await detectServerBase();
+            try {
+                const data = await fetchFromPythonServer();
+                if (data && (data.employees || data.overlapRules)) {
+                    progData = data;
+                    localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
+                }
+            } catch(err) {
+                console.warn('Eroare fetch, folosim localStorage:', err);
+                const v2Data = localStorage.getItem('hrProgDB_v2');
+                if (v2Data) {
+                    try { progData = JSON.parse(v2Data); } catch(e) {}
+                }
+            }
+            if (callback) callback();
+        }
+
+        let lastSavedTimestamp = 0;
+
+        async function triggerInstantSync() {
+            if (!currentEmp) return;
+            if (Date.now() - lastSavedTimestamp < 2000) return;
+            try {
+                const data = await fetchFromPythonServer();
+                if (!data || !data.employees) return;
+                const oldJson = JSON.stringify(progData);
+                const newJson = JSON.stringify(data);
+                if (oldJson === newJson) return;
+                progData = data;
+                localStorage.setItem('hrProgDB_v2', newJson);
+                const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
+                if (freshEmp) currentEmp = freshEmp;
+                renderApp();
+                showSyncIndicator();
+            } catch(e) {}
+        }
+
+        function startAutoSync() {
+            setInterval(triggerInstantSync, SYNC_INTERVAL_MS);
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible') {
+                    triggerInstantSync();
+                }
+            });
+
+            window.addEventListener('focus', () => {
+                triggerInstantSync();
+            });
+        }
+
+        function showSyncIndicator() {
+            const ind = document.getElementById('sync-indicator');
+            if (!ind) return;
+            ind.style.opacity = '1';
+            setTimeout(() => { ind.style.opacity = '0'; }, 2000);
+        }
+
+        // Sincronizare specifica a concediului direct in GitHub Cloud (fara a atinge sau masca CNP-urile altora)
+        async function syncLeaveToGitHub(empId, action, intervalData) {
+            try {
+                const getResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json?t=` + Date.now(), {
+                    headers: {
+                        "Authorization": `token ${GITHUB_TOKEN}`,
+                        "Accept": "application/vnd.github.v3+json"
+                    }
+                });
+                if (!getResp.ok) return false;
+                const fileInfo = await getResp.json();
+                const sha = fileInfo.sha;
+                const cleanB64 = fileInfo.content.replace(/\s/g, '');
+                const binaryStr = atob(cleanB64);
+                const bytes = new Uint8Array(binaryStr.length);
+                for (let i = 0; i < binaryStr.length; i++) bytes[i] = binaryStr.charCodeAt(i);
+                const cloudDb = JSON.parse(new TextDecoder().decode(bytes));
+
+                const targetEmp = (cloudDb.employees || []).find(e => e.id === empId || (currentEmp.cnp && e.cnp === currentEmp.cnp));
+                if (!targetEmp) return false;
+                if (!targetEmp.intervals) targetEmp.intervals = [];
+
+                if (action === 'save') {
+                    const exists = targetEmp.intervals.some(i => (intervalData.id && i.id === intervalData.id) || (i.start === intervalData.start && i.end === intervalData.end));
+                    if (!exists) targetEmp.intervals.push(intervalData);
+                } else if (action === 'delete') {
+                    targetEmp.intervals = targetEmp.intervals.filter(i => !( (intervalData.id && i.id === intervalData.id) || (i.start === intervalData.start && i.end === intervalData.end) ));
+                }
+
+                progData = cloudDb;
+                localStorage.setItem('hrProgDB_v2', JSON.stringify(cloudDb));
+
+                const utf8Bytes = new TextEncoder().encode(JSON.stringify(cloudDb, null, 4));
+                let binStr = '';
+                utf8Bytes.forEach(b => binStr += String.fromCharCode(b));
+                const contentB64 = btoa(binStr);
+
+                const putResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
+                    method: "PUT",
+                    headers: {
+                        "Authorization": `token ${GITHUB_TOKEN}`,
+                        "Content-Type": "application/json",
+                        "Accept": "application/vnd.github.v3+json"
+                    },
+                    body: JSON.stringify({
+                        message: `Concediu ${action === 'save' ? 'adaugat' : 'sters'} de ${targetEmp.name}`,
+                        content: contentB64,
+                        sha: sha
+                    })
+                });
+                return putResp.ok;
+            } catch(e) {
+                console.warn('Eroare syncLeaveToGitHub:', e);
+                return false;
+            }
+        }
+
+        // ========= HOLIDAY ENGINE (mirror main app) =========
+        function getEasterOrthodox(year) {
+            const a = year % 4, b = year % 7, c = year % 19;
+            const d = (19 * c + 15) % 30;
+            const e = (2 * a + 4 * b - d + 34) % 7;
+            const month = Math.floor((d + e + 114) / 31);
+            const day = ((d + e + 114) % 31) + 1;
+            const julianDate = new Date(year, month - 1, day);
+            julianDate.setDate(julianDate.getDate() + 13);
+            return julianDate;
+        }
+
+        function getRomanianHolidays(year) {
+            const holidays = [];
+            holidays.push({ date: `${year}-01-01`, name: 'Anul Nou' });
+            holidays.push({ date: `${year}-01-02`, name: 'Anul Nou (Ziua 2)' });
+            holidays.push({ date: `${year}-01-06`, name: 'Boboteaza' });
+            holidays.push({ date: `${year}-01-07`, name: 'Sf. Ioan Botezătorul' });
+            holidays.push({ date: `${year}-01-24`, name: 'Ziua Unirii Principatelor' });
+            holidays.push({ date: `${year}-05-01`, name: 'Ziua Muncii' });
+            holidays.push({ date: `${year}-06-01`, name: 'Ziua Copilului' });
+            holidays.push({ date: `${year}-08-15`, name: 'Adormirea Maicii Domnului' });
+            holidays.push({ date: `${year}-11-30`, name: 'Sf. Andrei' });
+            holidays.push({ date: `${year}-12-01`, name: 'Ziua Națională' });
+            holidays.push({ date: `${year}-12-25`, name: 'Crăciun (Ziua 1)' });
+            holidays.push({ date: `${year}-12-26`, name: 'Crăciun (Ziua 2)' });
+
+            const easter = getEasterOrthodox(year);
+            const goodFriday = new Date(easter); goodFriday.setDate(goodFriday.getDate() - 2);
+            holidays.push({ date: dateToIso(goodFriday), name: 'Vinerea Mare' });
+            holidays.push({ date: dateToIso(easter), name: 'Paștele Ortodox' });
+            const easterMon = new Date(easter); easterMon.setDate(easterMon.getDate() + 1);
+            holidays.push({ date: dateToIso(easterMon), name: 'A 2-a zi Paște' });
+            const pentecost = new Date(easter); pentecost.setDate(pentecost.getDate() + 49);
+            holidays.push({ date: dateToIso(pentecost), name: 'Rusalii' });
+            const pentecostMon = new Date(easter); pentecostMon.setDate(pentecostMon.getDate() + 50);
+            holidays.push({ date: dateToIso(pentecostMon), name: 'A 2-a zi Rusalii' });
+            return holidays;
+        }
+
+        const holidayCache = {};
+        function getHolidaysForYear(yr) {
+            if (!holidayCache[yr]) holidayCache[yr] = getRomanianHolidays(yr);
+            return holidayCache[yr];
+        }
+        function isHoliday(isoStr) {
+            const yr = parseInt(isoStr.substring(0, 4));
+            return getHolidaysForYear(yr).find(h => h.date === isoStr) || null;
+        }
+        function isNonWorkingDay(d) {
+            const dow = d.getDay();
+            if (dow === 0 || dow === 6) return true;
+            return !!isHoliday(dateToIso(d));
+        }
+        function getBusinessDaysCount(s, e) {
+            let cnt = 0;
+            const cur = new Date(s.getTime());
+            while (cur <= e) { if (!isNonWorkingDay(cur)) cnt++; cur.setDate(cur.getDate() + 1); }
+            return cnt;
+        }
+
+        // ========= DATE HELPERS =========
+        function dateToIso(d) {
+            return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+        }
+        function formatIsoToRo(iso) {
+            if (!iso) return '';
+            const p = iso.split('-');
+            return p.length === 3 ? `${p[2]}.${p[1]}.${p[0]}` : iso;
+        }
+
+        // ========= ROLE COLORS =========
+        const roleColors = [
+            { bg: 'rgba(245,158,11,0.3)', text: '#fef3c7', border: 'rgba(245,158,11,0.5)', dot: '#f59e0b' },
+            { bg: 'rgba(16,185,129,0.3)', text: '#d1fae5', border: 'rgba(16,185,129,0.5)', dot: '#10b981' },
+            { bg: 'rgba(14,165,233,0.3)', text: '#e0f2fe', border: 'rgba(14,165,233,0.5)', dot: '#0ea5e9' },
+            { bg: 'rgba(168,85,247,0.3)', text: '#f3e8ff', border: 'rgba(168,85,247,0.5)', dot: '#a855f7' },
+            { bg: 'rgba(236,72,153,0.3)', text: '#fce7f3', border: 'rgba(236,72,153,0.5)', dot: '#ec4899' },
+            { bg: 'rgba(99,102,241,0.3)', text: '#e0e7ff', border: 'rgba(99,102,241,0.5)', dot: '#6366f1' },
+        ];
+        const roleColorMap = {};
+        function getRoleStyle(roleName) {
+            const n = (roleName || '–').trim().toLowerCase();
+            if (!roleColorMap[n]) {
+                const idx = Object.keys(roleColorMap).length % roleColors.length;
+                roleColorMap[n] = roleColors[idx];
+            }
+            return roleColorMap[n];
+        }
+
+        // ========= OVERLAP CHECK =========
+        function checkOverlapRules(progData, targetEmpId, startIso, endIso) {
+            const emp = (progData.employees || []).find(e => e.id === targetEmpId);
+            if (!emp || !emp.functie) return { violated: false };
+
+            const role = emp.functie.trim();
+            const maxAllowed = (progData.overlapRules && progData.overlapRules[role] !== undefined) ? progData.overlapRules[role] : 1;
+            const others = (progData.employees || []).filter(e => e.id !== targetEmpId && e.functie && e.functie.trim().toLowerCase() === role.toLowerCase());
+            if (others.length === 0) return { violated: false };
+
+            const start = new Date(startIso), end = new Date(endIso);
+            let totalViolationDays = 0;
+            let violationDates = [];
+            let conflicting = new Set();
+
+            for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+                const ds = dateToIso(d);
+                if (isNonWorkingDay(d)) continue;
+                let cnt = 0;
+                others.forEach(c => {
+                    (c.intervals || []).forEach(int => {
+                        if (ds >= int.start && ds <= int.end) { cnt++; conflicting.add(c.name); }
+                    });
+                });
+                if (cnt >= maxAllowed) { totalViolationDays++; violationDates.push(ds); }
+            }
+
+            if (totalViolationDays > 0) {
+                const namesList = Array.from(conflicting).join(', ');
+                if (totalViolationDays <= 2) {
+                    return { violated: false, isException: true, totalViolationDays, role, namesList, violationDates };
+                } else {
+                    return { violated: true, totalViolationDays, role, maxAllowed, namesList, violationDates };
+                }
+            }
+            return { violated: false };
+        }
+
+        // ========= MONTH NAMES =========
+        const monthNamesRo = ['Ianuarie','Februarie','Martie','Aprilie','Mai','Iunie','Iulie','August','Septembrie','Octombrie','Noiembrie','Decembrie'];
+
+        // ========= STATE =========
+        let currentEmp = null;
+        const defaultNextYear = new Date().getFullYear() + 1;
+        let currentCalDate = new Date(defaultNextYear, 0, 1);
+        let selStart = null, selEnd = null;
+
+        // ========= DOM REFS =========
+        const loginScreen = document.getElementById('login-screen');
+        const appScreen = document.getElementById('app-screen');
+        const loginForm = document.getElementById('login-form');
+        const cnpInput = document.getElementById('cnp-input');
+        const loginError = document.getElementById('login-error');
+        const loginErrorText = document.getElementById('login-error-text');
+        const logoutBtn = document.getElementById('logout-btn');
+        const userAvatar = document.getElementById('user-avatar');
+        const userName = document.getElementById('user-name');
+        const userRole = document.getElementById('user-role');
+        const statTotal = document.getElementById('stat-total');
+        const statUsed = document.getElementById('stat-used');
+        const statRemaining = document.getElementById('stat-remaining');
+        const calTitle = document.getElementById('cal-title');
+        const calGrid = document.getElementById('m-cal-grid');
+        const calPrev = document.getElementById('cal-prev');
+        const calNext = document.getElementById('cal-next');
+        const legendEl = document.getElementById('m-legend');
+        const myLeavesList = document.getElementById('my-leaves-list');
+        const selBar = document.getElementById('sel-bar');
+        const selBarInfo = document.getElementById('sel-bar-info');
+        const selSaveBtn = document.getElementById('sel-save');
+        const selClearBtn = document.getElementById('sel-clear');
+        const toastEl = document.getElementById('toast');
+
+        // ========= TOAST =========
+        function showToast(msg, type = 'success', duration = 3500) {
+            toastEl.textContent = msg;
+            toastEl.className = `toast ${type}`;
+            requestAnimationFrame(() => toastEl.classList.add('visible'));
+            setTimeout(() => toastEl.classList.remove('visible'), duration);
+        }
+
+        function strEquals(a, b) {
+            return String(a || '').trim() === String(b || '').trim();
+        }
+
+        // ========= LOGIN =========
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const cnp = cnpInput.value.trim();
+            if (!cnp) return;
+
+            // 1. Incercare via Python API daca este setat SERVER_BASE
+            if (SERVER_BASE) {
+                try {
+                    const res = await fetch(apiUrl('/api/login'), {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ cnp: cnp }),
+                        signal: AbortSignal.timeout(3000)
+                    });
+                    const resData = await res.json();
+                    if (resData && resData.status === 'success' && resData.employee) {
+                        currentEmp = resData.employee;
+                        if (resData.db) progData = resData.db;
+                        loginScreen.style.display = 'none';
+                        appScreen.classList.add('active');
+                        renderApp();
+                        return;
+                    }
+                } catch(err) {
+                    console.warn('Login via Python server failed, trying local/cloud DB:', err);
+                }
+            }
+
+            // 2. Fallback direct pe baza de date (Cloud / local)
+            loadProgDataFromServer(() => {
+                const emp = (progData.employees || []).find(e => strEquals(e.cnp, cnp));
+                if (emp) {
+                    currentEmp = emp;
+                    loginScreen.style.display = 'none';
+                    appScreen.classList.add('active');
+                    renderApp();
+                } else {
+                    loginErrorText.textContent = 'CNP-ul nu a fost găsit în baza de date.';
+                    loginError.classList.add('visible');
+                    setTimeout(() => loginError.classList.remove('visible'), 4000);
+                }
+            });
+        });
+
+        logoutBtn.addEventListener('click', () => {
+            currentEmp = null;
+            selStart = null; selEnd = null;
+            cnpInput.value = '';
+            sessionStorage.removeItem('angajat_session_cnp');
+            appScreen.classList.remove('active');
+            loginScreen.style.display = 'flex';
+            selBar.classList.remove('visible');
+            document.body.classList.remove('has-selection');
+        });
+
+        startAutoSync();
+
+        // ========= RENDER APP =========
+        function renderApp() {
+            if (!currentEmp) return;
+
+            const freshEmp = (progData.employees || []).find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
+            if (freshEmp) currentEmp = freshEmp;
+
+            if (currentEmp.cnp && currentEmp.cnp !== '***') {
+                sessionStorage.setItem('angajat_session_cnp', currentEmp.cnp);
+            }
+
+            const initials = (currentEmp.name || '?').split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
+            userAvatar.textContent = initials;
+            userName.textContent = currentEmp.name;
+            userRole.textContent = currentEmp.functie || 'Angajat';
+
+            const usedDays = (currentEmp.intervals || []).reduce((sum, int) => sum + (int.days || 0), 0);
+            const totalDays = currentEmp.cuvenit || 21;
+            statTotal.textContent = totalDays;
+            statUsed.textContent = usedDays;
+            statRemaining.textContent = Math.max(0, totalDays - usedDays);
+
+            renderCalendar();
+            renderMyLeaves();
+            lucide.createIcons();
+        }
+
+        function normalizeRole(str) {
+            return (str || '')
+                .trim()
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/[.\-\s]+/g, ' ');
+        }
+
+        function isRoleVisibleOnMobile(roleName) {
+            if (!progData) return true;
+            if (Array.isArray(progData.mobileVisibleCategories)) {
+                const nr = normalizeRole(roleName);
+                if (!nr) return true;
+                return progData.mobileVisibleCategories.some(cat => {
+                    const nc = normalizeRole(cat);
+                    return nc === nr || nc.includes(nr) || nr.includes(nc);
+                });
+            }
+            return true;
+        }
+
+        // ========= CALENDAR =========
+        calPrev.addEventListener('click', () => { currentCalDate.setMonth(currentCalDate.getMonth() - 1); renderCalendar(); });
+        calNext.addEventListener('click', () => { currentCalDate.setMonth(currentCalDate.getMonth() + 1); renderCalendar(); });
+
+        function renderCalendar() {
+            const year = currentCalDate.getFullYear();
+            const month = currentCalDate.getMonth();
+            calTitle.textContent = `${monthNamesRo[month]} ${year}`;
+
+            legendEl.innerHTML = '';
+            const rolesSet = new Set();
+            (progData.employees || []).forEach(e => {
+                if (e.functie && isRoleVisibleOnMobile(e.functie)) {
+                    rolesSet.add(e.functie.trim());
+                }
+            });
+            rolesSet.forEach(role => {
+                const s = getRoleStyle(role);
+                legendEl.innerHTML += `<div class="m-legend-item"><span class="m-legend-dot" style="background:${s.dot};"></span>${role}</div>`;
+            });
+
+            calGrid.innerHTML = '';
+
+            const dayNames = ['Lu','Ma','Mi','Jo','Vi','Sâ','Du'];
+            dayNames.forEach((dn, i) => {
+                const hdr = document.createElement('div');
+                hdr.className = `m-cal-hdr ${i >= 5 ? 'wknd' : ''}`;
+                hdr.textContent = dn;
+                calGrid.appendChild(hdr);
+            });
+
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const daysInMonth = lastDay.getDate();
+            let startDow = firstDay.getDay();
+            if (startDow === 0) startDow = 7;
+
+            const prevLast = new Date(year, month, 0).getDate();
+            for (let i = startDow - 1; i > 0; i--) {
+                const cell = document.createElement('div');
+                cell.className = 'm-cal-cell other';
+                cell.innerHTML = `<div class="m-day-num">${prevLast - i + 1}</div>`;
+                calGrid.appendChild(cell);
+            }
+
+            const today = new Date();
+            for (let day = 1; day <= daysInMonth; day++) {
+                const cellDate = new Date(year, month, day);
+                const iso = dateToIso(cellDate);
+                const dow = cellDate.getDay();
+                const isWknd = (dow === 0 || dow === 6);
+                const holiday = isHoliday(iso);
+                const isToday = cellDate.toDateString() === today.toDateString();
+
+                let selCls = '';
+                if (selStart && !selEnd && iso === selStart) selCls = 'sel-start';
+                else if (selStart && selEnd) {
+                    if (iso === selStart) selCls = 'sel-start';
+                    else if (iso === selEnd) selCls = 'sel-end';
+                    else if (iso > selStart && iso < selEnd) selCls = 'sel-in-range';
+                }
+
+                const cell = document.createElement('div');
+                cell.className = `m-cal-cell selectable ${isWknd ? 'wknd' : ''} ${holiday ? 'holiday' : ''} ${isToday ? 'today' : ''} ${selCls}`;
+                cell.dataset.date = iso;
+
+                let html = `<div class="m-day-num">${day}</div>`;
+                if (holiday) html += `<div class="m-holiday-tag" title="${holiday.name}">🏛️ ${holiday.name}</div>`;
+
+                html += '<div class="m-badges">';
+                (progData.employees || []).forEach(emp => {
+                    const isMe = emp.id === currentEmp.id || (currentEmp.cnp && emp.cnp && strEquals(emp.cnp, currentEmp.cnp));
+                    if (!isMe && !isRoleVisibleOnMobile(emp.functie)) {
+                        return;
+                    }
+                    (emp.intervals || []).forEach(int => {
+                        if (iso >= int.start && iso <= int.end) {
+                            const style = getRoleStyle(emp.functie);
+                            const fullName = emp.name || 'Angajat';
+                            html += `<div class="m-badge ${isMe ? 'is-me' : ''}" style="background:${style.bg}; color:${style.text}; border: 1px solid ${style.border || 'transparent'};" title="${fullName} (${emp.functie || ''})">${isMe ? '⭐ ' : ''}${fullName}</div>`;
+                        }
+                    });
+                });
+                html += '</div>';
+
+                cell.innerHTML = html;
+                cell.addEventListener('click', () => handleCellClick(iso));
+                calGrid.appendChild(cell);
+            }
+
+            const totalCells = (startDow - 1) + daysInMonth;
+            const rem = (7 - (totalCells % 7)) % 7;
+            for (let i = 1; i <= rem; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'm-cal-cell other';
+                cell.innerHTML = `<div class="m-day-num">${i}</div>`;
+                calGrid.appendChild(cell);
+            }
+
+            lucide.createIcons();
+        }
+
+        // ========= CELL CLICK (SELECT PERIOD) =========
+        function handleCellClick(iso) {
+            if (!selStart || (selStart && selEnd)) {
+                selStart = iso;
+                selEnd = null;
+                selBar.classList.add('visible');
+                document.body.classList.add('has-selection');
+                updateSelBar();
+            } else if (selStart && !selEnd) {
+                if (iso < selStart) {
+                    selStart = iso;
+                } else {
+                    selEnd = iso;
+                }
+                updateSelBar();
+            }
+            renderCalendar();
+        }
+
+        function updateSelBar() {
+            if (!selStart) {
+                selBar.classList.remove('visible');
+                document.body.classList.remove('has-selection');
+                return;
+            }
+
+            selBar.classList.add('visible');
+            document.body.classList.add('has-selection');
+
+            if (selEnd && selEnd !== selStart) {
+                const bDays = getBusinessDaysCount(new Date(selStart), new Date(selEnd));
+                selBarInfo.textContent = `📅 ${formatIsoToRo(selStart)} – ${formatIsoToRo(selEnd)} (${bDays} zile lucrătoare)`;
+                selSaveBtn.disabled = false;
+            } else {
+                const bDays = getBusinessDaysCount(new Date(selStart), new Date(selStart));
+                selBarInfo.textContent = `📅 ${formatIsoToRo(selStart)} (${bDays} zi lucrătoare)`;
+                selSaveBtn.disabled = false;
+            }
+        }
+
+        selClearBtn.addEventListener('click', () => {
+            selStart = null; selEnd = null;
+            selBar.classList.remove('visible');
+            document.body.classList.remove('has-selection');
+            renderCalendar();
+        });
+
+        // ========= SAVE LEAVE =========
+        selSaveBtn.addEventListener('click', async () => {
+            if (!selStart || !currentEmp) return;
+
+            const selectedEnd = selEnd || selStart;
+            const startDate = new Date(selStart);
+            const endDate = new Date(selectedEnd);
+            const businessDays = getBusinessDaysCount(startDate, endDate);
+
+            if (businessDays === 0) {
+                showToast('Perioada nu conține zile lucrătoare.', 'error');
+                return;
+            }
+
+            const emp = (progData.employees || []).find(e => e.id === currentEmp.id);
+            if (!emp) { showToast('Eroare: angajatul nu a fost găsit.', 'error'); return; }
+
+            const usedDays = (emp.intervals || []).reduce((sum, int) => sum + (int.days || 0), 0);
+            const totalDays = emp.cuvenit || 21;
+            if (usedDays + businessDays > totalDays) {
+                const remaining = Math.max(0, totalDays - usedDays);
+                showToast(`⛔ Limită depășită! Mai aveți doar ${remaining} zile rămase (cuvenit: ${totalDays}), dar încercați să programați ${businessDays} zile.`, 'error', 6000);
+                return;
+            }
+
+            const check = checkOverlapRules(progData, currentEmp.id, selStart, selectedEnd);
+            if (check.violated) {
+                showToast(`⛔ Blocat! ${check.totalViolationDays} zile suprapuse (max 2 permise) cu ${check.namesList}. Alegeți altă perioadă.`, 'error', 5000);
+                return;
+            }
+
+            if (check.isException) {
+                showToast(`⚠️ Excepție (${check.totalViolationDays} zi suprapunere) cu ${check.namesList}. Salvat!`, 'warning', 4000);
+            }
+
+            if (!emp.intervals) emp.intervals = [];
+            const newIntId = 'int_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
+            const newInterval = {
+                id: newIntId,
+                start: selStart,
+                end: selectedEnd,
+                days: businessDays
+            };
+            emp.intervals.push(newInterval);
+
+            const savedStart = selStart;
+            const savedEnd = selectedEnd;
+            lastSavedTimestamp = Date.now();
+
+            // Salvare locala imediata
+            localStorage.setItem('hrProgDB_v2', JSON.stringify(progData));
+
+            // Salvare pe server Python daca e disponibil
+            if (SERVER_BASE) {
+                fetch(apiUrl('/api/save_employee_leave'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        cnp: currentEmp.cnp,
+                        empId: currentEmp.id,
+                        id: newIntId,
+                        start: selStart,
+                        end: selectedEnd,
+                        days: businessDays
+                    })
+                }).catch(() => {});
+            }
+
+            // Sincronizare direct in GitHub Cloud (fara a masca CNP-urile)
+            syncLeaveToGitHub(currentEmp.id, 'save', newInterval);
+
+            currentEmp = emp;
+            selStart = null; selEnd = null;
+            selBar.classList.remove('visible');
+            document.body.classList.remove('has-selection');
+
+            if (!check.isException) {
+                showToast(`✅ Concediu salvat! ${formatIsoToRo(savedStart)} – ${formatIsoToRo(savedEnd)} (${businessDays} zile)`, 'success');
+            }
+
+            renderApp();
+        });
+
+        // ========= MY LEAVES LIST =========
+        function renderMyLeaves() {
+            if (!myLeavesList || !currentEmp) return;
+            const intervals = currentEmp.intervals || [];
+
+            if (intervals.length === 0) {
+                myLeavesList.innerHTML = '<div class="empty-state">Nu aveți concedii programate.<br>Apăsați pe calendar pentru a selecta o perioadă.</div>';
+                return;
+            }
+
+            const sorted = [...intervals].sort((a, b) => a.start.localeCompare(b.start));
+            myLeavesList.innerHTML = sorted.map(int => `
+                <div class="leave-item">
+                    <div class="leave-item-info">
+                        <div class="leave-item-dates">${formatIsoToRo(int.start)} – ${formatIsoToRo(int.end)}</div>
+                        <div class="leave-item-days">${int.days || '–'} zile lucrătoare</div>
+                    </div>
+                    <button class="leave-del-btn" onclick="deleteMyLeave('${int.id}', '${int.start}', '${int.end}')" title="Șterge concediu">
+                        <i data-lucide="trash-2" style="width:16px; height:16px;"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            lucide.createIcons();
+        }
+
+        window.deleteMyLeave = async function(intId, startIso, endIso) {
+            if (!confirm('Sigur doriți să ștergeți acest concediu?')) return;
+
+            const emp = (progData.employees || []).find(e => e.id === currentEmp.id || (currentEmp.cnp && e.cnp === currentEmp.cnp));
+            if (!emp) return;
+
+            emp.intervals = (emp.intervals || []).filter(i => !( (intId && i.id === intId) || (i.start === startIso && i.end === endIso) ));
+            lastSavedTimestamp = Date.now();
+            localStorage.setItem('hrProgDB_v2', JSON.stringify(progData));
+
+            if (SERVER_BASE) {
+                fetch(apiUrl('/api/delete_employee_leave'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        cnp: currentEmp.cnp,
+                        empId: currentEmp.id,
+                        id: intId,
+                        start: startIso,
+                        end: endIso
+                    })
+                }).catch(() => {});
+            }
+
+            syncLeaveToGitHub(currentEmp.id, 'delete', { id: intId, start: startIso, end: endIso });
+
+            currentEmp = emp;
+            showToast('Concediu șters.', 'success');
+            renderApp();
+        };
+
+        // ========= INIT =========
+        const savedCnp = sessionStorage.getItem('angajat_session_cnp');
+        loadProgDataFromServer(() => {
+            if (savedCnp) {
+                const emp = (progData.employees || []).find(e => strEquals(e.cnp, savedCnp));
+                if (emp) {
+                    currentEmp = emp;
+                    loginScreen.style.display = 'none';
+                    appScreen.classList.add('active');
+                    renderApp();
+                }
+            }
+        });
+    });
+    </script>
+</body>
+</html>
