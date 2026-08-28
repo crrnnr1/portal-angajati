@@ -479,6 +479,9 @@
     ],
     "overlapRules": {},
     "mobileVisibleCategories": [
-        "Asist. Med."
+        "Asist. Med.",
+        "Infirmieră",
+        "Instr. Ergo.",
+        "Lucr. Soc"
     ]
 }
