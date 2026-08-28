@@ -309,11 +309,12 @@
             background: rgba(15, 23, 42, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.04);
             border-radius: 0.5rem;
-            min-height: 58px;
-            padding: 0.2rem;
+            min-height: 60px;
+            height: auto;
+            padding: 0.25rem 0.2rem;
             display: flex;
             flex-direction: column;
-            gap: 0.15rem;
+            gap: 0.2rem;
             transition: all 0.15s;
             position: relative;
         }
@@ -371,27 +372,28 @@
         .m-badges {
             display: flex;
             flex-direction: column;
-            gap: 1px;
-            overflow: hidden;
+            gap: 2px;
+            overflow: visible;
+            max-height: none;
+            width: 100%;
         }
         .m-badge {
-            font-size: 0.55rem;
+            font-size: 0.58rem;
             font-weight: 500;
-            padding: 1px 3px;
+            padding: 2px 3px;
             border-radius: 3px;
             line-height: 1.2;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            white-space: normal;
+            word-break: break-word;
+            display: block;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
         .m-badge.is-me {
-            outline: 1.5px solid rgba(255, 255, 255, 0.6);
+            outline: 1.5px solid rgba(255, 255, 255, 0.7);
             font-weight: 700;
         }
         .m-more {
-            font-size: 0.5rem;
-            color: var(--text-secondary);
-            padding: 0 0.15rem;
+            display: none;
         }
 
         /* Selection Bar (bottom fixed) */
@@ -765,7 +767,10 @@
         async function fetchFromPythonServer() {
             if (SERVER_BASE) {
                 try {
-                    const res = await fetch(apiUrl('/api/get'), { signal: AbortSignal.timeout(3000) });
+                    const res = await fetch(apiUrl('/api/get?t=' + Date.now()), {
+                        cache: 'no-store',
+                        signal: AbortSignal.timeout(3000)
+                    });
                     if (res.ok) return await res.json();
                 } catch(e) {
                     console.warn('Server Python indisponibil, fallback la GitHub Cloud:', e);
@@ -776,7 +781,7 @@
 
         // ========= DATA ACCESS STATE =========
         let progData = { employees: [], overlapRules: {} };
-        const SYNC_INTERVAL_MS = 8000;
+        const SYNC_INTERVAL_MS = 3000;
 
         async function loadProgDataFromServer(callback) {
             await detectServerBase();
@@ -798,39 +803,35 @@
 
         let lastSavedTimestamp = 0;
 
-        function startAutoSync() {
-            setInterval(async () => {
-                if (!currentEmp) return;
-                if (Date.now() - lastSavedTimestamp < 6000) return;
-                try {
-                    const data = await fetchFromPythonServer();
-                    if (!data || !data.employees) return;
-                    const oldJson = JSON.stringify(progData);
-                    const newJson = JSON.stringify(data);
-                    if (oldJson === newJson) return;
-                    progData = data;
-                    localStorage.setItem('hrProgDB_v2', newJson);
-                    const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
-                    if (freshEmp) currentEmp = freshEmp;
-                    renderApp();
-                    showSyncIndicator();
-                } catch(e) {}
-            }, SYNC_INTERVAL_MS);
+        async function triggerInstantSync() {
+            if (!currentEmp) return;
+            if (Date.now() - lastSavedTimestamp < 2000) return;
+            try {
+                const data = await fetchFromPythonServer();
+                if (!data || !data.employees) return;
+                const oldJson = JSON.stringify(progData);
+                const newJson = JSON.stringify(data);
+                if (oldJson === newJson) return;
+                progData = data;
+                localStorage.setItem('hrProgDB_v2', newJson);
+                const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
+                if (freshEmp) currentEmp = freshEmp;
+                renderApp();
+                showSyncIndicator();
+            } catch(e) {}
+        }
 
-            document.addEventListener('visibilitychange', async () => {
-                if (document.visibilityState === 'visible' && currentEmp) {
-                    if (Date.now() - lastSavedTimestamp < 3000) return;
-                    try {
-                        const data = await fetchFromPythonServer();
-                        if (!data || !data.employees) return;
-                        progData = data;
-                        localStorage.setItem('hrProgDB_v2', JSON.stringify(data));
-                        const freshEmp = progData.employees.find(e => e.id === currentEmp.id || (e.cnp && currentEmp.cnp && e.cnp === currentEmp.cnp));
-                        if (freshEmp) currentEmp = freshEmp;
-                        renderApp();
-                        showSyncIndicator();
-                    } catch(e) {}
+        function startAutoSync() {
+            setInterval(triggerInstantSync, SYNC_INTERVAL_MS);
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible') {
+                    triggerInstantSync();
                 }
+            });
+
+            window.addEventListener('focus', () => {
+                triggerInstantSync();
             });
         }
 
@@ -1158,6 +1159,28 @@
             lucide.createIcons();
         }
 
+        function normalizeRole(str) {
+            return (str || '')
+                .trim()
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/[.\-\s]+/g, ' ');
+        }
+
+        function isRoleVisibleOnMobile(roleName) {
+            if (!progData) return true;
+            if (Array.isArray(progData.mobileVisibleCategories)) {
+                const nr = normalizeRole(roleName);
+                if (!nr) return true;
+                return progData.mobileVisibleCategories.some(cat => {
+                    const nc = normalizeRole(cat);
+                    return nc === nr || nc.includes(nr) || nr.includes(nc);
+                });
+            }
+            return true;
+        }
+
         // ========= CALENDAR =========
         calPrev.addEventListener('click', () => { currentCalDate.setMonth(currentCalDate.getMonth() - 1); renderCalendar(); });
         calNext.addEventListener('click', () => { currentCalDate.setMonth(currentCalDate.getMonth() + 1); renderCalendar(); });
@@ -1169,7 +1192,11 @@
 
             legendEl.innerHTML = '';
             const rolesSet = new Set();
-            (progData.employees || []).forEach(e => { if (e.functie) rolesSet.add(e.functie.trim()); });
+            (progData.employees || []).forEach(e => {
+                if (e.functie && isRoleVisibleOnMobile(e.functie)) {
+                    rolesSet.add(e.functie.trim());
+                }
+            });
             rolesSet.forEach(role => {
                 const s = getRoleStyle(role);
                 legendEl.innerHTML += `<div class="m-legend-item"><span class="m-legend-dot" style="background:${s.dot};"></span>${role}</div>`;
@@ -1224,24 +1251,19 @@
                 if (holiday) html += `<div class="m-holiday-tag" title="${holiday.name}">🏛️ ${holiday.name}</div>`;
 
                 html += '<div class="m-badges">';
-                let badgeCount = 0;
-                let hiddenCount = 0;
                 (progData.employees || []).forEach(emp => {
+                    const isMe = emp.id === currentEmp.id || (currentEmp.cnp && emp.cnp && strEquals(emp.cnp, currentEmp.cnp));
+                    if (!isMe && !isRoleVisibleOnMobile(emp.functie)) {
+                        return;
+                    }
                     (emp.intervals || []).forEach(int => {
                         if (iso >= int.start && iso <= int.end) {
                             const style = getRoleStyle(emp.functie);
-                            const isMe = emp.id === currentEmp.id;
-                            if (badgeCount < 3) {
-                                const firstName = emp.name.split(' ')[0];
-                                html += `<div class="m-badge ${isMe ? 'is-me' : ''}" style="background:${style.bg}; color:${style.text};" title="${emp.name}">${isMe ? '⭐ ' : ''}${firstName}</div>`;
-                            } else {
-                                hiddenCount++;
-                            }
-                            badgeCount++;
+                            const fullName = emp.name || 'Angajat';
+                            html += `<div class="m-badge ${isMe ? 'is-me' : ''}" style="background:${style.bg}; color:${style.text}; border: 1px solid ${style.border || 'transparent'};" title="${fullName} (${emp.functie || ''})">${isMe ? '⭐ ' : ''}${fullName}</div>`;
                         }
                     });
                 });
-                if (hiddenCount > 0) html += `<div class="m-more">+${hiddenCount}</div>`;
                 html += '</div>';
 
                 cell.innerHTML = html;
@@ -1420,10 +1442,10 @@
         window.deleteMyLeave = async function(intId, startIso, endIso) {
             if (!confirm('Sigur doriți să ștergeți acest concediu?')) return;
 
-            const emp = (progData.employees || []).find(e => e.id === currentEmp.id);
+            const emp = (progData.employees || []).find(e => e.id === currentEmp.id || (currentEmp.cnp && e.cnp === currentEmp.cnp));
             if (!emp) return;
 
-            emp.intervals = (emp.intervals || []).filter(i => i.id !== intId);
+            emp.intervals = (emp.intervals || []).filter(i => !( (intId && i.id === intId) || (i.start === startIso && i.end === endIso) ));
             lastSavedTimestamp = Date.now();
             localStorage.setItem('hrProgDB_v2', JSON.stringify(progData));
 
