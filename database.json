@@ -276,7 +276,14 @@
             "functie": "Asist. social",
             "cnp": "6",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [
+                {
+                    "id": "int_1787902877946_n5pu",
+                    "start": "2027-01-11",
+                    "end": "2027-01-15",
+                    "days": 5
+                }
+            ]
         },
         {
             "id": "emp_1787645670167_u2dzn",
