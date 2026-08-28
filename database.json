@@ -408,22 +408,5 @@
         }
     ],
     "overlapRules": {},
-    "mobileVisibleCategories": [
-        "Asist. Med.",
-        "Asist. social",
-        "Infirmieră",
-        "Ingrijitoare",
-        "Insp. Spec. finan. Cont.",
-        "Insp. Spec. Res. Umane",
-        "Instr. Ergo.",
-        "Kinetoterapeut",
-        "Lucr. Soc",
-        "Munc. Fochist",
-        "Munc. Intret",
-        "Psiho log",
-        "Sef centru",
-        "Spalatoreasa",
-        "Şofer",
-        "Teh as. soc"
-    ]
+    "mobileVisibleCategories": []
 }
