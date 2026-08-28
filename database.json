@@ -381,7 +381,14 @@
             "functie": "Spalatoreasa",
             "cnp": "2810717351582",
             "cuvenit": 35,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_1787906678660_3wt6",
+                    "start": "2027-01-04",
+                    "end": "2027-01-08",
+                    "days": 3
+                }
+            ],
             "leaves": []
         },
         {
