@@ -408,12 +408,5 @@
         }
     ],
     "overlapRules": {},
-    "mobileVisibleCategories": [
-        "Asist. Med.",
-        "Infirmieră",
-        "Ingrijitoare",
-        "Instr. Ergo.",
-        "Lucr. Soc",
-        "Spalatoreasa"
-    ]
+    "mobileVisibleCategories": []
 }
