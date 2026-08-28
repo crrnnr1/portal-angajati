@@ -53,7 +53,7 @@
             "name": "Lupu Săndel",
             "functie": "Infirmieră",
             "cnp": "1730205330796",
-            "cuvenit": 21,
+            "cuvenit": 35,
             "intervals": [],
             "leaves": []
         },
@@ -384,7 +384,7 @@
             "name": "Benea Cristian",
             "functie": "Munc. Fochist",
             "cnp": "1650801352621",
-            "cuvenit": 35,
+            "cuvenit": 32,
             "intervals": [],
             "leaves": []
         },
@@ -455,7 +455,7 @@
             "id": "emp_1786613879264_m5ah8",
             "name": "Gonciar Voichița",
             "functie": "Asist. Med.",
-            "cnp": "***",
+            "cnp": "2",
             "cuvenit": 35,
             "intervals": [],
             "leaves": []
@@ -473,8 +473,20 @@
     "overlapRules": {},
     "mobileVisibleCategories": [
         "Asist. Med.",
+        "Asist. social",
         "Infirmieră",
+        "Ingrijitoare",
+        "Insp. Spec. finan. Cont.",
         "Insp. Spec. Res. Umane",
-        "Munc. Fochist"
+        "Instr. Ergo.",
+        "Kinetoterapeut",
+        "Lucr. Soc",
+        "Munc. Fochist",
+        "Munc. Intret",
+        "Psiho log",
+        "Sef centru",
+        "Spalatoreasa",
+        "Şofer",
+        "Teh as. soc"
     ]
 }
