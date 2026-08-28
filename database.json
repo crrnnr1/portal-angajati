@@ -53,7 +53,14 @@
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 35,
-            "intervals": []
+            "intervals": [
+                {
+                    "id": "int_1787902699091_lckd",
+                    "start": "2027-01-11",
+                    "end": "2027-01-15",
+                    "days": 5
+                }
+            ]
         },
         {
             "id": "emp_1787645670166_mblo9",
