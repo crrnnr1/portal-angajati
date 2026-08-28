@@ -484,7 +484,24 @@
             "leaves": []
         }
     ],
-    "overlapRules": {},
+    "overlapRules": {
+        "Asist. Med.": 1,
+        "Infirmieră": 3,
+        "Instr. Ergo.": 1,
+        "Teh as. soc": 1,
+        "Lucr. Soc": 1,
+        "Ingrijitoare": 1,
+        "Spalatoreasa": 1,
+        "Munc. Intret": 1,
+        "Munc. Fochist": 1,
+        "Şofer": 1,
+        "Sef centru": 1,
+        "Asist. social": 1,
+        "Psiho log": 1,
+        "Insp. Spec. finan. Cont.": 1,
+        "Kinetoterapeut": 1,
+        "Insp. Spec. Res. Umane": 1
+    },
     "mobileVisibleCategories": [
         "Asist. Med.",
         "Infirmieră",
