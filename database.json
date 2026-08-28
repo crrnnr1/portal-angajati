@@ -408,5 +408,7 @@
         }
     ],
     "overlapRules": {},
-    "mobileVisibleCategories": []
+    "mobileVisibleCategories": [
+        "Asist. Med."
+    ]
 }
