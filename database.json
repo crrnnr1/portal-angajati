@@ -498,14 +498,6 @@
             "leaves": []
         },
         {
-            "id": "emp_1789980460314_mymi8",
-            "name": "O R E Z I L N I C",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1789980460314_yoepn",
             "name": "Micula Adriana Elena",
             "functie": "Asist. Med.",
@@ -533,6 +525,22 @@
             "id": "emp_1789980460314_8umht",
             "name": "Crîsciu Florin Samson",
             "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1789980460314_34trc",
+            "name": "HUȘANU Luminița Leocadia",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1789980490597_g50r8",
+            "name": "Coordonat personal de specialitate",
+            "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
