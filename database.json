@@ -536,14 +536,6 @@
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
-        },
-        {
-            "id": "emp_1789980490597_g50r8",
-            "name": "Coordonat personal de specialitate",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
         }
     ],
     "overlapRules": {
