@@ -1920,6 +1920,25 @@
                 "_displayCo": 0,
                 "_displayZlp": 0
             },
+            "coordonat personal de specialitate": {
+                "name": "Coordonat personal de specialitate",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "",
+                "centru": "CCPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
             "husanu luminita leocadia": {
                 "name": "HUȘANU Luminița Leocadia",
                 "totalCo": 0,
