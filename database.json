@@ -726,7 +726,9 @@
             "cnp": "",
             "cuvenit": 21,
             "years": {
-                "2027": {}
+                "2027": {
+                    "cuvenit": 21
+                }
             },
             "intervals": []
         },
@@ -737,7 +739,9 @@
             "cnp": "",
             "cuvenit": 21,
             "years": {
-                "2027": {}
+                "2027": {
+                    "cuvenit": 21
+                }
             },
             "intervals": []
         },
@@ -748,7 +752,9 @@
             "cnp": "",
             "cuvenit": 21,
             "years": {
-                "2027": {}
+                "2027": {
+                    "cuvenit": 21
+                }
             },
             "intervals": []
         },
@@ -759,7 +765,9 @@
             "cnp": "",
             "cuvenit": 21,
             "years": {
-                "2027": {}
+                "2027": {
+                    "cuvenit": 21
+                }
             },
             "intervals": []
         },
@@ -770,7 +778,9 @@
             "cnp": "",
             "cuvenit": 21,
             "years": {
-                "2027": {}
+                "2027": {
+                    "cuvenit": 21
+                }
             },
             "intervals": []
         },
@@ -781,7 +791,9 @@
             "cnp": "",
             "cuvenit": 21,
             "years": {
-                "2027": {}
+                "2027": {
+                    "cuvenit": 21
+                }
             },
             "intervals": []
         },
@@ -792,7 +804,9 @@
             "cnp": "",
             "cuvenit": 21,
             "years": {
-                "2027": {}
+                "2027": {
+                    "cuvenit": 21
+                }
             },
             "intervals": []
         }
@@ -803,10 +817,5 @@
         "Infirmieră",
         "Insp. Spec. Res. Umane",
         "Munc. Fochist"
-    ],
-    "pontaj": {
-        "globalEmployees": {},
-        "monthsAdded": [],
-        "knownCenters": []
-    }
+    ]
 }
