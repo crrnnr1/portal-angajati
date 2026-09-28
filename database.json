@@ -520,14 +520,6 @@
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
-        },
-        {
-            "id": "emp_1790589177194_kmjsw",
-            "name": "O R E Z I L N I C",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
         }
     ],
     "overlapRules": {
