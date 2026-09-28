@@ -690,6 +690,87 @@
                 "2027": {}
             },
             "intervals": []
+        },
+        {
+            "id": "emp_1790598768163_9dn86",
+            "name": "Măran Florina Violeta",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598768163_hexe2",
+            "name": "Ocnariu Mariana",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598768163_3eo3j",
+            "name": "Pop Coman Daniel",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598768163_7901t",
+            "name": "Tatar Daniel Vasile",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598768163_bw4v3",
+            "name": "Vierescu Cristian",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598768163_qbhv6",
+            "name": "Grecu Aurelia",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598768163_v86kt",
+            "name": "Suici Alin Daniel",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598768163_diau0",
+            "name": "Repede Margarit Marian",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598768163_dkgn0",
+            "name": "Gaspar Maria",
+            "functie": "Insp. Spec. Res. umane",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
         }
     ],
     "overlapRules": {},
