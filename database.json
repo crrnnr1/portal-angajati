@@ -653,7 +653,9 @@
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
@@ -662,13 +664,35 @@
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
             "id": "emp_1790598503144_v5gl1",
             "name": "HUȘANU Luminița Leocadia",
             "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {
+                "2027": {}
+            },
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598516017_stjgf",
+            "name": "Micula Adriana Elena",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598516017_u8sb0",
+            "name": "Petrescu Cristian Ioan",
+            "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
             "years": {},
