@@ -514,14 +514,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1790581713121_veez3",
-            "name": "Coordonat personal de specialitate",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "intervals": []
-        },
-        {
             "id": "emp_1790581723935_n9clt",
             "name": "Petrescu Cristian Ioan",
             "functie": "Infirmieră",
@@ -530,7 +522,7 @@
             "intervals": []
         },
         {
-            "id": "emp_1790581821648_yqdvl",
+            "id": "emp_1790581818659_2isi4",
             "name": "O R E Z I L N I C",
             "functie": "Asistent medical",
             "cnp": "",
@@ -538,7 +530,7 @@
             "intervals": []
         },
         {
-            "id": "emp_1790581821648_twnjk",
+            "id": "emp_1790581818659_tv5uu",
             "name": "HUȘANU Luminița Leocadia",
             "functie": "Asistent medical",
             "cnp": "",
