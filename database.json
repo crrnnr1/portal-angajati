@@ -522,17 +522,25 @@
             "intervals": []
         },
         {
-            "id": "emp_1790581723935_jk1tl",
-            "name": "Micula Adriana Elena",
-            "functie": "Asist. Med.",
+            "id": "emp_1790581723935_n9clt",
+            "name": "Petrescu Cristian Ioan",
+            "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
         },
         {
-            "id": "emp_1790581723935_n9clt",
-            "name": "Petrescu Cristian Ioan",
-            "functie": "Infirmieră",
+            "id": "emp_1790581818659_2isi4",
+            "name": "O R E Z I L N I C",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1790581818659_tv5uu",
+            "name": "HUȘANU Luminița Leocadia",
+            "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
