@@ -25,7 +25,10 @@
                     "start": "2027-01-11",
                     "end": "2027-01-22"
                 }
-            ]
+            ],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_3wo0p",
@@ -34,7 +37,10 @@
             "cnp": "1880213350085",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_wj39g",
@@ -43,7 +49,10 @@
             "cnp": "1881215351614",
             "cuvenit": 33,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_cvm2m",
@@ -52,7 +61,10 @@
             "cnp": "2650226352634",
             "cuvenit": 49,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_ox5ot",
@@ -61,7 +73,10 @@
             "cnp": "1730205330796",
             "cuvenit": 45,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_0vfxd",
@@ -77,7 +92,10 @@
                     "days": 6
                 }
             ],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_eyfef",
@@ -86,7 +104,10 @@
             "cnp": "2680204352659",
             "cuvenit": 8,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_fev10",
@@ -95,7 +116,10 @@
             "cnp": "2761002352622",
             "cuvenit": 20,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_xwtp6",
@@ -104,7 +128,10 @@
             "cnp": "2690624352636",
             "cuvenit": 24,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_9pt50",
@@ -113,7 +140,10 @@
             "cnp": "1720302352636",
             "cuvenit": 16,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_qdih6",
@@ -122,7 +152,10 @@
             "cnp": "2790708352628",
             "cuvenit": 38,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_dssqi",
@@ -131,7 +164,10 @@
             "cnp": "2730825352625",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_q6yjs",
@@ -140,7 +176,10 @@
             "cnp": "2790115352623",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_60u1s",
@@ -149,7 +188,10 @@
             "cnp": "1750724352623",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_oklgs",
@@ -158,7 +200,10 @@
             "cnp": "2610319352646",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_dszm3",
@@ -167,7 +212,10 @@
             "cnp": "2770609352647",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_ys1u0",
@@ -176,7 +224,10 @@
             "cnp": "2691231200029",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_9n9df",
@@ -185,7 +236,10 @@
             "cnp": "1841028351589",
             "cuvenit": 52,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_fvzux",
@@ -194,7 +248,10 @@
             "cnp": "2720112352628",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_2fpug",
@@ -203,7 +260,10 @@
             "cnp": "2830915351572",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_t3dul",
@@ -212,7 +272,10 @@
             "cnp": "2930903226706",
             "cuvenit": 31,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_gjlyr",
@@ -221,7 +284,10 @@
             "cnp": "1730414352620",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_m568n",
@@ -230,7 +296,10 @@
             "cnp": "2700926352627",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_7p3nb",
@@ -239,7 +308,10 @@
             "cnp": "2731010352628",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_oycpr",
@@ -248,7 +320,10 @@
             "cnp": "1780326352645",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_s5f3k",
@@ -257,7 +332,10 @@
             "cnp": "1720319352622",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_ycljm",
@@ -266,7 +344,10 @@
             "cnp": "2720208352649",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_a1hps",
@@ -275,7 +356,10 @@
             "cnp": "2870907352294",
             "cuvenit": 31,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_mqojt",
@@ -284,7 +368,10 @@
             "cnp": "2761214352620",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_av7wj",
@@ -293,7 +380,10 @@
             "cnp": "1760626352623",
             "cuvenit": 36,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_jjn5v",
@@ -302,7 +392,10 @@
             "cnp": "2820913351579",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_sgj5f",
@@ -311,7 +404,10 @@
             "cnp": "2860512351582",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_n4vr1",
@@ -320,7 +416,10 @@
             "cnp": "2781027352623",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_x3lrh",
@@ -329,7 +428,10 @@
             "cnp": "2691129352632",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_b0wwf",
@@ -338,7 +440,10 @@
             "cnp": "2730212352621",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_r2d07",
@@ -347,7 +452,10 @@
             "cnp": "1740119352621",
             "cuvenit": 35,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_ncdw0",
@@ -356,7 +464,10 @@
             "cnp": "1880201350033",
             "cuvenit": 33,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_lo32p",
@@ -365,7 +476,10 @@
             "cnp": "2710812352625",
             "cuvenit": 37,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_xu1lg",
@@ -374,7 +488,10 @@
             "cnp": "2810717351582",
             "cuvenit": 52,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_1q52v",
@@ -383,7 +500,10 @@
             "cnp": "1821208351570",
             "cuvenit": 44,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_4eq0l",
@@ -392,7 +512,10 @@
             "cnp": "1650801352621",
             "cuvenit": 32,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_q0uas",
@@ -401,7 +524,10 @@
             "cnp": "1720728352621",
             "cuvenit": 37,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_mt6w9",
@@ -410,7 +536,10 @@
             "cnp": "2670426352638",
             "cuvenit": 93,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_z1gcp",
@@ -419,7 +548,10 @@
             "cnp": "2821106354165",
             "cuvenit": 37,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_s92j5",
@@ -428,7 +560,10 @@
             "cnp": "2760223352681",
             "cuvenit": 41,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_mldhr",
@@ -437,7 +572,10 @@
             "cnp": "2710203352647",
             "cuvenit": 41,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_9lrws",
@@ -446,7 +584,10 @@
             "cnp": "1820406351598",
             "cuvenit": 37,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_hhvba",
@@ -455,7 +596,10 @@
             "cnp": "1690122352622",
             "cuvenit": 32,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1786613879264_m5ah8",
@@ -464,7 +608,10 @@
             "cnp": "2",
             "cuvenit": 15,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1787552800408_0auqw",
@@ -473,7 +620,10 @@
             "cnp": "1660309352623",
             "cuvenit": 21,
             "intervals": [],
-            "leaves": []
+            "leaves": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1790596082110_mxbsv",
@@ -481,7 +631,10 @@
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "intervals": []
+            "intervals": [],
+            "years": {
+                "2027": {}
+            }
         },
         {
             "id": "emp_1790596082110_ok741",
@@ -489,6 +642,36 @@
             "functie": "Munc. Fochist",
             "cnp": "",
             "cuvenit": 21,
+            "intervals": [],
+            "years": {
+                "2027": {}
+            }
+        },
+        {
+            "id": "emp_1790598503143_lbf88",
+            "name": "O R E Z I L N I C",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598503143_6u52p",
+            "name": "Coordonat personal de specialitate",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
+        },
+        {
+            "id": "emp_1790598503144_v5gl1",
+            "name": "HUȘANU Luminița Leocadia",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
             "intervals": []
         }
     ],
