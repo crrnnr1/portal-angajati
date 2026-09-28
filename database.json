@@ -178,14 +178,7 @@
             "functie": "Teh as. soc",
             "cnp": "1841028351589",
             "cuvenit": 52,
-            "intervals": [
-                {
-                    "id": "int_1787906648757_xud5",
-                    "start": "2027-01-04",
-                    "end": "2027-01-08",
-                    "days": 3
-                }
-            ],
+            "intervals": [],
             "leaves": []
         },
         {
@@ -320,14 +313,7 @@
             "functie": "Infirmieră",
             "cnp": "2781027352623",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1787906621188_3qqd",
-                    "start": "2027-01-04",
-                    "end": "2027-01-08",
-                    "days": 3
-                }
-            ],
+            "intervals": [],
             "leaves": []
         },
         {
@@ -381,14 +367,7 @@
             "functie": "Spalatoreasa",
             "cnp": "2810717351582",
             "cuvenit": 52,
-            "intervals": [
-                {
-                    "id": "int_1787906678660_3wt6",
-                    "start": "2027-01-04",
-                    "end": "2027-01-08",
-                    "days": 3
-                }
-            ],
+            "intervals": [],
             "leaves": []
         },
         {
@@ -433,14 +412,7 @@
             "functie": "Asist. social",
             "cnp": "2821106354165",
             "cuvenit": 37,
-            "intervals": [
-                {
-                    "id": "int_1787906565037_1ttu",
-                    "start": "2027-01-04",
-                    "end": "2027-01-08",
-                    "days": 3
-                }
-            ],
+            "intervals": [],
             "leaves": []
         },
         {
@@ -498,7 +470,7 @@
             "leaves": []
         },
         {
-            "id": "emp_1789980460314_kdox0",
+            "id": "emp_1790596073026_gycew",
             "name": "Gross Elena",
             "functie": "Instr. Ergo.",
             "cnp": "",
@@ -506,7 +478,7 @@
             "intervals": []
         },
         {
-            "id": "emp_1789980460314_8umht",
+            "id": "emp_1790596073026_wtic8",
             "name": "Crîsciu Florin Samson",
             "functie": "Munc. Fochist",
             "cnp": "",
@@ -514,29 +486,16 @@
             "intervals": []
         }
     ],
-    "overlapRules": {
-        "Asist. Med.": 1,
-        "Infirmieră": 3,
-        "Instr. Ergo.": 1,
-        "Teh as. soc": 1,
-        "Lucr. Soc": 1,
-        "Ingrijitoare": 1,
-        "Spalatoreasa": 1,
-        "Munc. Intret": 1,
-        "Munc. Fochist": 1,
-        "Şofer": 1,
-        "Sef centru": 1,
-        "Asist. social": 1,
-        "Psiho log": 1,
-        "Insp. Spec. finan. Cont.": 1,
-        "Kinetoterapeut": 1,
-        "Insp. Spec. Res. Umane": 1
-    },
+    "overlapRules": {},
     "mobileVisibleCategories": [
         "Asist. Med.",
         "Infirmieră",
-        "Instr. Ergo.",
-        "Lucr. Soc",
-        "Spalatoreasa"
-    ]
+        "Insp. Spec. Res. Umane",
+        "Munc. Fochist"
+    ],
+    "pontaj": {
+        "globalEmployees": {},
+        "monthsAdded": [],
+        "knownCenters": []
+    }
 }
