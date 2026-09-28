@@ -1901,108 +1901,15 @@
                 "_displayCo": 0,
                 "_displayZlp": 0
             },
-            "o r e z i l n i c": {
-                "name": "O R E Z I L N I C",
-                "totalCo": 0,
-                "totalZlp": 0,
-                "cuvenit": 21,
-                "zlpCuvenit": 7,
-                "monthly": {
-                    "Ianuarie": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    }
-                },
-                "functie": "",
-                "centru": "CCPAD",
-                "_displayCo": 0,
-                "_displayZlp": 0
-            },
             "coordonat personal de specialitate": {
                 "name": "Coordonat personal de specialitate",
                 "totalCo": 0,
                 "totalZlp": 0,
                 "cuvenit": 21,
                 "zlpCuvenit": 7,
-                "monthly": {
-                    "Ianuarie": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    }
-                },
-                "functie": "",
-                "centru": "CCPAD",
-                "_displayCo": 0,
-                "_displayZlp": 0
-            },
-            "husanu luminita leocadia": {
-                "name": "HUȘANU Luminița Leocadia",
-                "totalCo": 0,
-                "totalZlp": 0,
-                "cuvenit": 21,
-                "zlpCuvenit": 7,
-                "monthly": {
-                    "Ianuarie": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Februarie": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Martie": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Aprilie": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Mai": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Iunie": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Iulie": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "August": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Septembrie": {
-                        "CCPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    }
-                },
-                "functie": "",
-                "centru": "CCPAD",
+                "monthly": {},
+                "functie": "Asistent medical",
+                "centru": "",
                 "_displayCo": 0,
                 "_displayZlp": 0
             }
