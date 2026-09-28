@@ -4167,6 +4167,18 @@
                 "centru": "CIAPAD",
                 "_displayCo": 0,
                 "_displayZlp": 3
+            },
+            "coordonat personal de specialitate": {
+                "name": "Coordonat personal de specialitate",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Asistent medical",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
             }
         },
         "monthsAdded": [
