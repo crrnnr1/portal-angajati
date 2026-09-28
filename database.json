@@ -686,7 +686,9 @@
             "functie": "Asist. Med.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
@@ -695,7 +697,9 @@
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         }
     ],
