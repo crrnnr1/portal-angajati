@@ -536,6 +536,22 @@
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
+        },
+        {
+            "id": "emp_1790581723935_jk1tl",
+            "name": "Micula Adriana Elena",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1790581723935_n9clt",
+            "name": "Petrescu Cristian Ioan",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
         }
     ],
     "overlapRules": {
