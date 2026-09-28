@@ -648,30 +648,36 @@
             }
         },
         {
-            "id": "emp_1790598503143_lbf88",
+            "id": "emp_1790598505523_3b879",
             "name": "O R E Z I L N I C",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
-            "id": "emp_1790598503143_6u52p",
+            "id": "emp_1790598505524_foz63",
             "name": "Coordonat personal de specialitate",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
-            "id": "emp_1790598503144_v5gl1",
+            "id": "emp_1790598505524_iqm42",
             "name": "HUȘANU Luminița Leocadia",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         }
     ],
