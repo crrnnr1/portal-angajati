@@ -2772,73 +2772,6 @@
                 "_displayCo": 30,
                 "_displayZlp": 4
             },
-            "paralescu rodica": {
-                "name": "Paralescu Rodica",
-                "totalCo": 30,
-                "totalZlp": 2,
-                "cuvenit": 35,
-                "zlpCuvenit": 7,
-                "monthly": {
-                    "Ianuarie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Februarie": {
-                        "CIAPAD": {
-                            "co": 10,
-                            "zlp": 0
-                        }
-                    },
-                    "Martie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Aprilie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Mai": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Iunie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Iulie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "August": {
-                        "CIAPAD": {
-                            "co": 11,
-                            "zlp": 0
-                        }
-                    },
-                    "Septembrie": {
-                        "CIAPAD": {
-                            "co": 9,
-                            "zlp": 2
-                        }
-                    }
-                },
-                "functie": "Infirmieră",
-                "centru": "CIAPAD",
-                "_displayCo": 30,
-                "_displayZlp": 2
-            },
             "petrescu liliana": {
                 "name": "Petrescu Liliana",
                 "totalCo": 22,
@@ -3920,6 +3853,18 @@
                 "zlpCuvenit": 7,
                 "monthly": {},
                 "functie": "Insp. Spec. Res. umane",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "grecu aurelia": {
+                "name": "Grecu Aurelia",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
                 "centru": "",
                 "_displayCo": 0,
                 "_displayZlp": 0
