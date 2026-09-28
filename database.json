@@ -3821,18 +3821,6 @@
                 "_displayCo": 0,
                 "_displayZlp": 0
             },
-            "petrescu cristian ioan": {
-                "name": "Petrescu Cristian Ioan",
-                "totalCo": 0,
-                "totalZlp": 0,
-                "cuvenit": 21,
-                "zlpCuvenit": 7,
-                "monthly": {},
-                "functie": "Infirmieră",
-                "centru": "",
-                "_displayCo": 0,
-                "_displayZlp": 0
-            },
             "suici alin daniel": {
                 "name": "Suici Alin Daniel",
                 "totalCo": 0,
@@ -3877,7 +3865,9 @@
                 "zlpCuvenit": 7,
                 "monthly": {},
                 "functie": "Infirmieră",
-                "centru": ""
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
             }
         },
         "monthsAdded": [
