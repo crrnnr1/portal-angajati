@@ -3945,7 +3945,7 @@
                 "name": "Paralescu Rodica",
                 "totalCo": 30,
                 "totalZlp": 2,
-                "cuvenit": 24,
+                "cuvenit": 21,
                 "zlpCuvenit": 7,
                 "monthly": {
                     "Ianuarie": {
@@ -4188,9 +4188,7 @@
                 "zlpCuvenit": 7,
                 "monthly": {},
                 "functie": "Infirmieră",
-                "centru": "",
-                "_displayCo": 0,
-                "_displayZlp": 0
+                "centru": ""
             }
         },
         "monthsAdded": [
