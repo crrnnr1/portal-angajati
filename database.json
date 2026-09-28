@@ -4069,18 +4069,6 @@
                 "_displayCo": 0,
                 "_displayZlp": 0
             },
-            "coordonat personal de specialitate": {
-                "name": "Coordonat personal de specialitate",
-                "totalCo": 0,
-                "totalZlp": 0,
-                "cuvenit": 21,
-                "zlpCuvenit": 7,
-                "monthly": {},
-                "functie": "Asistent medical",
-                "centru": "",
-                "_displayCo": 0,
-                "_displayZlp": 0
-            },
             "o r e z i l n i c": {
                 "name": "O R E Z I L N I C",
                 "totalCo": 0,
@@ -4089,73 +4077,6 @@
                 "zlpCuvenit": 7,
                 "monthly": {
                     "Ianuarie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    }
-                },
-                "functie": "Asistent medical",
-                "centru": "CIAPAD",
-                "_displayCo": 0,
-                "_displayZlp": 0
-            },
-            "hușanu luminița leocadia": {
-                "name": "HUȘANU Luminița Leocadia",
-                "totalCo": 0,
-                "totalZlp": 0,
-                "cuvenit": 21,
-                "zlpCuvenit": 7,
-                "monthly": {
-                    "Ianuarie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Februarie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Martie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Aprilie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Mai": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Iunie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Iulie": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "August": {
-                        "CIAPAD": {
-                            "co": 0,
-                            "zlp": 0
-                        }
-                    },
-                    "Septembrie": {
                         "CIAPAD": {
                             "co": 0,
                             "zlp": 0
