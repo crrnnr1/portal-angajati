@@ -362,7 +362,7 @@
             "name": "Andrei Sergiu",
             "functie": "Ingrijitoare",
             "cnp": "1880201350033",
-            "cuvenit": 33,
+            "cuvenit": 32,
             "intervals": [],
             "leaves": []
         },
@@ -517,6 +517,14 @@
             "id": "emp_1790581723935_n9clt",
             "name": "Petrescu Cristian Ioan",
             "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "intervals": []
+        },
+        {
+            "id": "emp_1790582880666_xl5bh",
+            "name": "O R E Z I L N I C",
+            "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
             "intervals": []
