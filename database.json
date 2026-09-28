@@ -8,12 +8,6 @@
             "cuvenit": 35,
             "intervals": [
                 {
-                    "id": "int_balanescu_1",
-                    "start": "2027-01-11",
-                    "end": "2027-01-22",
-                    "days": 10
-                },
-                {
                     "id": "int_1790596154336_9jq7",
                     "start": "2028-01-05",
                     "end": "2028-01-07",
@@ -86,14 +80,7 @@
             "functie": "Infirmieră",
             "cnp": "1680904352628",
             "cuvenit": 25,
-            "intervals": [
-                {
-                    "id": "int_1787556809977_65ye",
-                    "start": "2027-01-04",
-                    "end": "2027-01-13",
-                    "days": 6
-                }
-            ],
+            "intervals": [],
             "leaves": [],
             "years": {
                 "2027": {}
