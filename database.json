@@ -697,7 +697,9 @@
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
@@ -706,7 +708,9 @@
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
@@ -715,7 +719,9 @@
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
@@ -724,7 +730,9 @@
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
@@ -733,7 +741,9 @@
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
@@ -742,7 +752,9 @@
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
@@ -751,7 +763,9 @@
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
@@ -760,7 +774,9 @@
             "functie": "Munc. Fochist",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         },
         {
@@ -769,7 +785,9 @@
             "functie": "Insp. Spec. Res. umane",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         }
     ],
