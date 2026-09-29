@@ -869,5 +869,5582 @@
         "Infirmieră",
         "Insp. Spec. Res. Umane",
         "Munc. Fochist"
-    ]
+    ],
+    "deletedEmployees": [
+        {
+            "id": "del_1790659549106_3y0b6",
+            "name": "Coordonat personal de specialitate",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T05:25:49.106Z"
+        },
+        {
+            "id": "del_1790659553090_s8e77",
+            "name": "HUȘANU Luminița Leocadia",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T05:25:53.090Z"
+        },
+        {
+            "id": "del_1790659052684_3hu1d",
+            "name": "Gaspar Maria",
+            "functie": "Insp. Spec. Res. umane",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T05:17:32.685Z"
+        },
+        {
+            "id": "del_1790659542084_0rq18",
+            "name": "Micula Adriana Elena",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T05:25:42.084Z"
+        },
+        {
+            "id": "del_1790659557666_h2nqc",
+            "name": "O R E Z I L N I C",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T05:25:57.666Z"
+        }
+    ],
+    "pontaj": {
+        "globalEmployees": {
+            "bălănescu mihaela": {
+                "name": "Bălănescu Mihaela",
+                "totalCo": 70,
+                "totalZlp": 13,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "August 2025": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CCPAD": {
+                            "co": 5,
+                            "zlp": 4
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CCPAD": {
+                            "co": 8,
+                            "zlp": 3
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 14,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CCPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2026": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 3
+                        }
+                    },
+                    "August 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2026": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 2
+                        }
+                    }
+                },
+                "functie": "Asist. Med.",
+                "centru": "CCPAD",
+                "_displayCo": 35,
+                "_displayZlp": 6
+            },
+            "ciucă călin": {
+                "name": "Ciucă Călin",
+                "totalCo": 41,
+                "totalZlp": 2,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "August 2025": {
+                        "CCPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CCPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "August 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CCPAD",
+                "_displayCo": 10,
+                "_displayZlp": 2
+            },
+            "otescu alin nicolae": {
+                "name": "Otescu Alin Nicolae",
+                "totalCo": 41,
+                "totalZlp": 4,
+                "cuvenit": 33,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 4
+                        }
+                    },
+                    "Iulie 2026": {
+                        "CCPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2026": {
+                        "CCPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CCPAD",
+                "_displayCo": 20,
+                "_displayZlp": 4
+            },
+            "gavrilescu elvira": {
+                "name": "Gavrilescu Elvira",
+                "totalCo": 71,
+                "totalZlp": 11,
+                "cuvenit": 49,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "August 2025": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CCPAD": {
+                            "co": 3,
+                            "zlp": 1
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CCPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CCPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CCPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 4
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CCPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CCPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CCPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CCPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Iunie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iulie 2026": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2026": {
+                        "CCPAD": {
+                            "co": 12,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CCPAD",
+                "_displayCo": 41,
+                "_displayZlp": 4
+            },
+            "lupu săndel": {
+                "name": "Lupu Săndel",
+                "totalCo": 68,
+                "totalZlp": 18,
+                "cuvenit": 45,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "August 2025": {
+                        "CCPAD": {
+                            "co": 9,
+                            "zlp": 6
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CCPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CCPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 4
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CCPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CCPAD": {
+                            "co": 4,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CCPAD": {
+                            "co": 2,
+                            "zlp": 3
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Iunie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2026": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2026": {
+                        "CCPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CCPAD",
+                "_displayCo": 32,
+                "_displayZlp": 6
+            },
+            "văcariu ioan": {
+                "name": "Văcariu Ioan",
+                "totalCo": 0,
+                "totalZlp": 1,
+                "cuvenit": 25,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Iulie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CCPAD",
+                "_displayCo": 0,
+                "_displayZlp": 1
+            },
+            "dragu fira": {
+                "name": "Dragu Fira",
+                "totalCo": 0,
+                "totalZlp": 2,
+                "cuvenit": 8,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Iulie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Septembrie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CCPAD",
+                "_displayCo": 0,
+                "_displayZlp": 2
+            },
+            "hota valentina": {
+                "name": "Hota Valentina",
+                "totalCo": 15,
+                "totalZlp": 2,
+                "cuvenit": 20,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Iulie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "August 2026": {
+                        "CCPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2026": {
+                        "CCPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CCPAD",
+                "_displayCo": 15,
+                "_displayZlp": 2
+            },
+            "balomiri daniela": {
+                "name": "Balomiri Daniela",
+                "totalCo": 11,
+                "totalZlp": 0,
+                "cuvenit": 24,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Iulie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2026": {
+                        "CCPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CCPAD",
+                "_displayCo": 11,
+                "_displayZlp": 0
+            },
+            "șoman florin": {
+                "name": "Șoman Florin",
+                "totalCo": 0,
+                "totalZlp": 2,
+                "cuvenit": 16,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Iulie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "August 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2026": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CCPAD",
+                "_displayCo": 0,
+                "_displayZlp": 2
+            },
+            "isfan nicoleta ioana": {
+                "name": "Isfan Nicoleta Ioana",
+                "totalCo": 45,
+                "totalZlp": 9,
+                "cuvenit": 38,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 16,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Asist. Med.",
+                "centru": "CIAPAD",
+                "_displayCo": 13,
+                "_displayZlp": 2
+            },
+            "leucuș daniela": {
+                "name": "Leucuș Daniela",
+                "totalCo": 44,
+                "totalZlp": 7,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 16,
+                            "zlp": 2
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Asist. Med.",
+                "centru": "CIAPAD",
+                "_displayCo": 9,
+                "_displayZlp": 0
+            },
+            "mercea loredana viorica": {
+                "name": "Mercea Loredana Viorica",
+                "totalCo": 44,
+                "totalZlp": 7,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 14,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 2
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Asist. Med.",
+                "centru": "CIAPAD",
+                "_displayCo": 9,
+                "_displayZlp": 0
+            },
+            "bogdan claudiu adrian": {
+                "name": "Bogdan Claudiu Adrian",
+                "totalCo": 43,
+                "totalZlp": 8,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 1
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Instr. Ergo.",
+                "centru": "CIAPAD",
+                "_displayCo": 8,
+                "_displayZlp": 1
+            },
+            "indricau rodica": {
+                "name": "Indricau Rodica",
+                "totalCo": 59,
+                "totalZlp": 12,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 2
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Instr. Ergo.",
+                "centru": "CIAPAD",
+                "_displayCo": 24,
+                "_displayZlp": 5
+            },
+            "popet leodana nadia": {
+                "name": "Popet Leodana Nadia",
+                "totalCo": 42,
+                "totalZlp": 8,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 1
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 13,
+                            "zlp": 1
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 5
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Instr. Ergo.",
+                "centru": "CIAPAD",
+                "_displayCo": 7,
+                "_displayZlp": 1
+            },
+            "şandru lăcrămioara": {
+                "name": "Şandru Lăcrămioara",
+                "totalCo": 43,
+                "totalZlp": 10,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Instr. Ergo.",
+                "centru": "CIAPAD",
+                "_displayCo": 8,
+                "_displayZlp": 2
+            },
+            "schiopu daian caius": {
+                "name": "Schiopu Daian Caius",
+                "totalCo": 33,
+                "totalZlp": 9,
+                "cuvenit": 52,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 1
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 2
+                        }
+                    }
+                },
+                "functie": "Teh as. soc",
+                "centru": "CIAPAD",
+                "_displayCo": 3,
+                "_displayZlp": 2
+            },
+            "drăgoi claudia veronica": {
+                "name": "Drăgoi Claudia Veronica",
+                "totalCo": 38,
+                "totalZlp": 8,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 5
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Lucr. Soc",
+                "centru": "CIAPAD",
+                "_displayCo": 3,
+                "_displayZlp": 1
+            },
+            "petrovici crina maria": {
+                "name": "Petrovici Crina Maria",
+                "totalCo": 48,
+                "totalZlp": 12,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 4
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Lucr. Soc",
+                "centru": "CIAPAD",
+                "_displayCo": 13,
+                "_displayZlp": 5
+            },
+            "balint alexandra": {
+                "name": "Balint Alexandra",
+                "totalCo": 35,
+                "totalZlp": 9,
+                "cuvenit": 31,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 3
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 5,
+                "_displayZlp": 1
+            },
+            "balintescu valentin c-tin": {
+                "name": "Balintescu Valentin C-tin",
+                "totalCo": 59,
+                "totalZlp": 7,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 13,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 12,
+                            "zlp": 3
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 24,
+                "_displayZlp": 0
+            },
+            "berke mirela lia": {
+                "name": "Berke Mirela Lia",
+                "totalCo": 35,
+                "totalZlp": 9,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 4
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "boanca cristiana": {
+                "name": "Boanca Cristiana",
+                "totalCo": 47,
+                "totalZlp": 10,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 2
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 1
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 1
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 13,
+                "_displayZlp": 2
+            },
+            "catrinoiu laurentiu ioan": {
+                "name": "Catrinoiu Laurentiu Ioan",
+                "totalCo": 48,
+                "totalZlp": 12,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 3
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 2
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 1
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 12,
+                            "zlp": 2
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 12,
+                "_displayZlp": 3
+            },
+            "jiva gabriel": {
+                "name": "Jiva Gabriel",
+                "totalCo": 41,
+                "totalZlp": 7,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 1
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 1
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 2
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 6,
+                "_displayZlp": 0
+            },
+            "kiss irina": {
+                "name": "Kiss Irina",
+                "totalCo": 39,
+                "totalZlp": 10,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 2
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 1
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 1
+            },
+            "maran maria mirabela": {
+                "name": "Maran Maria Mirabela",
+                "totalCo": 42,
+                "totalZlp": 10,
+                "cuvenit": 31,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 5
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 4
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 10,
+                "_displayZlp": 1
+            },
+            "moisoni maria liliana": {
+                "name": "Moisoni Maria Liliana",
+                "totalCo": 35,
+                "totalZlp": 9,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 2
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 2
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 1
+            },
+            "moisoni marius petru": {
+                "name": "Moisoni Marius Petru",
+                "totalCo": 44,
+                "totalZlp": 7,
+                "cuvenit": 36,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 15,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 8,
+                "_displayZlp": 0
+            },
+            "mudaci ana": {
+                "name": "Mudaci Ana",
+                "totalCo": 37,
+                "totalZlp": 6,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 1
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 12,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 5
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 3,
+                "_displayZlp": 0
+            },
+            "olariu oana ancuta": {
+                "name": "Olariu Oana Ancuta",
+                "totalCo": 45,
+                "totalZlp": 7,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 1
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 10,
+                "_displayZlp": 0
+            },
+            "petrescu liliana": {
+                "name": "Petrescu Liliana",
+                "totalCo": 41,
+                "totalZlp": 7,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 2
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 2
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 1
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 1
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 1
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 7,
+                "_displayZlp": 0
+            },
+            "stoicănescu sorina": {
+                "name": "Stoicănescu Sorina",
+                "totalCo": 40,
+                "totalZlp": 9,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 14,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 4
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 6,
+                "_displayZlp": 2
+            },
+            "tătar daniel": {
+                "name": "Tătar Daniel",
+                "totalCo": 19,
+                "totalZlp": 10,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 4
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 4
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 10,
+                "_displayZlp": 4
+            },
+            "andrei sergiu": {
+                "name": "Andrei Sergiu",
+                "totalCo": 45,
+                "totalZlp": 15,
+                "cuvenit": 33,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 5
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 13,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 13,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 1
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    }
+                },
+                "functie": "Ingrijitoare",
+                "centru": "CIAPAD",
+                "_displayCo": 10,
+                "_displayZlp": 7
+            },
+            "munteanu mihaela miorita": {
+                "name": "Munteanu Mihaela Miorita",
+                "totalCo": 43,
+                "totalZlp": 7,
+                "cuvenit": 37,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 17,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Ingrijitoare",
+                "centru": "CIAPAD",
+                "_displayCo": 10,
+                "_displayZlp": 0
+            },
+            "ciurescu voichita dorina": {
+                "name": "Ciurescu Voichita Dorina",
+                "totalCo": 28,
+                "totalZlp": 8,
+                "cuvenit": 52,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 5
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Spalatoreasa",
+                "centru": "CIAPAD",
+                "_displayCo": 5,
+                "_displayZlp": 1
+            },
+            "craciun ciprian dorel": {
+                "name": "Craciun Ciprian Dorel",
+                "totalCo": 32,
+                "totalZlp": 7,
+                "cuvenit": 44,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 3
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Munc. Intret",
+                "centru": "CIAPAD",
+                "_displayCo": 9,
+                "_displayZlp": 0
+            },
+            "benea cristian": {
+                "name": "Benea Cristian",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 32,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Munc. Fochist",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "popeţ nicolae florin": {
+                "name": "Popeţ Nicolae Florin",
+                "totalCo": 34,
+                "totalZlp": 6,
+                "cuvenit": 37,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Şofer",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 1
+            },
+            "husanu luminita": {
+                "name": "Husanu Luminita",
+                "totalCo": 39,
+                "totalZlp": 7,
+                "cuvenit": 93,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Sef centru",
+                "centru": "CIAPAD",
+                "_displayCo": 23,
+                "_displayZlp": 0
+            },
+            "bustescu radu emanuela paula": {
+                "name": "Bustescu Radu Emanuela Paula",
+                "totalCo": 25,
+                "totalZlp": 11,
+                "cuvenit": 37,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 4
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 1
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 1
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    }
+                },
+                "functie": "Asist. social",
+                "centru": "CIAPAD",
+                "_displayCo": 1,
+                "_displayZlp": 4
+            },
+            "daminescu madalina elena": {
+                "name": "Daminescu Madalina Elena",
+                "totalCo": 29,
+                "totalZlp": 14,
+                "cuvenit": 41,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 2
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 4
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Psiho log",
+                "centru": "CIAPAD",
+                "_displayCo": 3,
+                "_displayZlp": 7
+            },
+            "muscai frăguța": {
+                "name": "Muscai Frăguța",
+                "totalCo": 12,
+                "totalZlp": 2,
+                "cuvenit": 41,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Insp. Spec. finan. Cont.",
+                "centru": "CIAPAD",
+                "_displayCo": 12,
+                "_displayZlp": 2
+            },
+            "sajti janos": {
+                "name": "Sajti Janos",
+                "totalCo": 51,
+                "totalZlp": 15,
+                "cuvenit": 37,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 6
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 1
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 4
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Kinetoterapeut",
+                "centru": "CIAPAD",
+                "_displayCo": 6,
+                "_displayZlp": 8
+            },
+            "crîștiu dan": {
+                "name": "Crîștiu Dan",
+                "totalCo": 0,
+                "totalZlp": 2,
+                "cuvenit": 32,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Insp. Spec. Res. Umane",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 2
+            },
+            "gonciar voichița": {
+                "name": "Gonciar Voichița",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 15,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Asist. Med.",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "strehan alexandru": {
+                "name": "Strehan Alexandru",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Munc. Fochist",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "tatar daniel vasile": {
+                "name": "Tatar Daniel Vasile",
+                "totalCo": 20,
+                "totalZlp": 1,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Instr. Ergo.",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "vierescu cristian": {
+                "name": "Vierescu Cristian",
+                "totalCo": 14,
+                "totalZlp": 7,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 2
+                        }
+                    }
+                },
+                "functie": "Instr. Ergo.",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "gross elena": {
+                "name": "Gross Elena",
+                "totalCo": 50,
+                "totalZlp": 8,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 5
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 15,
+                            "zlp": 2
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Instr. Ergo.",
+                "centru": "CIAPAD",
+                "_displayCo": 15,
+                "_displayZlp": 1
+            },
+            "suici alin daniel": {
+                "name": "Suici Alin Daniel",
+                "totalCo": 20,
+                "totalZlp": 5,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 4
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "gaspar maria": {
+                "name": "Gaspar Maria",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Insp. Spec. Res. umane",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "paralescu rodica": {
+                "name": "Paralescu Rodica",
+                "totalCo": 45,
+                "totalZlp": 7,
+                "cuvenit": 35,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 4
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 10,
+                "_displayZlp": 0
+            },
+            "crisciu florin samson": {
+                "name": "Crîsciu Florin Samson",
+                "totalCo": 32,
+                "totalZlp": 10,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 6
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 1
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 23,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    }
+                },
+                "functie": "Munc. Fochist",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 3
+            },
+            "grecu aurelia": {
+                "name": "Grecu Aurelia",
+                "totalCo": 35,
+                "totalZlp": 7,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "August 2025": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CCPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CCPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CCPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 2
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CCPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "petrescu cristian ioan": {
+                "name": "Petrescu Cristian Ioan",
+                "totalCo": 53,
+                "totalZlp": 9,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 14,
+                            "zlp": 0
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Infirmieră",
+                "centru": "CIAPAD",
+                "_displayCo": 18,
+                "_displayZlp": 2
+            },
+            "maran florina violeta": {
+                "name": "Măran Florina Violeta",
+                "totalCo": 7,
+                "totalZlp": 1,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 0
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Instr. Ergo.",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "ocnariu mariana": {
+                "name": "Ocnariu Mariana",
+                "totalCo": 19,
+                "totalZlp": 4,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 14,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Instr. Ergo.",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "pop coman daniel": {
+                "name": "Pop Coman Daniel",
+                "totalCo": 6,
+                "totalZlp": 4,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    }
+                },
+                "functie": "Instr. Ergo.",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "repede margarit marian": {
+                "name": "Repede Margarit Marian",
+                "totalCo": 45,
+                "totalZlp": 7,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {
+                    "Ianuarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Mai 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Iunie 2025": {
+                        "CIAPAD": {
+                            "co": 13,
+                            "zlp": 0
+                        }
+                    },
+                    "Iulie 2025": {
+                        "CIAPAD": {
+                            "co": 15,
+                            "zlp": 3
+                        }
+                    },
+                    "August 2025": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Septembrie 2025": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Octombrie 2025": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 1
+                        }
+                    },
+                    "Noiembrie 2025": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Decembrie 2025": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    }
+                },
+                "functie": "Munc. Fochist",
+                "centru": "CIAPAD",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            }
+        },
+        "monthsAdded": [
+            "Ianuarie 2025",
+            "Februarie 2025",
+            "Martie 2025",
+            "Aprilie 2025",
+            "Mai 2025",
+            "Iunie 2025",
+            "Iulie 2025",
+            "August 2025",
+            "Septembrie 2025",
+            "Octombrie 2025",
+            "Noiembrie 2025",
+            "Decembrie 2025",
+            "Ianuarie 2026",
+            "Februarie 2026",
+            "Martie 2026",
+            "Aprilie 2026",
+            "Mai 2026",
+            "Iunie 2026",
+            "Iulie 2026",
+            "August 2026",
+            "Septembrie 2026"
+        ],
+        "knownCenters": [
+            "CCPAD",
+            "CIAPAD"
+        ]
+    }
 }
