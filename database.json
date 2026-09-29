@@ -816,7 +816,11 @@
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {
+                    "cuvenit": 21
+                }
+            },
             "intervals": []
         },
         {
@@ -825,7 +829,11 @@
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {
+                    "cuvenit": 21
+                }
+            },
             "intervals": []
         },
         {
@@ -834,7 +842,11 @@
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {
+                    "cuvenit": 21
+                }
+            },
             "intervals": []
         },
         {
@@ -843,7 +855,11 @@
             "functie": "Munc. Fochist",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {
+                    "cuvenit": 21
+                }
+            },
             "intervals": []
         }
     ],
