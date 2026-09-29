@@ -1061,7 +1061,7 @@
                 "functie": "Asist. Med.",
                 "centru": "CCPAD",
                 "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayZlp": 6
             },
             "ciucă călin": {
                 "name": "Ciucă Călin",
@@ -1199,8 +1199,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 31,
-                "_displayZlp": 0
+                "_displayCo": 10,
+                "_displayZlp": 2
             },
             "otescu alin nicolae": {
                 "name": "Otescu Alin Nicolae",
@@ -1290,8 +1290,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 21,
-                "_displayZlp": 0
+                "_displayCo": 20,
+                "_displayZlp": 4
             },
             "gavrilescu elvira": {
                 "name": "Gavrilescu Elvira",
@@ -1429,8 +1429,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 30,
-                "_displayZlp": 7
+                "_displayCo": 41,
+                "_displayZlp": 4
             },
             "lupu săndel": {
                 "name": "Lupu Săndel",
@@ -1568,8 +1568,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 36,
-                "_displayZlp": 12
+                "_displayCo": 32,
+                "_displayZlp": 6
             },
             "văcariu ioan": {
                 "name": "Văcariu Ioan",
@@ -1600,7 +1600,7 @@
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
                 "_displayCo": 0,
-                "_displayZlp": 0
+                "_displayZlp": 1
             },
             "dragu fira": {
                 "name": "Dragu Fira",
@@ -1631,7 +1631,7 @@
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
                 "_displayCo": 0,
-                "_displayZlp": 0
+                "_displayZlp": 2
             },
             "hota valentina": {
                 "name": "Hota Valentina",
@@ -1661,8 +1661,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 0,
-                "_displayZlp": 0
+                "_displayCo": 15,
+                "_displayZlp": 2
             },
             "balomiri daniela": {
                 "name": "Balomiri Daniela",
@@ -1692,7 +1692,7 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 0,
+                "_displayCo": 11,
                 "_displayZlp": 0
             },
             "șoman florin": {
@@ -1724,12 +1724,12 @@
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
                 "_displayCo": 0,
-                "_displayZlp": 0
+                "_displayZlp": 2
             },
             "isfan nicoleta ioana": {
                 "name": "Isfan Nicoleta Ioana",
-                "totalCo": 32,
-                "totalZlp": 7,
+                "totalCo": 45,
+                "totalZlp": 9,
                 "cuvenit": 38,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -1804,16 +1804,40 @@
                             "co": 0,
                             "zlp": 3
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Asist. Med.",
                 "centru": "CIAPAD",
-                "_displayCo": 32,
-                "_displayZlp": 7
+                "_displayCo": 13,
+                "_displayZlp": 2
             },
             "leucuș daniela": {
                 "name": "Leucuș Daniela",
-                "totalCo": 35,
+                "totalCo": 44,
                 "totalZlp": 7,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
@@ -1889,16 +1913,40 @@
                             "co": 0,
                             "zlp": 3
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Asist. Med.",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 9,
+                "_displayZlp": 0
             },
             "mercea loredana viorica": {
                 "name": "Mercea Loredana Viorica",
-                "totalCo": 35,
+                "totalCo": 44,
                 "totalZlp": 7,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
@@ -1974,17 +2022,41 @@
                             "co": 0,
                             "zlp": 3
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Asist. Med.",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 9,
+                "_displayZlp": 0
             },
             "bogdan claudiu adrian": {
                 "name": "Bogdan Claudiu Adrian",
-                "totalCo": 35,
-                "totalZlp": 7,
+                "totalCo": 43,
+                "totalZlp": 8,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -2059,17 +2131,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 8,
+                "_displayZlp": 1
             },
             "indricau rodica": {
                 "name": "Indricau Rodica",
-                "totalCo": 35,
-                "totalZlp": 7,
+                "totalCo": 59,
+                "totalZlp": 12,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -2144,17 +2240,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 1
+                        }
                     }
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 24,
+                "_displayZlp": 5
             },
             "popet leodana nadia": {
                 "name": "Popet Leodana Nadia",
-                "totalCo": 35,
-                "totalZlp": 7,
+                "totalCo": 42,
+                "totalZlp": 8,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -2229,17 +2349,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 7,
+                "_displayZlp": 1
             },
             "şandru lăcrămioara": {
                 "name": "Şandru Lăcrămioara",
-                "totalCo": 35,
-                "totalZlp": 8,
+                "totalCo": 43,
+                "totalZlp": 10,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -2314,17 +2458,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
                     }
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 8
+                "_displayCo": 8,
+                "_displayZlp": 2
             },
             "schiopu daian caius": {
                 "name": "Schiopu Daian Caius",
-                "totalCo": 30,
-                "totalZlp": 7,
+                "totalCo": 33,
+                "totalZlp": 9,
                 "cuvenit": 52,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -2399,17 +2567,41 @@
                             "co": 2,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 2
+                        }
                     }
                 },
-                "functie": "Teh asist socială",
+                "functie": "Teh as. soc",
                 "centru": "CIAPAD",
-                "_displayCo": 30,
-                "_displayZlp": 7
+                "_displayCo": 3,
+                "_displayZlp": 2
             },
             "drăgoi claudia veronica": {
                 "name": "Drăgoi Claudia Veronica",
-                "totalCo": 35,
-                "totalZlp": 7,
+                "totalCo": 38,
+                "totalZlp": 8,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -2484,17 +2676,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
                     }
                 },
-                "functie": "Lucr. social",
+                "functie": "Lucr. Soc",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 3,
+                "_displayZlp": 1
             },
             "petrovici crina maria": {
                 "name": "Petrovici Crina Maria",
-                "totalCo": 35,
-                "totalZlp": 7,
+                "totalCo": 48,
+                "totalZlp": 12,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -2569,17 +2785,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 4
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
                     }
                 },
-                "functie": "Lucr. social",
+                "functie": "Lucr. Soc",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 13,
+                "_displayZlp": 5
             },
             "balint alexandra": {
                 "name": "Balint Alexandra",
-                "totalCo": 30,
-                "totalZlp": 8,
+                "totalCo": 35,
+                "totalZlp": 9,
                 "cuvenit": 31,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -2654,16 +2894,40 @@
                             "co": 0,
                             "zlp": 2
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 30,
-                "_displayZlp": 8
+                "_displayCo": 5,
+                "_displayZlp": 1
             },
             "balintescu valentin c-tin": {
                 "name": "Balintescu Valentin C-tin",
-                "totalCo": 35,
+                "totalCo": 59,
                 "totalZlp": 7,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
@@ -2739,12 +3003,36 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 24,
+                "_displayZlp": 0
             },
             "berke mirela lia": {
                 "name": "Berke Mirela Lia",
@@ -2824,17 +3112,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 9
+                "_displayCo": 0,
+                "_displayZlp": 0
             },
             "boanca cristiana": {
                 "name": "Boanca Cristiana",
-                "totalCo": 34,
-                "totalZlp": 8,
+                "totalCo": 47,
+                "totalZlp": 10,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -2909,17 +3221,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 34,
-                "_displayZlp": 8
+                "_displayCo": 13,
+                "_displayZlp": 2
             },
             "catrinoiu laurentiu ioan": {
                 "name": "Catrinoiu Laurentiu Ioan",
-                "totalCo": 36,
-                "totalZlp": 9,
+                "totalCo": 48,
+                "totalZlp": 12,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -2994,16 +3330,40 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 12,
+                            "zlp": 2
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 36,
-                "_displayZlp": 9
+                "_displayCo": 12,
+                "_displayZlp": 3
             },
             "jiva gabriel": {
                 "name": "Jiva Gabriel",
-                "totalCo": 35,
+                "totalCo": 41,
                 "totalZlp": 7,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
@@ -3079,17 +3439,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 6,
+                "_displayZlp": 0
             },
             "kiss irina": {
                 "name": "Kiss Irina",
                 "totalCo": 39,
-                "totalZlp": 9,
+                "totalZlp": 10,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -3164,17 +3548,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 39,
-                "_displayZlp": 9
+                "_displayCo": 0,
+                "_displayZlp": 1
             },
             "maran maria mirabela": {
                 "name": "Maran Maria Mirabela",
-                "totalCo": 32,
-                "totalZlp": 9,
+                "totalCo": 42,
+                "totalZlp": 10,
                 "cuvenit": 31,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -3249,17 +3657,41 @@
                             "co": 1,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 32,
-                "_displayZlp": 9
+                "_displayCo": 10,
+                "_displayZlp": 1
             },
             "moisoni maria liliana": {
                 "name": "Moisoni Maria Liliana",
                 "totalCo": 35,
-                "totalZlp": 8,
+                "totalZlp": 9,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -3334,16 +3766,40 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 8
+                "_displayCo": 0,
+                "_displayZlp": 1
             },
             "moisoni marius petru": {
                 "name": "Moisoni Marius Petru",
-                "totalCo": 36,
+                "totalCo": 44,
                 "totalZlp": 7,
                 "cuvenit": 36,
                 "zlpCuvenit": 7,
@@ -3419,16 +3875,40 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 36,
-                "_displayZlp": 7
+                "_displayCo": 8,
+                "_displayZlp": 0
             },
             "mudaci ana": {
                 "name": "Mudaci Ana",
-                "totalCo": 34,
+                "totalCo": 37,
                 "totalZlp": 6,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
@@ -3504,16 +3984,40 @@
                             "co": 0,
                             "zlp": 5
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 34,
-                "_displayZlp": 6
+                "_displayCo": 3,
+                "_displayZlp": 0
             },
             "olariu oana ancuta": {
                 "name": "Olariu Oana Ancuta",
-                "totalCo": 35,
+                "totalCo": 45,
                 "totalZlp": 7,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
@@ -3589,16 +4093,40 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 10,
+                "_displayZlp": 0
             },
             "petrescu liliana": {
                 "name": "Petrescu Liliana",
-                "totalCo": 34,
+                "totalCo": 41,
                 "totalZlp": 7,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
@@ -3674,17 +4202,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 7,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 34,
-                "_displayZlp": 7
+                "_displayCo": 7,
+                "_displayZlp": 0
             },
             "stoicănescu sorina": {
                 "name": "Stoicănescu Sorina",
-                "totalCo": 34,
-                "totalZlp": 7,
+                "totalCo": 40,
+                "totalZlp": 9,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -3759,17 +4311,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 34,
-                "_displayZlp": 7
+                "_displayCo": 6,
+                "_displayZlp": 2
             },
             "tătar daniel": {
                 "name": "Tătar Daniel",
-                "totalCo": 9,
-                "totalZlp": 6,
+                "totalCo": 19,
+                "totalZlp": 10,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -3802,17 +4378,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 4
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 9,
-                "_displayZlp": 6
+                "_displayCo": 10,
+                "_displayZlp": 4
             },
             "andrei sergiu": {
                 "name": "Andrei Sergiu",
-                "totalCo": 35,
-                "totalZlp": 8,
+                "totalCo": 45,
+                "totalZlp": 15,
                 "cuvenit": 33,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -3887,16 +4487,40 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
                     }
                 },
                 "functie": "Ingrijitoare",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 8
+                "_displayCo": 10,
+                "_displayZlp": 7
             },
             "munteanu mihaela miorita": {
                 "name": "Munteanu Mihaela Miorita",
-                "totalCo": 33,
+                "totalCo": 43,
                 "totalZlp": 7,
                 "cuvenit": 37,
                 "zlpCuvenit": 7,
@@ -3972,17 +4596,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Ingrijitoare",
                 "centru": "CIAPAD",
-                "_displayCo": 33,
-                "_displayZlp": 7
+                "_displayCo": 10,
+                "_displayZlp": 0
             },
             "ciurescu voichita dorina": {
                 "name": "Ciurescu Voichita Dorina",
-                "totalCo": 23,
-                "totalZlp": 7,
+                "totalCo": 28,
+                "totalZlp": 8,
                 "cuvenit": 52,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -4057,16 +4705,40 @@
                             "co": 1,
                             "zlp": 5
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 4,
+                            "zlp": 1
+                        }
                     }
                 },
                 "functie": "Spalatoreasa",
                 "centru": "CIAPAD",
-                "_displayCo": 23,
-                "_displayZlp": 7
+                "_displayCo": 5,
+                "_displayZlp": 1
             },
             "craciun ciprian dorel": {
                 "name": "Craciun Ciprian Dorel",
-                "totalCo": 23,
+                "totalCo": 32,
                 "totalZlp": 7,
                 "cuvenit": 44,
                 "zlpCuvenit": 7,
@@ -4142,12 +4814,36 @@
                             "co": 4,
                             "zlp": 3
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 6,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Munc. Intret",
                 "centru": "CIAPAD",
-                "_displayCo": 23,
-                "_displayZlp": 7
+                "_displayCo": 9,
+                "_displayZlp": 0
             },
             "benea cristian": {
                 "name": "Benea Cristian",
@@ -4164,7 +4860,7 @@
             "popeţ nicolae florin": {
                 "name": "Popeţ Nicolae Florin",
                 "totalCo": 34,
-                "totalZlp": 5,
+                "totalZlp": 6,
                 "cuvenit": 37,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -4239,16 +4935,40 @@
                             "co": 0,
                             "zlp": 1
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Şofer",
                 "centru": "CIAPAD",
-                "_displayCo": 34,
-                "_displayZlp": 5
+                "_displayCo": 0,
+                "_displayZlp": 1
             },
             "husanu luminita": {
                 "name": "Husanu Luminita",
-                "totalCo": 16,
+                "totalCo": 39,
                 "totalZlp": 7,
                 "cuvenit": 93,
                 "zlpCuvenit": 7,
@@ -4324,17 +5044,41 @@
                             "co": 1,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 9,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 11,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Sef centru",
                 "centru": "CIAPAD",
-                "_displayCo": 16,
-                "_displayZlp": 7
+                "_displayCo": 23,
+                "_displayZlp": 0
             },
             "bustescu radu emanuela paula": {
                 "name": "Bustescu Radu Emanuela Paula",
-                "totalCo": 24,
-                "totalZlp": 7,
+                "totalCo": 25,
+                "totalZlp": 11,
                 "cuvenit": 37,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -4409,17 +5153,41 @@
                             "co": 1,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
                     }
                 },
                 "functie": "Asist. social",
                 "centru": "CIAPAD",
-                "_displayCo": 24,
-                "_displayZlp": 7
+                "_displayCo": 1,
+                "_displayZlp": 4
             },
             "daminescu madalina elena": {
                 "name": "Daminescu Madalina Elena",
-                "totalCo": 26,
-                "totalZlp": 7,
+                "totalCo": 29,
+                "totalZlp": 14,
                 "cuvenit": 41,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -4494,17 +5262,41 @@
                             "co": 3,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 4
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 3,
+                            "zlp": 1
+                        }
                     }
                 },
                 "functie": "Psiho log",
                 "centru": "CIAPAD",
-                "_displayCo": 26,
+                "_displayCo": 3,
                 "_displayZlp": 7
             },
             "muscai frăguța": {
                 "name": "Muscai Frăguța",
-                "totalCo": 0,
-                "totalZlp": 0,
+                "totalCo": 12,
+                "totalZlp": 2,
                 "cuvenit": 41,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -4513,17 +5305,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 2,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
                     }
                 },
-                "functie": "Insp. Spec. Contabil",
+                "functie": "Insp. Spec. finan. Cont.",
                 "centru": "CIAPAD",
-                "_displayCo": 0,
-                "_displayZlp": 0
+                "_displayCo": 12,
+                "_displayZlp": 2
             },
             "sajti janos": {
                 "name": "Sajti Janos",
-                "totalCo": 45,
-                "totalZlp": 7,
+                "totalCo": 51,
+                "totalZlp": 15,
                 "cuvenit": 37,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -4598,24 +5414,73 @@
                             "co": 3,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 4
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 1,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Kinetoterapeut",
                 "centru": "CIAPAD",
-                "_displayCo": 45,
-                "_displayZlp": 7
+                "_displayCo": 6,
+                "_displayZlp": 8
             },
             "crîștiu dan": {
                 "name": "Crîștiu Dan",
                 "totalCo": 0,
-                "totalZlp": 0,
+                "totalZlp": 2,
                 "cuvenit": 32,
                 "zlpCuvenit": 7,
-                "monthly": {},
+                "monthly": {
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 2
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    }
+                },
                 "functie": "Insp. Spec. Res. Umane",
                 "centru": "CIAPAD",
                 "_displayCo": 0,
-                "_displayZlp": 0
+                "_displayZlp": 2
             },
             "gonciar voichița": {
                 "name": "Gonciar Voichița",
@@ -4687,8 +5552,8 @@
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 20,
-                "_displayZlp": 1
+                "_displayCo": 0,
+                "_displayZlp": 0
             },
             "vierescu cristian": {
                 "name": "Vierescu Cristian",
@@ -4736,13 +5601,13 @@
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 14,
-                "_displayZlp": 7
+                "_displayCo": 0,
+                "_displayZlp": 0
             },
             "gross elena": {
                 "name": "Gross Elena",
-                "totalCo": 35,
-                "totalZlp": 7,
+                "totalCo": 50,
+                "totalZlp": 8,
                 "cuvenit": 21,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -4817,12 +5682,36 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 5,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 15,
+                "_displayZlp": 1
             },
             "suici alin daniel": {
                 "name": "Suici Alin Daniel",
@@ -4870,8 +5759,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 20,
-                "_displayZlp": 5
+                "_displayCo": 0,
+                "_displayZlp": 0
             },
             "gaspar maria": {
                 "name": "Gaspar Maria",
@@ -4887,7 +5776,7 @@
             },
             "paralescu rodica": {
                 "name": "Paralescu Rodica",
-                "totalCo": 35,
+                "totalCo": 45,
                 "totalZlp": 7,
                 "cuvenit": 35,
                 "zlpCuvenit": 7,
@@ -4963,17 +5852,41 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 10,
+                "_displayZlp": 0
             },
             "crisciu florin samson": {
                 "name": "Crîsciu Florin Samson",
                 "totalCo": 32,
-                "totalZlp": 7,
+                "totalZlp": 10,
                 "cuvenit": 21,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -5048,12 +5961,36 @@
                             "co": 0,
                             "zlp": 0
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 3
+                        }
                     }
                 },
                 "functie": "Munc. Fochist",
                 "centru": "CIAPAD",
-                "_displayCo": 32,
-                "_displayZlp": 7
+                "_displayCo": 0,
+                "_displayZlp": 3
             },
             "grecu aurelia": {
                 "name": "Grecu Aurelia",
@@ -5137,13 +6074,13 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 0,
+                "_displayZlp": 0
             },
             "petrescu cristian ioan": {
                 "name": "Petrescu Cristian Ioan",
-                "totalCo": 35,
-                "totalZlp": 7,
+                "totalCo": 53,
+                "totalZlp": 9,
                 "cuvenit": 21,
                 "zlpCuvenit": 7,
                 "monthly": {
@@ -5218,12 +6155,36 @@
                             "co": 0,
                             "zlp": 1
                         }
+                    },
+                    "Ianuarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 0
+                        }
+                    },
+                    "Februarie 2026": {
+                        "CIAPAD": {
+                            "co": 0,
+                            "zlp": 1
+                        }
+                    },
+                    "Martie 2026": {
+                        "CIAPAD": {
+                            "co": 10,
+                            "zlp": 0
+                        }
+                    },
+                    "Aprilie 2026": {
+                        "CIAPAD": {
+                            "co": 8,
+                            "zlp": 1
+                        }
                     }
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 35,
-                "_displayZlp": 7
+                "_displayCo": 18,
+                "_displayZlp": 2
             },
             "maran florina violeta": {
                 "name": "Măran Florina Violeta",
@@ -5271,8 +6232,8 @@
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 7,
-                "_displayZlp": 1
+                "_displayCo": 0,
+                "_displayZlp": 0
             },
             "ocnariu mariana": {
                 "name": "Ocnariu Mariana",
@@ -5320,8 +6281,8 @@
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 19,
-                "_displayZlp": 4
+                "_displayCo": 0,
+                "_displayZlp": 0
             },
             "pop coman daniel": {
                 "name": "Pop Coman Daniel",
@@ -5369,8 +6330,8 @@
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 6,
-                "_displayZlp": 4
+                "_displayCo": 0,
+                "_displayZlp": 0
             },
             "repede margarit marian": {
                 "name": "Repede Margarit Marian",
@@ -5454,8 +6415,8 @@
                 },
                 "functie": "Munc. Fochist",
                 "centru": "CIAPAD",
-                "_displayCo": 45,
-                "_displayZlp": 7
+                "_displayCo": 0,
+                "_displayZlp": 0
             }
         },
         "monthsAdded": [
