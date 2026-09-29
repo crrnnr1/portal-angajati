@@ -824,19 +824,6 @@
             "intervals": []
         },
         {
-            "id": "emp_1790599685897_arx8y",
-            "name": "HUȘANU Luminița Leocadia",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
-            "intervals": []
-        },
-        {
             "id": "emp_1790599765052_o6ngs",
             "name": "Micula Adriana Elena",
             "functie": "Asist. Med.",
@@ -872,14 +859,14 @@
     ],
     "deletedEmployees": [
         {
-            "id": "del_1790659039664_fzui3",
+            "id": "del_1790659047204_7ozpa",
             "name": "Coordonat personal de specialitate",
             "functie": "Asistent medical",
             "cnp": "",
             "cuvenit": 21,
             "years": {},
             "intervals": [],
-            "deletedAt": "2026-09-29T05:17:19.664Z"
+            "deletedAt": "2026-09-29T05:17:27.204Z"
         },
         {
             "id": "del_1790659045075_nu3v8",
