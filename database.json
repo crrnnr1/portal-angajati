@@ -1,666 +1,453 @@
 {
     "employees": [
         {
-            "id": "emp_1790677121277_ox00q",
+            "id": "emp_1790677161554_7lta3",
             "name": "Bălănescu Mihaela",
             "functie": "Asist. Med.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_4fmhe",
+            "id": "emp_1790677161554_9xelh",
             "name": "Ciucă Călin",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_ets8g",
+            "id": "emp_1790677161554_dtq24",
             "name": "Otescu Alin Nicolae",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_mq8sz",
+            "id": "emp_1790677161554_cvmzy",
             "name": "Gavrilescu Elvira",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_d2yu8",
+            "id": "emp_1790677161554_v4r4g",
             "name": "Lupu Săndel",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_2ok45",
+            "id": "emp_1790677161554_a41yz",
             "name": "Văcariu Ioan",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_pqxru",
+            "id": "emp_1790677161554_2ptzi",
             "name": "Dragu Fira",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_lbdd6",
+            "id": "emp_1790677161554_xjh1f",
             "name": "Hota Valentina",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_8ioo4",
+            "id": "emp_1790677161554_cutvu",
             "name": "Balomiri Daniela",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_5sbct",
+            "id": "emp_1790677161554_ins88",
             "name": "Șoman Florin",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_s7g3u",
+            "id": "emp_1790677161554_j4gr6",
             "name": "Isfan Nicoleta Ioana",
             "functie": "Asist. Med.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_7dnsu",
+            "id": "emp_1790677161554_me6v3",
             "name": "Leucuș Daniela",
             "functie": "Asist. Med.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_tj5by",
+            "id": "emp_1790677161554_ok12n",
             "name": "Mercea Loredana Viorica",
             "functie": "Asist. Med.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_xyod3",
+            "id": "emp_1790677161554_p2eud",
             "name": "Bogdan Claudiu Adrian",
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_nbc2k",
+            "id": "emp_1790677161554_cfoys",
             "name": "Indricau Rodica",
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_13cl2",
+            "id": "emp_1790677161554_z0ebs",
             "name": "Popet Leodana Nadia",
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_1xv0k",
+            "id": "emp_1790677161554_r6evw",
             "name": "Şandru Lăcrămioara",
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_f6ffd",
+            "id": "emp_1790677161554_58l3m",
             "name": "Schiopu Daian Caius",
             "functie": "Teh as. soc",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_2z5f2",
+            "id": "emp_1790677161554_j3m91",
             "name": "Drăgoi Claudia Veronica",
             "functie": "Lucr. Soc",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_zb0la",
+            "id": "emp_1790677161554_imtao",
             "name": "Petrovici Crina Maria",
             "functie": "Lucr. Soc",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_qjmro",
+            "id": "emp_1790677161554_9e5gs",
             "name": "Balint Alexandra",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_m7rum",
+            "id": "emp_1790677161554_kuflz",
             "name": "Balintescu Valentin C-tin",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_18blk",
+            "id": "emp_1790677161554_u1af1",
             "name": "Berke Mirela Lia",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_kipsf",
+            "id": "emp_1790677161554_jod4d",
             "name": "Boanca Cristiana",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_i18dw",
+            "id": "emp_1790677161554_7h992",
             "name": "Catrinoiu Laurentiu Ioan",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_u6grd",
+            "id": "emp_1790677161554_g8bk3",
             "name": "Jiva Gabriel",
             "functie": "Infirmieră",
-            "cnp": "1720319352622",
+            "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_4qaev",
+            "id": "emp_1790677161554_qhei2",
             "name": "Kiss Irina",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_p3k1q",
+            "id": "emp_1790677161554_v4n0i",
             "name": "Maran Maria Mirabela",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_behu8",
+            "id": "emp_1790677161554_wlybn",
             "name": "Moisoni Maria Liliana",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_0t2xf",
+            "id": "emp_1790677161554_lrdvu",
             "name": "Moisoni Marius Petru",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_oo4jf",
+            "id": "emp_1790677161555_zxe4v",
             "name": "Mudaci Ana",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_p8zxi",
+            "id": "emp_1790677161555_opbgp",
             "name": "Olariu Oana Ancuta",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_hmgx9",
+            "id": "emp_1790677161555_3dvd3",
             "name": "Petrescu Liliana",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121277_ttvv4",
+            "id": "emp_1790677161555_sosr1",
             "name": "Stoicănescu Sorina",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_iv1qf",
+            "id": "emp_1790677161555_jsluu",
             "name": "Tătar Daniel",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_oejj5",
+            "id": "emp_1790677161555_5hyny",
             "name": "Andrei Sergiu",
             "functie": "Ingrijitoare",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_2kmnm",
+            "id": "emp_1790677161555_jw3il",
             "name": "Munteanu Mihaela Miorita",
             "functie": "Ingrijitoare",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_9nwyr",
+            "id": "emp_1790677161555_f2v2o",
             "name": "Ciurescu Voichita Dorina",
             "functie": "Spalatoreasa",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_1xjgi",
+            "id": "emp_1790677161555_m8d3p",
             "name": "Craciun Ciprian Dorel",
             "functie": "Munc. Intret",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_sxb8h",
+            "id": "emp_1790677161555_38fd4",
             "name": "Benea Cristian",
             "functie": "Munc. Fochist",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_0sjme",
+            "id": "emp_1790677161555_kc7lb",
             "name": "Popeţ Nicolae Florin",
             "functie": "Şofer",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_jmn70",
+            "id": "emp_1790677161555_n63vb",
             "name": "Husanu Luminita",
             "functie": "Sef centru",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_75cgn",
+            "id": "emp_1790677161555_v2os4",
             "name": "Bustescu Radu Emanuela Paula",
             "functie": "Asist. social",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_3tubb",
+            "id": "emp_1790677161555_s05ot",
             "name": "Daminescu Madalina Elena",
             "functie": "Psiho log",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_ediz8",
+            "id": "emp_1790677161555_rmzgy",
             "name": "Muscai Frăguța",
             "functie": "Insp. Spec. finan. Cont.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_588zk",
+            "id": "emp_1790677161555_4xep1",
             "name": "Sajti Janos",
             "functie": "Kinetoterapeut",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_sjhaq",
+            "id": "emp_1790677161555_a43qm",
             "name": "Crîștiu Dan",
             "functie": "Insp. Spec. Res. Umane",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_paono",
+            "id": "emp_1790677161555_0t59v",
             "name": "Gonciar Voichița",
             "functie": "Asist. Med.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_281zz",
+            "id": "emp_1790677161556_q0kyj",
             "name": "Gross Elena",
             "functie": "Instr. Ergo.",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         },
         {
-            "id": "emp_1790677121278_w9eef",
-            "name": "Suici Alin Daniel",
-            "functie": "Infirmieră",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
-            "intervals": []
-        },
-        {
-            "id": "emp_1790677121278_2p9wx",
+            "id": "emp_1790677161556_wd7bm",
             "name": "Paralescu Rodica",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
-            },
+            "years": {},
             "intervals": []
         }
     ],
