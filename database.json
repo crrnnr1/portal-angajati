@@ -4169,5 +4169,17 @@
             "CCPAD",
             "CIAPAD"
         ]
-    }
+    },
+    "deletedEmployees": [
+        {
+            "id": "del_1790659039664_fzui3",
+            "name": "Coordonat personal de specialitate",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T05:17:19.664Z"
+        }
+    ]
 }
