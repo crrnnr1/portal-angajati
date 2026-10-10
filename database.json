@@ -972,8 +972,8 @@
                 },
                 "functie": "Asist. Med.",
                 "centru": "CCPAD",
-                "_displayCo": 70,
-                "_displayZlp": 13
+                "_displayCo": 35,
+                "_displayZlp": 6
             },
             "ciucă călin": {
                 "name": "Ciucă Călin",
@@ -1117,7 +1117,7 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 41,
+                "_displayCo": 10,
                 "_displayZlp": 2
             },
             "otescu alin nicolae": {
@@ -1214,7 +1214,7 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 41,
+                "_displayCo": 20,
                 "_displayZlp": 6
             },
             "gavrilescu elvira": {
@@ -1359,8 +1359,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 71,
-                "_displayZlp": 11
+                "_displayCo": 41,
+                "_displayZlp": 4
             },
             "lupu săndel": {
                 "name": "Lupu Săndel",
@@ -1504,8 +1504,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CCPAD",
-                "_displayCo": 68,
-                "_displayZlp": 19
+                "_displayCo": 32,
+                "_displayZlp": 7
             },
             "văcariu ioan": {
                 "name": "Văcariu Ioan",
@@ -1834,8 +1834,8 @@
                 },
                 "functie": "Asist. Med.",
                 "centru": "CIAPAD",
-                "_displayCo": 55,
-                "_displayZlp": 10
+                "_displayCo": 23,
+                "_displayZlp": 3
             },
             "leucuș daniela": {
                 "name": "Leucuș Daniela",
@@ -1979,8 +1979,8 @@
                 },
                 "functie": "Asist. Med.",
                 "centru": "CIAPAD",
-                "_displayCo": 70,
-                "_displayZlp": 9
+                "_displayCo": 35,
+                "_displayZlp": 2
             },
             "mercea loredana viorica": {
                 "name": "Mercea Loredana Viorica",
@@ -2124,8 +2124,8 @@
                 },
                 "functie": "Asist. Med.",
                 "centru": "CIAPAD",
-                "_displayCo": 70,
-                "_displayZlp": 12
+                "_displayCo": 35,
+                "_displayZlp": 5
             },
             "bogdan claudiu adrian": {
                 "name": "Bogdan Claudiu Adrian",
@@ -2269,8 +2269,8 @@
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 66,
-                "_displayZlp": 14
+                "_displayCo": 31,
+                "_displayZlp": 7
             },
             "indricau rodica": {
                 "name": "Indricau Rodica",
@@ -2414,8 +2414,8 @@
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 70,
-                "_displayZlp": 14
+                "_displayCo": 35,
+                "_displayZlp": 7
             },
             "popet leodana nadia": {
                 "name": "Popet Leodana Nadia",
@@ -2559,8 +2559,8 @@
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 70,
-                "_displayZlp": 9
+                "_displayCo": 35,
+                "_displayZlp": 2
             },
             "şandru lăcrămioara": {
                 "name": "Şandru Lăcrămioara",
@@ -2704,8 +2704,8 @@
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 70,
-                "_displayZlp": 12
+                "_displayCo": 35,
+                "_displayZlp": 4
             },
             "schiopu daian caius": {
                 "name": "Schiopu Daian Caius",
@@ -2849,8 +2849,8 @@
                 },
                 "functie": "Teh as. soc",
                 "centru": "CIAPAD",
-                "_displayCo": 55,
-                "_displayZlp": 13
+                "_displayCo": 25,
+                "_displayZlp": 6
             },
             "drăgoi claudia veronica": {
                 "name": "Drăgoi Claudia Veronica",
@@ -2994,8 +2994,8 @@
                 },
                 "functie": "Lucr. Soc",
                 "centru": "CIAPAD",
-                "_displayCo": 67,
-                "_displayZlp": 11
+                "_displayCo": 32,
+                "_displayZlp": 4
             },
             "petrovici crina maria": {
                 "name": "Petrovici Crina Maria",
@@ -3139,8 +3139,8 @@
                 },
                 "functie": "Lucr. Soc",
                 "centru": "CIAPAD",
-                "_displayCo": 66,
-                "_displayZlp": 16
+                "_displayCo": 31,
+                "_displayZlp": 9
             },
             "balint alexandra": {
                 "name": "Balint Alexandra",
@@ -3284,8 +3284,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 60,
-                "_displayZlp": 10
+                "_displayCo": 30,
+                "_displayZlp": 2
             },
             "balintescu valentin c-tin": {
                 "name": "Balintescu Valentin C-tin",
@@ -3429,8 +3429,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 65,
-                "_displayZlp": 9
+                "_displayCo": 30,
+                "_displayZlp": 2
             },
             "berke mirela lia": {
                 "name": "Berke Mirela Lia",
@@ -3574,8 +3574,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 56,
-                "_displayZlp": 12
+                "_displayCo": 21,
+                "_displayZlp": 3
             },
             "boanca cristiana": {
                 "name": "Boanca Cristiana",
@@ -3719,8 +3719,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 62,
-                "_displayZlp": 14
+                "_displayCo": 28,
+                "_displayZlp": 6
             },
             "catrinoiu laurentiu ioan": {
                 "name": "Catrinoiu Laurentiu Ioan",
@@ -3864,8 +3864,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 65,
-                "_displayZlp": 16
+                "_displayCo": 29,
+                "_displayZlp": 7
             },
             "jiva gabriel": {
                 "name": "Jiva Gabriel",
@@ -4009,8 +4009,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 67,
-                "_displayZlp": 9
+                "_displayCo": 32,
+                "_displayZlp": 2
             },
             "kiss irina": {
                 "name": "Kiss Irina",
@@ -4154,8 +4154,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 74,
-                "_displayZlp": 14
+                "_displayCo": 35,
+                "_displayZlp": 5
             },
             "maran maria mirabela": {
                 "name": "Maran Maria Mirabela",
@@ -4299,8 +4299,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 63,
-                "_displayZlp": 13
+                "_displayCo": 31,
+                "_displayZlp": 4
             },
             "moisoni maria liliana": {
                 "name": "Moisoni Maria Liliana",
@@ -4444,8 +4444,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 62,
-                "_displayZlp": 9
+                "_displayCo": 27,
+                "_displayZlp": 1
             },
             "moisoni marius petru": {
                 "name": "Moisoni Marius Petru",
@@ -4589,8 +4589,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 62,
-                "_displayZlp": 8
+                "_displayCo": 26,
+                "_displayZlp": 1
             },
             "mudaci ana": {
                 "name": "Mudaci Ana",
@@ -4734,8 +4734,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 60,
-                "_displayZlp": 9
+                "_displayCo": 26,
+                "_displayZlp": 3
             },
             "olariu oana ancuta": {
                 "name": "Olariu Oana Ancuta",
@@ -4879,8 +4879,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 65,
-                "_displayZlp": 11
+                "_displayCo": 30,
+                "_displayZlp": 4
             },
             "petrescu liliana": {
                 "name": "Petrescu Liliana",
@@ -5024,8 +5024,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 62,
-                "_displayZlp": 12
+                "_displayCo": 28,
+                "_displayZlp": 5
             },
             "stoicănescu sorina": {
                 "name": "Stoicănescu Sorina",
@@ -5169,8 +5169,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 64,
-                "_displayZlp": 13
+                "_displayCo": 30,
+                "_displayZlp": 6
             },
             "tătar daniel": {
                 "name": "Tătar Daniel",
@@ -5272,8 +5272,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 44,
-                "_displayZlp": 11
+                "_displayCo": 35,
+                "_displayZlp": 5
             },
             "andrei sergiu": {
                 "name": "Andrei Sergiu",
@@ -5417,8 +5417,8 @@
                 },
                 "functie": "Ingrijitoare",
                 "centru": "CIAPAD",
-                "_displayCo": 68,
-                "_displayZlp": 15
+                "_displayCo": 33,
+                "_displayZlp": 7
             },
             "munteanu mihaela miorita": {
                 "name": "Munteanu Mihaela Miorita",
@@ -5562,8 +5562,8 @@
                 },
                 "functie": "Ingrijitoare",
                 "centru": "CIAPAD",
-                "_displayCo": 53,
-                "_displayZlp": 11
+                "_displayCo": 20,
+                "_displayZlp": 4
             },
             "ciurescu voichita dorina": {
                 "name": "Ciurescu Voichita Dorina",
@@ -5707,8 +5707,8 @@
                 },
                 "functie": "Spalatoreasa",
                 "centru": "CIAPAD",
-                "_displayCo": 59,
-                "_displayZlp": 9
+                "_displayCo": 36,
+                "_displayZlp": 2
             },
             "craciun ciprian dorel": {
                 "name": "Craciun Ciprian Dorel",
@@ -5852,8 +5852,8 @@
                 },
                 "functie": "Munc. Intret",
                 "centru": "CIAPAD",
-                "_displayCo": 43,
-                "_displayZlp": 9
+                "_displayCo": 20,
+                "_displayZlp": 2
             },
             "benea cristian": {
                 "name": "Benea Cristian",
@@ -6034,8 +6034,8 @@
                 },
                 "functie": "Şofer",
                 "centru": "CIAPAD",
-                "_displayCo": 52,
-                "_displayZlp": 9
+                "_displayCo": 18,
+                "_displayZlp": 4
             },
             "husanu luminita": {
                 "name": "Husanu Luminita",
@@ -6179,8 +6179,8 @@
                 },
                 "functie": "Sef centru",
                 "centru": "CIAPAD",
-                "_displayCo": 47,
-                "_displayZlp": 10
+                "_displayCo": 31,
+                "_displayZlp": 3
             },
             "bustescu radu emanuela paula": {
                 "name": "Bustescu Radu Emanuela Paula",
@@ -6324,8 +6324,8 @@
                 },
                 "functie": "Asist. social",
                 "centru": "CIAPAD",
-                "_displayCo": 46,
-                "_displayZlp": 13
+                "_displayCo": 22,
+                "_displayZlp": 6
             },
             "daminescu madalina elena": {
                 "name": "Daminescu Madalina Elena",
@@ -6469,8 +6469,8 @@
                 },
                 "functie": "Psiho log",
                 "centru": "CIAPAD",
-                "_displayCo": 50,
-                "_displayZlp": 14
+                "_displayCo": 24,
+                "_displayZlp": 7
             },
             "muscai frăguța": {
                 "name": "Muscai Frăguța",
@@ -6693,8 +6693,8 @@
                 },
                 "functie": "Kinetoterapeut",
                 "centru": "CIAPAD",
-                "_displayCo": 70,
-                "_displayZlp": 15
+                "_displayCo": 25,
+                "_displayZlp": 8
             },
             "crîștiu dan": {
                 "name": "Crîștiu Dan",
@@ -6912,8 +6912,8 @@
                 },
                 "functie": "Instr. Ergo.",
                 "centru": "CIAPAD",
-                "_displayCo": 50,
-                "_displayZlp": 8
+                "_displayCo": 15,
+                "_displayZlp": 1
             },
             "paralescu rodica": {
                 "name": "Paralescu Rodica",
@@ -7057,8 +7057,8 @@
                 },
                 "functie": "Infirmieră",
                 "centru": "CIAPAD",
-                "_displayCo": 70,
-                "_displayZlp": 11
+                "_displayCo": 35,
+                "_displayZlp": 4
             }
         },
         "monthsAdded": [
