@@ -441,11 +441,11 @@
             "name": "Paralescu Rodica",
             "functie": "Infirmieră",
             "cnp": "2781027352623",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
