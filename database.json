@@ -136,11 +136,11 @@
             "name": "Șoman Florin",
             "functie": "Infirmieră",
             "cnp": "1720302352636",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
