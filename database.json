@@ -467,11 +467,11 @@
             "name": "Stoicănescu Sorina",
             "functie": "Infirmieră",
             "cnp": "2730212352621",
-            "cuvenit": 35,
+            "cuvenit": 3,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 21
+                    "cuvenit": 3
                 }
             }
         },
