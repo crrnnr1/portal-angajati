@@ -350,11 +350,11 @@
             "name": "Jiva Gabriel",
             "functie": "Infirmieră",
             "cnp": "1720319352622",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
