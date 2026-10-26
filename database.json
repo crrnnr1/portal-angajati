@@ -762,11 +762,11 @@
             "name": "Gonciar Voichița",
             "functie": "Asist. Med.",
             "cnp": "2721124352621",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         }
