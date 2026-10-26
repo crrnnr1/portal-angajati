@@ -97,11 +97,11 @@
             "name": "Dragu Fira",
             "functie": "Infirmieră",
             "cnp": "2680204352659",
-            "cuvenit": 2993,
+            "cuvenit": 1,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 2993
+                    "cuvenit": 1
                 }
             }
         },
