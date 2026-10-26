@@ -558,11 +558,11 @@
             "name": "Popeţ Nicolae Florin",
             "functie": "Şofer",
             "cnp": "1720728352621",
-            "cuvenit": 3,
+            "cuvenit": 32,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 32
                 }
             }
         },
