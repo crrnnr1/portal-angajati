@@ -376,11 +376,11 @@
             "name": "Maran Maria Mirabela",
             "functie": "Infirmieră",
             "cnp": "2870907352294",
-            "cuvenit": 3,
+            "cuvenit": 31,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 31
                 }
             }
         },
