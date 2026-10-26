@@ -493,11 +493,11 @@
             "name": "Andrei Sergiu",
             "functie": "Ingrijitoare",
             "cnp": "1880201350033",
-            "cuvenit": 3,
+            "cuvenit": 33,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 33
                 }
             }
         },
