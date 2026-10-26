@@ -71,11 +71,11 @@
             "name": "Lupu Săndel",
             "functie": "Infirmieră",
             "cnp": "1730205330796",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
