@@ -750,12 +750,25 @@
             "functie": "Insp. Spec. Res. Umane",
             "cnp": "1690122352622",
             "cuvenit": 35,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_1793009981961_a7ji",
+                    "start": "2027-05-11",
+                    "end": "2027-05-11",
+                    "days": 1
+                }
+            ],
             "years": {
                 "2027": {
                     "cuvenit": 21
                 }
-            }
+            },
+            "leaves": [
+                {
+                    "start": "2027-05-11",
+                    "end": "2027-05-11"
+                }
+            ]
         },
         {
             "id": "emp_1786613879264_m5ah8",
