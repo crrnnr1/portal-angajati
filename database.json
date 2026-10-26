@@ -415,11 +415,11 @@
             "name": "Mudaci Ana",
             "functie": "Infirmieră",
             "cnp": "2820913351579",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
