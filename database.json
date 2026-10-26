@@ -545,11 +545,11 @@
             "name": "Benea Cristian",
             "functie": "Munc. Fochist",
             "cnp": "1650801352621",
-            "cuvenit": 3,
+            "cuvenit": 32,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 32
                 }
             }
         },
