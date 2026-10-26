@@ -5,7 +5,7 @@
             "name": "Bălănescu Mihaela",
             "functie": "Asist. Med.",
             "cnp": "2730410351064",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [
                 {
                     "id": "int_1786690682395_a59i",
@@ -23,7 +23,7 @@
             "leaves": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
