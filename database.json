@@ -428,11 +428,11 @@
             "name": "Olariu Oana Ancuta",
             "functie": "Infirmieră",
             "cnp": "2860512351582",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
