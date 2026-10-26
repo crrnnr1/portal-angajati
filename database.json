@@ -324,11 +324,11 @@
             "name": "Boanca Cristiana",
             "functie": "Infirmieră",
             "cnp": "2731010352628",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
