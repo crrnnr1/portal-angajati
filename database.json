@@ -298,11 +298,11 @@
             "name": "Balintescu Valentin C-tin",
             "functie": "Infirmieră",
             "cnp": "1730414352620",
-            "cuvenit": 35,
+            "cuvenit": 3,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 21
+                    "cuvenit": 3
                 }
             }
         },
@@ -780,12 +780,6 @@
                     "start": "2027-08-02",
                     "end": "2027-08-02",
                     "days": 1
-                },
-                {
-                    "id": "int_1793010032783_gtq6",
-                    "start": "2027-08-03",
-                    "end": "2027-08-03",
-                    "days": 1
                 }
             ],
             "years": {
@@ -813,10 +807,6 @@
                 {
                     "start": "2027-08-02",
                     "end": "2027-08-02"
-                },
-                {
-                    "start": "2027-08-03",
-                    "end": "2027-08-03"
                 }
             ]
         },
