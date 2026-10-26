@@ -749,7 +749,7 @@
             "name": "Crîștiu Dan",
             "functie": "Insp. Spec. Res. Umane",
             "cnp": "1690122352622",
-            "cuvenit": 25,
+            "cuvenit": 26,
             "intervals": [
                 {
                     "id": "int_1793009981961_a7ji",
@@ -832,7 +832,7 @@
             ],
             "years": {
                 "2027": {
-                    "cuvenit": 25
+                    "cuvenit": 26
                 }
             },
             "leaves": [
