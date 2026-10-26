@@ -45,11 +45,11 @@
             "name": "Otescu Alin Nicolae",
             "functie": "Infirmieră",
             "cnp": "1881215351614",
-            "cuvenit": 35,
+            "cuvenit": 33,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 21
+                    "cuvenit": 33
                 }
             }
         },
