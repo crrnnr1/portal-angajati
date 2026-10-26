@@ -110,11 +110,11 @@
             "name": "Hota Valentina",
             "functie": "Infirmieră",
             "cnp": "6761002352622",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
