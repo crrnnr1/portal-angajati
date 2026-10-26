@@ -363,11 +363,11 @@
             "name": "Kiss Irina",
             "functie": "Infirmieră",
             "cnp": "2720208352649",
-            "cuvenit": 35,
+            "cuvenit": 3,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 21
+                    "cuvenit": 3
                 }
             }
         },
