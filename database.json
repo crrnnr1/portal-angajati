@@ -298,11 +298,11 @@
             "name": "Balintescu Valentin C-tin",
             "functie": "Infirmieră",
             "cnp": "1730414352620",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
