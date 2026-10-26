@@ -597,7 +597,7 @@
             "name": "Daminescu Madalina Elena",
             "functie": "Psiho log",
             "cnp": "2760223352681",
-            "cuvenit": 35,
+            "cuvenit": 34,
             "intervals": [
                 {
                     "id": "int_1793009270966_8677",
@@ -668,7 +668,7 @@
             ],
             "years": {
                 "2027": {
-                    "cuvenit": 35
+                    "cuvenit": 34
                 }
             },
             "leaves": [
