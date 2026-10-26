@@ -291,8 +291,9 @@
         /* Calendar Grid (Mobile optimized) */
         .m-cal-grid {
             display: grid;
-            grid-template-columns: repeat(7, 1fr);
+            grid-template-columns: repeat(7, minmax(0, 1fr));
             gap: 3px;
+            width: 100%;
         }
         .m-cal-hdr {
             text-align: center;
@@ -302,6 +303,8 @@
             color: var(--text-secondary);
             background: rgba(255, 255, 255, 0.04);
             border-radius: 0.3rem;
+            min-width: 0;
+            overflow: hidden;
         }
         .m-cal-hdr.wknd { color: #f87171; background: rgba(239, 68, 68, 0.06); }
 
@@ -311,12 +314,15 @@
             border-radius: 0.5rem;
             min-height: 60px;
             height: auto;
+            min-width: 0;
             padding: 0.25rem 0.2rem;
             display: flex;
             flex-direction: column;
             gap: 0.2rem;
             transition: all 0.15s;
             position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
         }
         .m-cal-cell.wknd { background: rgba(255, 255, 255, 0.015); }
         .m-cal-cell.holiday {
@@ -351,12 +357,13 @@
             font-weight: 600;
             color: var(--text-secondary);
             padding: 0 0.15rem;
+            min-width: 0;
         }
         .m-cal-cell.wknd .m-day-num { color: #f87171; }
         .m-cal-cell.today .m-day-num { color: var(--primary-color); }
 
         .m-holiday-tag {
-            font-size: 0.55rem;
+            font-size: 0.52rem;
             font-weight: 600;
             color: #fca5a5;
             background: rgba(239, 68, 68, 0.25);
@@ -367,6 +374,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            max-width: 100%;
+            display: block;
+            box-sizing: border-box;
         }
 
         .m-badges {
@@ -376,17 +386,23 @@
             overflow: visible;
             max-height: none;
             width: 100%;
+            min-width: 0;
         }
         .m-badge {
             font-size: 0.58rem;
             font-weight: 500;
             padding: 2px 3px;
             border-radius: 3px;
-            line-height: 1.2;
+            line-height: 1.15;
             white-space: normal;
-            word-break: break-word;
+            word-break: normal;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
             display: block;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
         }
         .m-badge.is-me {
             outline: 1.5px solid rgba(255, 255, 255, 0.7);
