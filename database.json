@@ -58,11 +58,11 @@
             "name": "Gavrilescu Elvira",
             "functie": "Infirmieră",
             "cnp": "2650226352634",
-            "cuvenit": 3,
+            "cuvenit": 35,
             "intervals": [],
             "years": {
                 "2027": {
-                    "cuvenit": 3
+                    "cuvenit": 35
                 }
             }
         },
