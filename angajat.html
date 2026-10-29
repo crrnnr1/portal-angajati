@@ -472,20 +472,41 @@
             position: fixed;
             top: 1rem; left: 50%;
             transform: translateX(-50%) translateY(-120px);
-            padding: 0.75rem 1.25rem;
+            padding: 0.85rem 1.25rem;
             border-radius: 0.75rem;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 500;
             z-index: 500;
             transition: transform 0.4s ease;
-            max-width: 90%;
-            text-align: center;
+            max-width: 92%;
+            width: max-content;
+            text-align: left;
+            white-space: pre-line;
+            line-height: 1.4;
             box-shadow: 0 8px 30px rgba(0,0,0,0.3);
         }
         .toast.visible { transform: translateX(-50%) translateY(0); }
-        .toast.success { background: rgba(16, 185, 129, 0.9); color: white; }
-        .toast.error { background: rgba(239, 68, 68, 0.9); color: white; }
-        .toast.warning { background: rgba(245, 158, 11, 0.9); color: #1e293b; }
+        .toast.success { background: rgba(16, 185, 129, 0.95); color: white; }
+        .toast.error { background: rgba(239, 68, 68, 0.95); color: white; }
+        .toast.warning { background: rgba(245, 158, 11, 0.95); color: #1e293b; }
+
+        /* Tranche Banner under Calendar Header */
+        .m-tranche-banner {
+            margin: 0.35rem 0.75rem 0.5rem;
+            padding: 0.45rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            text-align: center;
+        }
+        .m-tranche-t1 { background: rgba(59, 130, 246, 0.15); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .m-tranche-t2 { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .m-tranche-t3 { background: rgba(245, 158, 11, 0.18); color: #fde047; border: 1px solid rgba(245, 158, 11, 0.35); }
+        .m-tranche-t4 { background: rgba(168, 85, 247, 0.18); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.35); }
 
         /* My Leaves List */
         .my-leaves-section {
@@ -626,6 +647,7 @@
                 <span class="cal-title" id="cal-title">August 2026</span>
                 <button class="cal-nav" id="cal-next"><i data-lucide="chevron-right" style="width:18px;height:18px;"></i></button>
             </div>
+            <div id="cal-tranche-badge" class="m-tranche-banner" style="display:none;"></div>
             <div class="m-legend" id="m-legend"></div>
             <div class="m-cal-grid" id="m-cal-grid"></div>
         </div>
@@ -797,7 +819,13 @@
         }
 
         // ========= DATA ACCESS STATE =========
-        let progData = { employees: [], overlapRules: {} };
+        let progData = {
+            employees: [],
+            overlapRules: {},
+            mobileVisibleCategories: [],
+            planningRules: { maxDaysPerMonth: 10, maxSummerDays: 10 },
+            decemberAllowedCategories: []
+        };
         const SYNC_INTERVAL_MS = 3000;
 
         async function loadProgDataFromServer(callback) {
@@ -1006,6 +1034,143 @@
             return roleColorMap[n];
         }
 
+        // ========= PLANNING RULES CHECK =========
+        function validateLeavePlanningRules(data, employee, startIso, endIso, ignoreIntervalId = null) {
+            if (!employee) return { valid: true, violations: [] };
+
+            const startDate = new Date(startIso);
+            const endDate = new Date(endIso);
+            if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+                return { valid: true, violations: [] };
+            }
+
+            const planningRules = (data && data.planningRules) || {};
+            const maxDaysPerMonth = planningRules.maxDaysPerMonth !== undefined ? parseInt(planningRules.maxDaysPerMonth) : 10;
+            const maxSummerDays = planningRules.maxSummerDays !== undefined ? parseInt(planningRules.maxSummerDays) : 10;
+            const decemberAllowed = Array.isArray(data && data.decemberAllowedCategories) ? data.decemberAllowedCategories : [];
+
+            const monthNames = ['Ianuarie','Februarie','Martie','Aprilie','Mai','Iunie','Iulie','August','Septembrie','Octombrie','Noiembrie','Decembrie'];
+
+            // 1. Zile lucrătoare din intervalul candidat grupate pe 'YYYY-MM' și Vară 'YYYY'
+            const candidateDaysByMonth = {};
+            const candidateSummerByYear = {};
+            let candidateHasDecemberWorkingDays = false;
+
+            const cur = new Date(startDate.getTime());
+            while (cur <= endDate) {
+                if (!isNonWorkingDay(cur)) {
+                    const yr = cur.getFullYear();
+                    const mo = cur.getMonth() + 1; // 1..12
+                    const monthKey = `${yr}-${String(mo).padStart(2, '0')}`;
+
+                    candidateDaysByMonth[monthKey] = (candidateDaysByMonth[monthKey] || 0) + 1;
+
+                    // Tranșa 3 (Vară): Iulie (7), August (8), Septembrie (9)
+                    if (mo === 7 || mo === 8 || mo === 9) {
+                        candidateSummerByYear[yr] = (candidateSummerByYear[yr] || 0) + 1;
+                    }
+
+                    // Luna Decembrie: Luna 12
+                    if (mo === 12) {
+                        candidateHasDecemberWorkingDays = true;
+                    }
+                }
+                cur.setDate(cur.getDate() + 1);
+            }
+
+            // 2. Zile lucrătoare din intervalele existente ale angajatului
+            const existingDaysByMonth = {};
+            const existingSummerByYear = {};
+
+            (employee.intervals || []).forEach(int => {
+                if (ignoreIntervalId && int.id === ignoreIntervalId) return;
+                if (!int.start || !int.end) return;
+
+                const iStart = new Date(int.start);
+                const iEnd = new Date(int.end);
+                if (isNaN(iStart.getTime()) || isNaN(iEnd.getTime())) return;
+
+                const iCur = new Date(iStart.getTime());
+                while (iCur <= iEnd) {
+                    if (!isNonWorkingDay(iCur)) {
+                        const yr = iCur.getFullYear();
+                        const mo = iCur.getMonth() + 1;
+                        const monthKey = `${yr}-${String(mo).padStart(2, '0')}`;
+
+                        existingDaysByMonth[monthKey] = (existingDaysByMonth[monthKey] || 0) + 1;
+
+                        if (mo === 7 || mo === 8 || mo === 9) {
+                            existingSummerByYear[yr] = (existingSummerByYear[yr] || 0) + 1;
+                        }
+                    }
+                    iCur.setDate(iCur.getDate() + 1);
+                }
+            });
+
+            const violations = [];
+
+            // Regula 1: Maxim 10 zile lucrătoare într-o lună
+            for (const monthKey of Object.keys(candidateDaysByMonth)) {
+                const newInMonth = candidateDaysByMonth[monthKey];
+                const existingInMonth = existingDaysByMonth[monthKey] || 0;
+                const totalInMonth = existingInMonth + newInMonth;
+
+                if (totalInMonth > maxDaysPerMonth) {
+                    const [yStr, mStr] = monthKey.split('-');
+                    const mName = monthNames[parseInt(mStr, 10) - 1];
+                    violations.push({
+                        type: 'MONTH_LIMIT',
+                        monthKey,
+                        message: `Limită lunară depășită în ${mName} ${yStr}!\n` +
+                                 (existingInMonth > 0 
+                                    ? `Aveți deja ${existingInMonth} zile lucrătoare programate. Cu noile ${newInMonth} zile ați ajunge la ${totalInMonth} zile lucrătoare.`
+                                    : `Ați selectat ${newInMonth} zile lucrătoare în această lună.`) +
+                                 ` Limita maximă permisă este de ${maxDaysPerMonth} zile lucrătoare pe lună.`
+                    });
+                }
+            }
+
+            // Regula 2: Împărțire în tranșe (max 10 zile cumulat în Tranșa 3 - Vară)
+            for (const yr of Object.keys(candidateSummerByYear)) {
+                const newSummer = candidateSummerByYear[yr];
+                const existingSummer = existingSummerByYear[yr] || 0;
+                const totalSummer = existingSummer + newSummer;
+
+                if (totalSummer > maxSummerDays) {
+                    violations.push({
+                        type: 'SUMMER_LIMIT',
+                        year: yr,
+                        message: `Limită de vară depășită pentru anul ${yr}!\n` +
+                                 `În Tranșa 3 (Vară: Iulie, August, Septembrie) sunt permise maximum ${maxSummerDays} zile lucrătoare cumulate.` +
+                                 (existingSummer > 0 
+                                    ? ` Aveți deja ${existingSummer} zile programate în vară, iar cu noile ${newSummer} zile ați ajunge la ${totalSummer} zile lucrătoare.`
+                                    : ` Ați selectat ${newSummer} zile lucrătoare în perioada de vară.`) +
+                                 `\nRestul concediului trebuie împărțit în Tranșa 1 (Ian, Feb, Mar, Noi) sau Tranșa 2 (Apr, Mai, Iun, Oct).`
+                    });
+                }
+            }
+
+            // Regula 3: Decembrie permis doar anumitor categorii
+            if (candidateHasDecemberWorkingDays) {
+                const empRole = (employee.functie || '').trim().toLowerCase();
+                const isAllowed = decemberAllowed.some(cat => (cat || '').trim().toLowerCase() === empRole);
+                if (!isAllowed) {
+                    violations.push({
+                        type: 'DECEMBER_RESTRICTION',
+                        role: employee.functie,
+                        message: `Concediu restricționat în luna Decembrie!\n` +
+                                 `Conform regulamentului, funcția dvs. ("${employee.functie || '–'}") nu are dreptul de a efectua concediu în luna Decembrie.\n` +
+                                 `Vă rugăm să selectați o altă perioadă din cursul anului.`
+                    });
+                }
+            }
+
+            return {
+                valid: violations.length === 0,
+                violations
+            };
+        }
+
         // ========= OVERLAP CHECK =========
         function checkOverlapRules(progData, targetEmpId, startIso, endIso) {
             const emp = (progData.employees || []).find(e => e.id === targetEmpId);
@@ -1207,6 +1372,30 @@
             const month = currentCalDate.getMonth();
             calTitle.textContent = `${monthNamesRo[month]} ${year}`;
 
+            const trancheEl = document.getElementById('cal-tranche-badge');
+            if (trancheEl) {
+                const moNum = month + 1; // 1..12
+                trancheEl.style.display = 'flex';
+                if (moNum === 1 || moNum === 2 || moNum === 3 || moNum === 11) {
+                    trancheEl.className = 'm-tranche-banner m-tranche-t1';
+                    trancheEl.innerHTML = `❄️ <strong>Tranșa 1</strong> (Ian, Feb, Mar, Noi) • Max. 10 zile lucrătoare/lună`;
+                } else if (moNum === 4 || moNum === 5 || moNum === 6 || moNum === 10) {
+                    trancheEl.className = 'm-tranche-banner m-tranche-t2';
+                    trancheEl.innerHTML = `🌿 <strong>Tranșa 2</strong> (Apr, Mai, Iun, Oct) • Max. 10 zile lucrătoare/lună`;
+                } else if (moNum === 7 || moNum === 8 || moNum === 9) {
+                    const maxS = (progData.planningRules && progData.planningRules.maxSummerDays) || 10;
+                    trancheEl.className = 'm-tranche-banner m-tranche-t3';
+                    trancheEl.innerHTML = `☀️ <strong>Tranșa 3 (Vară)</strong> • Max. 10z/lună & max. ${maxS}z în vară`;
+                } else if (moNum === 12) {
+                    const empRole = (currentEmp && currentEmp.functie || '').trim().toLowerCase();
+                    const isDecAllowed = Array.isArray(progData.decemberAllowedCategories) && progData.decemberAllowedCategories.some(c => (c || '').trim().toLowerCase() === empRole);
+                    trancheEl.className = 'm-tranche-banner m-tranche-t4';
+                    trancheEl.innerHTML = isDecAllowed 
+                        ? `🔒 <strong>Decembrie</strong> • ✅ Concediul este permis pentru funcția dvs.`
+                        : `🔒 <strong>Decembrie</strong> • ⛔ Concediu restricționat pentru funcția dvs.`;
+                }
+            }
+
             legendEl.innerHTML = '';
             const rolesSet = new Set();
             (progData.employees || []).forEach(e => {
@@ -1380,6 +1569,13 @@
 
             if (check.isException) {
                 showToast(`⚠️ Excepție (${check.totalViolationDays} zi suprapunere) cu ${check.namesList}. Salvat!`, 'warning', 4000);
+            }
+
+            // Verificare reguli noi de planificare (max 10 zile/luna, max 10 zile vara, restrictie Decembrie)
+            const planCheck = validateLeavePlanningRules(progData, currentEmp, selStart, selectedEnd);
+            if (!planCheck.valid) {
+                showToast(`⛔ Salvare blocată!\n\n${planCheck.violations[0].message}`, 'error', 7500);
+                return;
             }
 
             if (!emp.intervals) emp.intervals = [];
