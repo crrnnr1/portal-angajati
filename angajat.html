@@ -506,7 +506,8 @@
         .m-tranche-t1 { background: rgba(59, 130, 246, 0.15); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.3); }
         .m-tranche-t2 { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
         .m-tranche-t3 { background: rgba(245, 158, 11, 0.18); color: #fde047; border: 1px solid rgba(245, 158, 11, 0.35); }
-        .m-tranche-t4 { background: rgba(168, 85, 247, 0.18); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.35); }
+        .m-tranche-t4 { background: rgba(249, 115, 22, 0.15); color: #fdba74; border: 1px solid rgba(249, 115, 22, 0.35); }
+        .m-tranche-dec { background: rgba(168, 85, 247, 0.18); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.35); }
 
         /* My Leaves List */
         .my-leaves-section {
@@ -1065,8 +1066,8 @@
 
                     candidateDaysByMonth[monthKey] = (candidateDaysByMonth[monthKey] || 0) + 1;
 
-                    // Tranșa 3 (Vară): Iulie (7), August (8), Septembrie (9)
-                    if (mo === 7 || mo === 8 || mo === 9) {
+                    // Tranșa 3 (Vară): Iunie (6), Iulie (7), August (8)
+                    if (mo === 6 || mo === 7 || mo === 8) {
                         candidateSummerByYear[yr] = (candidateSummerByYear[yr] || 0) + 1;
                     }
 
@@ -1099,7 +1100,8 @@
 
                         existingDaysByMonth[monthKey] = (existingDaysByMonth[monthKey] || 0) + 1;
 
-                        if (mo === 7 || mo === 8 || mo === 9) {
+                        // Tranșa 3 (Vară): Iunie (6), Iulie (7), August (8)
+                        if (mo === 6 || mo === 7 || mo === 8) {
                             existingSummerByYear[yr] = (existingSummerByYear[yr] || 0) + 1;
                         }
                     }
@@ -1141,11 +1143,11 @@
                         type: 'SUMMER_LIMIT',
                         year: yr,
                         message: `Limită de vară depășită pentru anul ${yr}!\n` +
-                                 `În Tranșa 3 (Vară: Iulie, August, Septembrie) sunt permise maximum ${maxSummerDays} zile lucrătoare cumulate.` +
+                                 `În Tranșa 3 (Vară: Iunie, Iulie, August) sunt permise maximum ${maxSummerDays} zile lucrătoare cumulate.` +
                                  (existingSummer > 0 
                                     ? ` Aveți deja ${existingSummer} zile programate în vară, iar cu noile ${newSummer} zile ați ajunge la ${totalSummer} zile lucrătoare.`
                                     : ` Ați selectat ${newSummer} zile lucrătoare în perioada de vară.`) +
-                                 `\nRestul concediului trebuie împărțit în Tranșa 1 (Ian, Feb, Mar, Noi) sau Tranșa 2 (Apr, Mai, Iun, Oct).`
+                                 `\nRestul concediului trebuie împărțit în Tranșa 1 (Ian, Feb, Mar), Tranșa 2 (Apr, Mai) sau Tranșa 4 (Sep, Oct, Noi).`
                     });
                 }
             }
@@ -1376,20 +1378,23 @@
             if (trancheEl) {
                 const moNum = month + 1; // 1..12
                 trancheEl.style.display = 'flex';
-                if (moNum === 1 || moNum === 2 || moNum === 3 || moNum === 11) {
+                if (moNum === 1 || moNum === 2 || moNum === 3) {
                     trancheEl.className = 'm-tranche-banner m-tranche-t1';
-                    trancheEl.innerHTML = `❄️ <strong>Tranșa 1</strong> (Ian, Feb, Mar, Noi) • Max. 10 zile lucrătoare/lună`;
-                } else if (moNum === 4 || moNum === 5 || moNum === 6 || moNum === 10) {
+                    trancheEl.innerHTML = `❄️ <strong>Tranșa 1</strong> (Ian, Feb, Mar) • Max. 10 zile lucrătoare/lună`;
+                } else if (moNum === 4 || moNum === 5) {
                     trancheEl.className = 'm-tranche-banner m-tranche-t2';
-                    trancheEl.innerHTML = `🌿 <strong>Tranșa 2</strong> (Apr, Mai, Iun, Oct) • Max. 10 zile lucrătoare/lună`;
-                } else if (moNum === 7 || moNum === 8 || moNum === 9) {
+                    trancheEl.innerHTML = `🌿 <strong>Tranșa 2</strong> (Apr, Mai) • Max. 10 zile lucrătoare/lună`;
+                } else if (moNum === 6 || moNum === 7 || moNum === 8) {
                     const maxS = (progData.planningRules && progData.planningRules.maxSummerDays) || 10;
                     trancheEl.className = 'm-tranche-banner m-tranche-t3';
-                    trancheEl.innerHTML = `☀️ <strong>Tranșa 3 (Vară)</strong> • Max. 10z/lună & max. ${maxS}z în vară`;
+                    trancheEl.innerHTML = `☀️ <strong>Tranșa 3 (Vară)</strong> (Iun, Iul, Aug) • Max. ${maxS}z în vară`;
+                } else if (moNum === 9 || moNum === 10 || moNum === 11) {
+                    trancheEl.className = 'm-tranche-banner m-tranche-t4';
+                    trancheEl.innerHTML = `🍂 <strong>Tranșa 4</strong> (Sep, Oct, Noi) • Max. 10 zile lucrătoare/lună`;
                 } else if (moNum === 12) {
                     const empRole = (currentEmp && currentEmp.functie || '').trim().toLowerCase();
                     const isDecAllowed = Array.isArray(progData.decemberAllowedCategories) && progData.decemberAllowedCategories.some(c => (c || '').trim().toLowerCase() === empRole);
-                    trancheEl.className = 'm-tranche-banner m-tranche-t4';
+                    trancheEl.className = 'm-tranche-banner m-tranche-dec';
                     trancheEl.innerHTML = isDecAllowed 
                         ? `🔒 <strong>Decembrie</strong> • ✅ Concediul este permis pentru funcția dvs.`
                         : `🔒 <strong>Decembrie</strong> • ⛔ Concediu restricționat pentru funcția dvs.`;
