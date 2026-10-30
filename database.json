@@ -369,12 +369,25 @@
             "functie": "Instr. Ergo.",
             "cnp": "2691231200029",
             "cuvenit": 35,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_1793353936892_jxcb",
+                    "start": "2027-01-04",
+                    "end": "2027-01-04",
+                    "days": 1
+                }
+            ],
             "years": {
                 "2027": {
                     "cuvenit": 35
                 }
-            }
+            },
+            "leaves": [
+                {
+                    "start": "2027-01-04",
+                    "end": "2027-01-04"
+                }
+            ]
         },
         {
             "id": "emp_1786613879264_9n9df",
