@@ -64,12 +64,25 @@
             "functie": "Infirmieră",
             "cnp": "1881215351614",
             "cuvenit": 33,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_1793353801694_ayp7",
+                    "start": "2028-03-18",
+                    "end": "2028-03-31",
+                    "days": 10
+                }
+            ],
             "years": {
                 "2027": {
                     "cuvenit": 33
                 }
-            }
+            },
+            "leaves": [
+                {
+                    "start": "2028-03-18",
+                    "end": "2028-03-31"
+                }
+            ]
         },
         {
             "id": "emp_1786613879264_cvm2m",
