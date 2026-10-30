@@ -135,26 +135,7 @@
             "functie": "Infirmieră",
             "cnp": "6761002352622",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1793345464884_rjgy",
-                    "start": "2027-02-01",
-                    "end": "2027-02-11",
-                    "days": 9
-                },
-                {
-                    "id": "int_1793345469396_jk5b",
-                    "start": "2027-03-05",
-                    "end": "2027-03-15",
-                    "days": 7
-                },
-                {
-                    "id": "int_1793345483836_lhoz",
-                    "start": "2027-04-02",
-                    "end": "2027-04-15",
-                    "days": 10
-                }
-            ],
+            "intervals": [],
             "years": {
                 "2027": {
                     "cuvenit": 35
@@ -419,20 +400,7 @@
             "functie": "Infirmieră",
             "cnp": "1780326352645",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1793345415716_54a9",
-                    "start": "2027-09-20",
-                    "end": "2027-09-24",
-                    "days": 5
-                },
-                {
-                    "id": "int_1793345637996_p75j",
-                    "start": "2027-09-27",
-                    "end": "2027-09-30",
-                    "days": 4
-                }
-            ],
+            "intervals": [],
             "years": {
                 "2027": {
                     "cuvenit": 35
@@ -498,14 +466,7 @@
             "functie": "Infirmieră",
             "cnp": "2761214352620",
             "cuvenit": 35,
-            "intervals": [
-                {
-                    "id": "int_1793345351557_tjjs",
-                    "start": "2027-09-06",
-                    "end": "2027-09-10",
-                    "days": 5
-                }
-            ],
+            "intervals": [],
             "years": {
                 "2027": {
                     "cuvenit": 35
