@@ -64,14 +64,7 @@
             "functie": "Infirmieră",
             "cnp": "1881215351614",
             "cuvenit": 33,
-            "intervals": [
-                {
-                    "id": "int_1793359656648_akyo",
-                    "start": "2027-06-01",
-                    "end": "2027-06-13",
-                    "days": 8
-                }
-            ],
+            "intervals": [],
             "years": {
                 "2027": {
                     "cuvenit": 33
