@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Programare Concediu - Portal Angajat</title>
     <meta name="description" content="Portal mobil pentru programarea concediului. Autentificare cu CNP.">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -509,6 +512,61 @@
         .m-tranche-t4 { background: rgba(249, 115, 22, 0.15); color: #fdba74; border: 1px solid rgba(249, 115, 22, 0.35); }
         .m-tranche-dec { background: rgba(168, 85, 247, 0.18); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.35); }
 
+        /* Tranches Card Overview */
+        .m-tranches-card {
+            margin: 0 0.8rem 0.6rem;
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 0.85rem;
+            padding: 0.75rem 0.85rem;
+            backdrop-filter: blur(8px);
+        }
+        .m-tranches-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.55rem;
+        }
+        .m-tranches-badge {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.15rem 0.5rem;
+            border-radius: 999px;
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            text-transform: uppercase;
+        }
+        .m-tranches-body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .m-tranche-row {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            font-size: 0.78rem;
+            padding: 0.35rem 0.5rem;
+            border-radius: 0.5rem;
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .m-tranche-row.t1 .m-t-badge { color: #60a5fa; font-weight: 700; min-width: 82px; }
+        .m-tranche-row.t2 .m-t-badge { color: #34d399; font-weight: 700; min-width: 82px; }
+        .m-tranche-row.t3 .m-t-badge { color: #fbbf24; font-weight: 700; min-width: 82px; }
+        .m-tranche-row.t4 .m-t-badge { color: #fb923c; font-weight: 700; min-width: 82px; }
+        .m-tranche-row.dec .m-t-badge { color: #c084fc; font-weight: 700; min-width: 82px; }
+        .m-t-text {
+            color: var(--text-primary);
+            flex: 1;
+        }
+        .m-t-sub {
+            color: var(--text-secondary);
+            font-size: 0.72rem;
+            margin-left: 0.25rem;
+        }
+
         /* My Leaves List */
         .my-leaves-section {
             padding: 0 0.8rem 6rem;
@@ -585,6 +643,9 @@
             <i data-lucide="user-circle" class="login-icon"></i>
             <h1>Portal Angajat</h1>
             <p>Programare Concediu<br>Introduceți CNP-ul pentru autentificare</p>
+            <div style="margin: 0.6rem 0 0.35rem; font-size: 0.72rem; color: #94a3b8; background: rgba(255,255,255,0.04); padding: 0.4rem 0.65rem; border-radius: 0.5rem; border: 1px solid rgba(255,255,255,0.08); text-align: center;">
+                🗓️ Tranșe Anuale: <strong>1</strong> (Ian-Mar) • <strong>2</strong> (Apr-Mai) • <strong>3</strong> (Iun-Aug) • <strong>4</strong> (Sep-Noi)
+            </div>
             <form id="login-form">
                 <div class="login-input-group">
                     <i data-lucide="key-round"></i>
@@ -617,7 +678,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 0.6rem;">
                 <span id="conn-status-badge" style="font-size: 0.72rem; padding: 0.25rem 0.6rem; border-radius: 1rem; background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-weight: 500; display: inline-flex; align-items: center; gap: 0.3rem;">
-                    <span style="width: 6px; height: 6px; border-radius: 50%; background: #34d399; display: inline-block;"></span> Sincronizat
+                    <span style="width: 6px; height: 6px; border-radius: 50%; background: #34d399; display: inline-block;"></span> v2.5 Sincronizat
                 </span>
                 <button class="logout-btn" id="logout-btn">
                     <i data-lucide="log-out" style="width:14px; height:14px;"></i> Ieșire
@@ -638,6 +699,39 @@
             <div class="info-card">
                 <div class="info-card-value amber" id="stat-remaining">21</div>
                 <div class="info-card-label">Zile rămase</div>
+            </div>
+        </div>
+
+        <!-- Repartizare Tranșe Anuale Mobile Card -->
+        <div class="m-tranches-card">
+            <div class="m-tranches-header">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-lucide="calendar-range" style="width:16px; height:16px; color:#60a5fa;"></i>
+                    <span style="font-weight: 600; font-size: 0.85rem; color: #f1f5f9;">Regulament Tranșe Concediu</span>
+                </div>
+                <span class="m-tranches-badge">4 Tranșe</span>
+            </div>
+            <div class="m-tranches-body">
+                <div class="m-tranche-row t1">
+                    <span class="m-t-badge">❄️ Tranșa 1</span>
+                    <span class="m-t-text"><strong>Ian, Feb, Mar</strong> <span class="m-t-sub">(max. 10z lucrătoare/lună)</span></span>
+                </div>
+                <div class="m-tranche-row t2">
+                    <span class="m-t-badge">🌿 Tranșa 2</span>
+                    <span class="m-t-text"><strong>Apr, Mai</strong> <span class="m-t-sub">(max. 10z lucrătoare/lună)</span></span>
+                </div>
+                <div class="m-tranche-row t3">
+                    <span class="m-t-badge">☀️ Tranșa 3</span>
+                    <span class="m-t-text"><strong>Iun, Iul, Aug (Vară)</strong> <span class="m-t-sub" id="m-t-summer-sub">(max. 10z cumulate)</span></span>
+                </div>
+                <div class="m-tranche-row t4">
+                    <span class="m-t-badge">🍂 Tranșa 4</span>
+                    <span class="m-t-text"><strong>Sep, Oct, Noi</strong> <span class="m-t-sub">(max. 10z lucrătoare/lună)</span></span>
+                </div>
+                <div class="m-tranche-row dec">
+                    <span class="m-t-badge">🔒 Decembrie</span>
+                    <span class="m-t-text"><strong>Luna Decembrie</strong> <span class="m-t-sub" id="m-t-dec-sub">(restricționat pe funcții)</span></span>
+                </div>
             </div>
         </div>
 
@@ -1337,6 +1431,20 @@
             statTotal.textContent = totalDays;
             statUsed.textContent = usedDays;
             statRemaining.textContent = Math.max(0, totalDays - usedDays);
+
+            // Actualizare info din cardul de tranșe
+            const summerSub = document.getElementById('m-t-summer-sub');
+            if (summerSub) {
+                const maxS = (progData.planningRules && progData.planningRules.maxSummerDays) || 10;
+                summerSub.textContent = `(max. ${maxS}z cumulate)`;
+            }
+            const decSub = document.getElementById('m-t-dec-sub');
+            if (decSub && currentEmp) {
+                const empRole = (currentEmp.functie || '').trim().toLowerCase();
+                const isDecAllowed = Array.isArray(progData.decemberAllowedCategories) && progData.decemberAllowedCategories.some(c => (c || '').trim().toLowerCase() === empRole);
+                decSub.textContent = isDecAllowed ? '(✅ permis pentru dvs.)' : '(⛔ restricționat pentru dvs.)';
+                decSub.style.color = isDecAllowed ? '#34d399' : '#f87171';
+            }
 
             renderCalendar();
             renderMyLeaves();
