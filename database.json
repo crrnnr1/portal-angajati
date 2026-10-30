@@ -632,7 +632,14 @@
             "functie": "Lucr. Soc",
             "cnp": "2720112352628",
             "cuvenit": 35,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_1793358573284_du46",
+                    "start": "2027-04-26",
+                    "end": "2027-04-29",
+                    "days": 4
+                }
+            ],
             "years": {
                 "2027": {
                     "cuvenit": 35
