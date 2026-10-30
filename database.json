@@ -125,7 +125,14 @@
             "functie": "Infirmieră",
             "cnp": "1730205330796",
             "cuvenit": 35,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_1793355014262_byji",
+                    "start": "2027-04-12",
+                    "end": "2027-04-12",
+                    "days": 1
+                }
+            ],
             "years": {
                 "2027": {
                     "cuvenit": 35
