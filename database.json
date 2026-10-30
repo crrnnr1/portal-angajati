@@ -850,7 +850,14 @@
             "functie": "Infirmieră",
             "cnp": "2860512351582",
             "cuvenit": 35,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_1793355817870_r6xn",
+                    "start": "2027-09-17",
+                    "end": "2027-09-30",
+                    "days": 10
+                }
+            ],
             "years": {
                 "2027": {
                     "cuvenit": 35
