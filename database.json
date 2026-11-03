@@ -722,13 +722,25 @@
             "functie": "Asist. Med.",
             "cnp": "2790708352628",
             "cuvenit": 35,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_1793724860089_va5n",
+                    "start": "2027-07-01",
+                    "end": "2027-07-09",
+                    "days": 7
+                }
+            ],
             "years": {
                 "2027": {
                     "cuvenit": 35
                 }
             },
-            "leaves": []
+            "leaves": [
+                {
+                    "start": "2027-07-01",
+                    "end": "2027-07-09"
+                }
+            ]
         },
         {
             "id": "emp_1786613879264_dssqi",
