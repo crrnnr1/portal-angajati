@@ -3073,12 +3073,25 @@
             "functie": "Insp. Spec. finan. Cont.",
             "cnp": "2710203352647",
             "cuvenit": 32,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_1794396691427_xha6",
+                    "start": "2027-07-10",
+                    "end": "2027-07-16",
+                    "days": 5
+                }
+            ],
             "years": {
                 "2027": {
                     "cuvenit": 32
                 }
-            }
+            },
+            "leaves": [
+                {
+                    "start": "2027-07-10",
+                    "end": "2027-07-16"
+                }
+            ]
         },
         {
             "id": "emp_1786613879264_9lrws",
