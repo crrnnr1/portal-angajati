@@ -3536,5 +3536,8 @@
         "Instr. Ergo.",
         "Lucr. Soc",
         "Spalatoreasa"
+    ],
+    "deletedIntervals": [
+        "int_1795502882027_svhh"
     ]
 }
