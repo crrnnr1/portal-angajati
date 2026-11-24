@@ -812,11 +812,12 @@
                 try {
                     const res = await fetch(apiUrl('/api/get?t=' + Date.now()), {
                         cache: 'no-store',
-                        signal: AbortSignal.timeout(3000)
+                        signal: AbortSignal.timeout(2000)
                     });
                     if (res.ok) return await res.json();
                 } catch(e) {
-                    console.warn('Server Python indisponibil, fallback la GitHub Cloud:', e);
+                    SERVER_BASE = '';
+                    updateConnBadge('☁️ Cloud Sincronizat', false);
                 }
             }
             return await fetchFromCloudGitHub();
@@ -891,70 +892,97 @@
             setTimeout(() => { ind.style.opacity = '0'; }, 2000);
         }
 
-        // Sincronizare specifica a concediului direct in GitHub Cloud (fara a atinge sau masca CNP-urile altora)
+        // Sincronizare specifica a concediului direct in GitHub Cloud (cu retry la conflicte SHA si chunking)
         async function syncLeaveToGitHub(empId, action, intervalData) {
-            try {
-                const getResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json?t=` + Date.now(), {
-                    headers: {
-                        "Authorization": `token ${GITHUB_TOKEN}`,
-                        "Accept": "application/vnd.github.v3+json"
+            for (let attempt = 1; attempt <= 3; attempt++) {
+                try {
+                    const getResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json?t=` + Date.now(), {
+                        headers: {
+                            "Authorization": `token ${GITHUB_TOKEN}`,
+                            "Accept": "application/vnd.github.v3+json"
+                        },
+                        signal: AbortSignal.timeout(6000)
+                    });
+                    if (!getResp.ok) {
+                        if (attempt < 3) { await new Promise(r => setTimeout(r, 600 * attempt)); continue; }
+                        return false;
                     }
-                });
-                if (!getResp.ok) return false;
-                const fileInfo = await getResp.json();
-                const sha = fileInfo.sha;
-                const cleanB64 = fileInfo.content.replace(/\s/g, '');
-                const binaryStr = atob(cleanB64);
-                const bytes = new Uint8Array(binaryStr.length);
-                for (let i = 0; i < binaryStr.length; i++) bytes[i] = binaryStr.charCodeAt(i);
-                const cloudDb = JSON.parse(new TextDecoder().decode(bytes));
+                    const fileInfo = await getResp.json();
+                    const sha = fileInfo.sha;
+                    const cleanB64 = fileInfo.content.replace(/\s/g, '');
+                    const binaryStr = atob(cleanB64);
+                    const bytes = new Uint8Array(binaryStr.length);
+                    for (let i = 0; i < binaryStr.length; i++) bytes[i] = binaryStr.charCodeAt(i);
+                    const cloudDb = JSON.parse(new TextDecoder().decode(bytes));
 
-                const targetEmp = (cloudDb.employees || []).find(e => e.id === empId || (currentEmp.cnp && e.cnp === currentEmp.cnp));
-                if (!targetEmp) return false;
-                if (!targetEmp.intervals) targetEmp.intervals = [];
+                    const targetEmp = (cloudDb.employees || []).find(e => e.id === empId || (currentEmp && currentEmp.cnp && e.cnp === currentEmp.cnp));
+                    if (!targetEmp) return false;
+                    if (!targetEmp.intervals) targetEmp.intervals = [];
 
-                if (action === 'save') {
-                    if (cloudDb.deletedIntervals && intervalData.id) {
-                        cloudDb.deletedIntervals = cloudDb.deletedIntervals.filter(id => id !== intervalData.id);
-                    }
-                    const exists = targetEmp.intervals.some(i => (intervalData.id && i.id === intervalData.id) || (i.start === intervalData.start && i.end === intervalData.end));
-                    if (!exists) targetEmp.intervals.push(intervalData);
-                } else if (action === 'delete') {
-                    targetEmp.intervals = targetEmp.intervals.filter(i => !( (intervalData.id && i.id === intervalData.id) || (i.start === intervalData.start && i.end === intervalData.end) ));
-                    if (intervalData.id) {
-                        if (!cloudDb.deletedIntervals) cloudDb.deletedIntervals = [];
-                        if (!cloudDb.deletedIntervals.includes(intervalData.id)) {
-                            cloudDb.deletedIntervals.push(intervalData.id);
+                    if (action === 'save') {
+                        if (cloudDb.deletedIntervals && intervalData.id) {
+                            cloudDb.deletedIntervals = cloudDb.deletedIntervals.filter(id => id !== intervalData.id);
+                        }
+                        const exists = targetEmp.intervals.some(i => (intervalData.id && i.id === intervalData.id) || (i.start === intervalData.start && i.end === intervalData.end));
+                        if (!exists) targetEmp.intervals.push(intervalData);
+                    } else if (action === 'delete') {
+                        targetEmp.intervals = targetEmp.intervals.filter(i => !( (intervalData.id && i.id === intervalData.id) || (i.start === intervalData.start && i.end === intervalData.end) ));
+                        if (intervalData.id) {
+                            if (!cloudDb.deletedIntervals) cloudDb.deletedIntervals = [];
+                            if (!cloudDb.deletedIntervals.includes(intervalData.id)) {
+                                cloudDb.deletedIntervals.push(intervalData.id);
+                            }
                         }
                     }
+
+                    progData = cloudDb;
+                    localStorage.setItem('hrProgDB_v2', JSON.stringify(cloudDb));
+
+                    // Codare base64 rapida si sigura pentru fisiere mari
+                    const jsonStr = JSON.stringify(cloudDb, null, 4);
+                    const utf8Bytes = new TextEncoder().encode(jsonStr);
+                    let binStr = '';
+                    const CHUNK_SIZE = 8192;
+                    for (let i = 0; i < utf8Bytes.length; i += CHUNK_SIZE) {
+                        binStr += String.fromCharCode.apply(null, utf8Bytes.subarray(i, i + CHUNK_SIZE));
+                    }
+                    const contentB64 = btoa(binStr);
+
+                    const putResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
+                        method: "PUT",
+                        headers: {
+                            "Authorization": `token ${GITHUB_TOKEN}`,
+                            "Content-Type": "application/json",
+                            "Accept": "application/vnd.github.v3+json"
+                        },
+                        body: JSON.stringify({
+                            message: `Concediu ${action === 'save' ? 'adaugat' : 'sters'} de ${targetEmp.name}`,
+                            content: contentB64,
+                            sha: sha
+                        }),
+                        signal: AbortSignal.timeout(10000)
+                    });
+
+                    if (putResp.ok) {
+                        return true;
+                    }
+
+                    if (putResp.status === 409 && attempt < 3) {
+                        console.warn(`[syncLeaveToGitHub] SHA conflict (409), reincercare ${attempt}/3...`);
+                        await new Promise(r => setTimeout(r, 600 * attempt));
+                        continue;
+                    }
+                    return false;
+                } catch(e) {
+                    console.warn(`[syncLeaveToGitHub] Eroare tentativa ${attempt}:`, e);
+                    if (attempt < 3) {
+                        await new Promise(r => setTimeout(r, 600 * attempt));
+                        continue;
+                    }
+                    return false;
                 }
-
-                progData = cloudDb;
-                localStorage.setItem('hrProgDB_v2', JSON.stringify(cloudDb));
-
-                const utf8Bytes = new TextEncoder().encode(JSON.stringify(cloudDb, null, 4));
-                let binStr = '';
-                utf8Bytes.forEach(b => binStr += String.fromCharCode(b));
-                const contentB64 = btoa(binStr);
-
-                const putResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/database.json`, {
-                    method: "PUT",
-                    headers: {
-                        "Authorization": `token ${GITHUB_TOKEN}`,
-                        "Content-Type": "application/json",
-                        "Accept": "application/vnd.github.v3+json"
-                    },
-                    body: JSON.stringify({
-                        message: `Concediu ${action === 'save' ? 'adaugat' : 'sters'} de ${targetEmp.name}`,
-                        content: contentB64,
-                        sha: sha
-                    })
-                });
-                return putResp.ok;
-            } catch(e) {
-                console.warn('Eroare syncLeaveToGitHub:', e);
-                return false;
             }
+            return false;
         }
 
         // ========= HOLIDAY ENGINE (mirror main app) =========
@@ -1570,11 +1598,16 @@
             const emp = (progData.employees || []).find(e => e.id === currentEmp.id);
             if (!emp) { showToast('Eroare: angajatul nu a fost găsit.', 'error'); return; }
 
-            const usedDays = (emp.intervals || []).reduce((sum, int) => sum + (int.days || 0), 0);
-            const totalDays = emp.cuvenit || 21;
+            const selYear = new Date(selStart).getFullYear();
+            const yearIntervals = (emp.intervals || []).filter(i => i.start && new Date(i.start).getFullYear() === selYear);
+            const usedDays = yearIntervals.reduce((sum, int) => sum + (int.days || 0), 0);
+            const totalDays = (emp.years && emp.years[selYear] && emp.years[selYear].cuvenit) 
+                ? Number(emp.years[selYear].cuvenit) 
+                : (Number(emp.cuvenit) || 21);
+
             if (usedDays + businessDays > totalDays) {
                 const remaining = Math.max(0, totalDays - usedDays);
-                showToast(`⛔ Limită depășită! Mai aveți doar ${remaining} zile rămase (cuvenit: ${totalDays}), dar încercați să programați ${businessDays} zile.`, 'error', 6000);
+                showToast(`⛔ Limită depășită! Mai aveți doar ${remaining} zile rămase în anul ${selYear} (cuvenit: ${totalDays}), dar încercați să programați ${businessDays} zile.`, 'error', 6000);
                 return;
             }
 
@@ -1590,6 +1623,9 @@
                 showToast(`⛔ Salvare blocată!\n\n${planCheck.violations[0].message}`, 'error', 7500);
                 return;
             }
+
+            selSaveBtn.disabled = true;
+            selSaveBtn.innerHTML = '⏳ Se salvează...';
 
             if (!emp.intervals) emp.intervals = [];
             const newIntId = 'int_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
@@ -1621,11 +1657,26 @@
                         end: selectedEnd,
                         days: businessDays
                     })
-                }).catch(() => {});
+                }).catch(() => {
+                    SERVER_BASE = '';
+                    updateConnBadge('☁️ Cloud Sincronizat', false);
+                });
             }
 
-            // Sincronizare direct in GitHub Cloud (fara a masca CNP-urile)
-            syncLeaveToGitHub(currentEmp.id, 'save', newInterval);
+            // Sincronizare direct in GitHub Cloud cu confirmare si retry
+            const ok = await syncLeaveToGitHub(currentEmp.id, 'save', newInterval);
+
+            selSaveBtn.disabled = false;
+            selSaveBtn.innerHTML = '<i data-lucide="calendar-check" style="width:16px; height:16px;"></i> Salvează';
+            lucide.createIcons();
+
+            if (!ok && !SERVER_BASE) {
+                emp.intervals = emp.intervals.filter(i => i.id !== newIntId);
+                localStorage.setItem('hrProgDB_v2', JSON.stringify(progData));
+                showToast('❌ Nu s-a putut salva în Cloud! Verificați conexiunea la internet și reîncercați.', 'error', 6000);
+                renderApp();
+                return;
+            }
 
             currentEmp = emp;
             selStart = null; selEnd = null;
@@ -1673,6 +1724,7 @@
             const emp = (progData.employees || []).find(e => e.id === currentEmp.id || (currentEmp.cnp && e.cnp === currentEmp.cnp));
             if (!emp) return;
 
+            const removedIntervals = (emp.intervals || []).filter(i => (intId && i.id === intId) || (i.start === startIso && i.end === endIso));
             emp.intervals = (emp.intervals || []).filter(i => !( (intId && i.id === intId) || (i.start === startIso && i.end === endIso) ));
             lastSavedTimestamp = Date.now();
             localStorage.setItem('hrProgDB_v2', JSON.stringify(progData));
@@ -1688,13 +1740,25 @@
                         start: startIso,
                         end: endIso
                     })
-                }).catch(() => {});
+                }).catch(() => {
+                    SERVER_BASE = '';
+                    updateConnBadge('☁️ Cloud Sincronizat', false);
+                });
             }
 
-            syncLeaveToGitHub(currentEmp.id, 'delete', { id: intId, start: startIso, end: endIso });
+            showToast('⏳ Se șterge din Cloud...', 'info', 2000);
+            const ok = await syncLeaveToGitHub(currentEmp.id, 'delete', { id: intId, start: startIso, end: endIso });
+
+            if (!ok && !SERVER_BASE) {
+                emp.intervals.push(...removedIntervals);
+                localStorage.setItem('hrProgDB_v2', JSON.stringify(progData));
+                showToast('❌ Nu s-a putut șterge din Cloud. Verificați conexiunea la internet și reîncercați.', 'error', 5000);
+                renderApp();
+                return;
+            }
 
             currentEmp = emp;
-            showToast('Concediu șters.', 'success');
+            showToast('✅ Concediu șters cu succes.', 'success');
             renderApp();
         };
 
