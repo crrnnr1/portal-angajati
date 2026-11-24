@@ -914,10 +914,19 @@
                 if (!targetEmp.intervals) targetEmp.intervals = [];
 
                 if (action === 'save') {
+                    if (cloudDb.deletedIntervals && intervalData.id) {
+                        cloudDb.deletedIntervals = cloudDb.deletedIntervals.filter(id => id !== intervalData.id);
+                    }
                     const exists = targetEmp.intervals.some(i => (intervalData.id && i.id === intervalData.id) || (i.start === intervalData.start && i.end === intervalData.end));
                     if (!exists) targetEmp.intervals.push(intervalData);
                 } else if (action === 'delete') {
                     targetEmp.intervals = targetEmp.intervals.filter(i => !( (intervalData.id && i.id === intervalData.id) || (i.start === intervalData.start && i.end === intervalData.end) ));
+                    if (intervalData.id) {
+                        if (!cloudDb.deletedIntervals) cloudDb.deletedIntervals = [];
+                        if (!cloudDb.deletedIntervals.includes(intervalData.id)) {
+                            cloudDb.deletedIntervals.push(intervalData.id);
+                        }
+                    }
                 }
 
                 progData = cloudDb;
