@@ -3599,12 +3599,14 @@
             ]
         },
         {
-            "id": "emp_1795691198274_jyaqs",
+            "id": "emp_1795691200007_h2c1c",
             "name": "Caniuca Voica",
             "functie": "Infirmieră",
             "cnp": "",
             "cuvenit": 21,
-            "years": {},
+            "years": {
+                "2027": {}
+            },
             "intervals": []
         }
     ],
