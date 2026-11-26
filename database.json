@@ -3597,6 +3597,15 @@
                     "end": "2027-06-14"
                 }
             ]
+        },
+        {
+            "id": "emp_1795691198274_jyaqs",
+            "name": "Caniuca Voica",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": []
         }
     ],
     "overlapRules": {
