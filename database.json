@@ -3684,6 +3684,186 @@
         "Șofer",
         "Teh as. soc"
     ],
+    "deletedEmployees": [
+        {
+            "id": "del_1790659549106_3y0b6",
+            "name": "Coordonat personal de specialitate",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T05:25:49.106Z"
+        },
+        {
+            "id": "del_1790659553090_s8e77",
+            "name": "HUȘANU Luminița Leocadia",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T05:25:53.090Z"
+        },
+        {
+            "id": "del_1790663348060_bsxod",
+            "name": "Gaspar Maria",
+            "functie": "Insp. Spec. Res. umane",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T06:29:08.060Z"
+        },
+        {
+            "id": "del_1790659542084_0rq18",
+            "name": "Micula Adriana Elena",
+            "functie": "Asist. Med.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T05:25:42.084Z"
+        },
+        {
+            "id": "del_1790659557666_h2nqc",
+            "name": "O R E Z I L N I C",
+            "functie": "Asistent medical",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T05:25:57.666Z"
+        },
+        {
+            "id": "del_1790661647394_5yzjw",
+            "name": "Măran Florina Violeta",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T06:00:47.395Z"
+        },
+        {
+            "id": "del_1790661650227_38x4i",
+            "name": "Ocnariu Mariana",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T06:00:50.227Z"
+        },
+        {
+            "id": "del_1790661653786_bmvzb",
+            "name": "Pop Coman Daniel",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T06:00:53.786Z"
+        },
+        {
+            "id": "del_1790663341978_co8df",
+            "name": "Petrescu Cristian Ioan",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T06:29:01.978Z"
+        },
+        {
+            "id": "del_1790663372133_xm70i",
+            "name": "Crîsciu Florin Samson",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T06:29:32.133Z"
+        },
+        {
+            "id": "del_1790663375876_q6y9l",
+            "name": "Strehan Alexandru",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T06:29:35.876Z"
+        },
+        {
+            "id": "del_1790663385093_gszu3",
+            "name": "Repede Margarit Marian",
+            "functie": "Munc. Fochist",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T06:29:45.093Z"
+        },
+        {
+            "id": "del_1790663397852_0o3j1",
+            "name": "Tatar Daniel Vasile",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T06:29:57.852Z"
+        },
+        {
+            "id": "del_1790663401141_n4kh8",
+            "name": "Vierescu Cristian",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-09-29T06:30:01.141Z"
+        },
+        {
+            "id": "emp_1790663404981_bh0j4",
+            "name": "Grecu Aurelia",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {
+                "2027": {
+                    "cuvenit": 21
+                }
+            },
+            "intervals": [],
+            "deletedAt": "2026-09-29T10:18:38.468Z"
+        },
+        {
+            "id": "emp_1790677121278_w9eef",
+            "name": "Suici Alin Daniel",
+            "functie": "Infirmieră",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {
+                "2027": {
+                    "cuvenit": 21
+                }
+            },
+            "intervals": [],
+            "deletedAt": "2026-09-29T10:19:19.771Z"
+        },
+        {
+            "id": "del_1791606878937_aep57",
+            "name": "Gross Elena",
+            "functie": "Instr. Ergo.",
+            "cnp": "",
+            "cuvenit": 21,
+            "years": {},
+            "intervals": [],
+            "deletedAt": "2026-10-10T04:34:38.937Z"
+        }
+    ],
     "deletedIntervals": [
         "int_1793441148149_af65",
         "int_1793692223301_n652",
@@ -3876,184 +4056,610 @@
         "int_1793359935728_q039",
         "int_1793692837984_7vhk"
     ],
-    "deletedEmployees": [
-        {
-            "id": "del_1790659549106_3y0b6",
-            "name": "Coordonat personal de specialitate",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T05:25:49.106Z"
-        },
-        {
-            "id": "del_1790659553090_s8e77",
-            "name": "HUȘANU Luminița Leocadia",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T05:25:53.090Z"
-        },
-        {
-            "id": "del_1790663348060_bsxod",
-            "name": "Gaspar Maria",
-            "functie": "Insp. Spec. Res. umane",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T06:29:08.060Z"
-        },
-        {
-            "id": "del_1790659542084_0rq18",
-            "name": "Micula Adriana Elena",
-            "functie": "Asist. Med.",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T05:25:42.084Z"
-        },
-        {
-            "id": "del_1790659557666_h2nqc",
-            "name": "O R E Z I L N I C",
-            "functie": "Asistent medical",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T05:25:57.666Z"
-        },
-        {
-            "id": "del_1790661647394_5yzjw",
-            "name": "Măran Florina Violeta",
-            "functie": "Instr. Ergo.",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T06:00:47.395Z"
-        },
-        {
-            "id": "del_1790661650227_38x4i",
-            "name": "Ocnariu Mariana",
-            "functie": "Instr. Ergo.",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T06:00:50.227Z"
-        },
-        {
-            "id": "del_1790661653786_bmvzb",
-            "name": "Pop Coman Daniel",
-            "functie": "Instr. Ergo.",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T06:00:53.786Z"
-        },
-        {
-            "id": "del_1790663341978_co8df",
-            "name": "Petrescu Cristian Ioan",
-            "functie": "Infirmieră",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T06:29:01.978Z"
-        },
-        {
-            "id": "del_1790663372133_xm70i",
-            "name": "Crîsciu Florin Samson",
-            "functie": "Munc. Fochist",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T06:29:32.133Z"
-        },
-        {
-            "id": "del_1790663375876_q6y9l",
-            "name": "Strehan Alexandru",
-            "functie": "Munc. Fochist",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T06:29:35.876Z"
-        },
-        {
-            "id": "del_1790663385093_gszu3",
-            "name": "Repede Margarit Marian",
-            "functie": "Munc. Fochist",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T06:29:45.093Z"
-        },
-        {
-            "id": "del_1790663397852_0o3j1",
-            "name": "Tatar Daniel Vasile",
-            "functie": "Instr. Ergo.",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T06:29:57.852Z"
-        },
-        {
-            "id": "del_1790663401141_n4kh8",
-            "name": "Vierescu Cristian",
-            "functie": "Instr. Ergo.",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-09-29T06:30:01.141Z"
-        },
-        {
-            "id": "emp_1790663404981_bh0j4",
-            "name": "Grecu Aurelia",
-            "functie": "Infirmieră",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
+    "pontaj": {
+        "globalEmployees": {
+            "bălănescu mihaela": {
+                "name": "Bălănescu Mihaela",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Asist. Med.",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
             },
-            "intervals": [],
-            "deletedAt": "2026-09-29T10:18:38.468Z"
-        },
-        {
-            "id": "emp_1790677121278_w9eef",
-            "name": "Suici Alin Daniel",
-            "functie": "Infirmieră",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {
-                "2027": {
-                    "cuvenit": 21
-                }
+            "ciucă călin": {
+                "name": "Ciucă Călin",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
             },
-            "intervals": [],
-            "deletedAt": "2026-09-29T10:19:19.771Z"
+            "otescu alin nicolae": {
+                "name": "Otescu Alin Nicolae",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "gavrilescu elvira": {
+                "name": "Gavrilescu Elvira",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "lupu săndel": {
+                "name": "Lupu Săndel",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Medic",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "văcariu ioan": {
+                "name": "Văcariu Ioan",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "dragu fira": {
+                "name": "Dragu Fira",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "hota valentina": {
+                "name": "Hota Valentina",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "balomiri daniela": {
+                "name": "Balomiri Daniela",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "șoman florin": {
+                "name": "Șoman Florin",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "isfan nicoleta ioana": {
+                "name": "Isfan Nicoleta Ioana",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Asist. Med.",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "leucuș daniela": {
+                "name": "Leucuș Daniela",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Asist. Med.",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "mercea loredana viorica": {
+                "name": "Mercea Loredana Viorica",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Asist. Med.",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "bogdan claudiu adrian": {
+                "name": "Bogdan Claudiu Adrian",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Instr. Ergo.",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "indricau rodica": {
+                "name": "Indricau Rodica",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Instr. Ergo.",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "popet leodana nadia": {
+                "name": "Popet Leodana Nadia",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Instr. Ergo.",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "şandru lăcrămioara": {
+                "name": "Şandru Lăcrămioara",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Instr. Ergo.",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "schiopu daian caius": {
+                "name": "Schiopu Daian Caius",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Teh as. soc",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "drăgoi claudia veronica": {
+                "name": "Drăgoi Claudia Veronica",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Lucr. Soc",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "petrovici crina maria": {
+                "name": "Petrovici Crina Maria",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Lucr. Soc",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "balint alexandra": {
+                "name": "Balint Alexandra",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "balintescu valentin c-tin": {
+                "name": "Balintescu Valentin C-tin",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "berke mirela lia": {
+                "name": "Berke Mirela Lia",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "boanca cristiana": {
+                "name": "Boanca Cristiana",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "catrinoiu laurentiu ioan": {
+                "name": "Catrinoiu Laurentiu Ioan",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "jiva gabriel": {
+                "name": "Jiva Gabriel",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "kiss irina": {
+                "name": "Kiss Irina",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "maran maria mirabela": {
+                "name": "Maran Maria Mirabela",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "moisoni maria liliana": {
+                "name": "Moisoni Maria Liliana",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "moisoni marius petru": {
+                "name": "Moisoni Marius Petru",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "mudaci ana": {
+                "name": "Mudaci Ana",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "olariu oana ancuta": {
+                "name": "Olariu Oana Ancuta",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "paralescu rodica": {
+                "name": "Paralescu Rodica",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "petrescu liliana": {
+                "name": "Petrescu Liliana",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "stoicănescu sorina": {
+                "name": "Stoicănescu Sorina",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "tătar daniel": {
+                "name": "Tătar Daniel",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "andrei sergiu": {
+                "name": "Andrei Sergiu",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Ingrijitoare",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "munteanu mihaela miorita": {
+                "name": "Munteanu Mihaela Miorita",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Ingrijitoare",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "ciurescu voichita dorina": {
+                "name": "Ciurescu Voichita Dorina",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Spalatoreasa",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "craciun ciprian dorel": {
+                "name": "Craciun Ciprian Dorel",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Munc. Intret",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "benea cristian": {
+                "name": "Benea Cristian",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Munc. Fochist",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "popeţ nicolae florin": {
+                "name": "Popeţ Nicolae Florin",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Şofer",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "husanu luminita": {
+                "name": "Husanu Luminita",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Sef centru",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "bustescu radu emanuela paula": {
+                "name": "Bustescu Radu Emanuela Paula",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Asist. social",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "daminescu madalina elena": {
+                "name": "Daminescu Madalina Elena",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Psiho log",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "muscai frăguța": {
+                "name": "Muscai Frăguța",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Insp. Spec. finan. Cont.",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "sajti janos": {
+                "name": "Sajti Janos",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Kinetoterapeut",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "crîștiu dan": {
+                "name": "Crîștiu Dan",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Insp. Spec. Res. Umane",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "gonciar voichița": {
+                "name": "Gonciar Voichița",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Asist. Med.",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            },
+            "caniuca voica": {
+                "name": "Caniuca Voica",
+                "totalCo": 0,
+                "totalZlp": 0,
+                "cuvenit": 21,
+                "zlpCuvenit": 7,
+                "monthly": {},
+                "functie": "Infirmieră",
+                "centru": "",
+                "_displayCo": 0,
+                "_displayZlp": 0
+            }
         },
-        {
-            "id": "del_1791606878937_aep57",
-            "name": "Gross Elena",
-            "functie": "Instr. Ergo.",
-            "cnp": "",
-            "cuvenit": 21,
-            "years": {},
-            "intervals": [],
-            "deletedAt": "2026-10-10T04:34:38.937Z"
-        }
-    ]
+        "monthsAdded": [],
+        "knownCenters": []
+    }
 }
