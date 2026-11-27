@@ -2681,12 +2681,25 @@
             "functie": "Infirmieră",
             "cnp": "1760626352623",
             "cuvenit": 38,
-            "intervals": [],
+            "intervals": [
+                {
+                    "id": "int_1795764064030_pe2p",
+                    "start": "2027-04-01",
+                    "end": "2027-04-12",
+                    "days": 8
+                }
+            ],
             "years": {
                 "2027": {
                     "cuvenit": 38
                 }
-            }
+            },
+            "leaves": [
+                {
+                    "start": "2027-04-01",
+                    "end": "2027-04-12"
+                }
+            ]
         },
         {
             "id": "emp_1786613879264_jjn5v",
